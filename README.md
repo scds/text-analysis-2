@@ -1,13 +1,13 @@
-# << ENTER WORKSHOP NAME HERE >>
-Materials for the DMDS workshop: **<<  ENTER WORKSHOP NAME HERE  >> **  
+# Named Entity Recognition (NER)
+Materials for the DMDS workshop: **Named Entity Recognition **  
 
-This repository contains workshop files, as well as files used to create the [workshop webpage](https://scds.githib.io/<<enter_site_url>>) with GitHub Pages   
+This repository contains workshop files, as well as files used to create the [workshop webpage](https://scds.github.io/text-analysis-2/) with GitHub Pages   
 
 
 Contributions by the following individuals: 
-- Workshop content created by << ENTER NAME(S) HERE >> 
+- Workshop content created by Devon Mordell 
 - Content edited for online use by << ENTER NAME(S) HERE >> 
-- Online pages created by << ENTER NAME(S) HERE >> 
+- Online pages created by Devon Mordell
 
 
   
