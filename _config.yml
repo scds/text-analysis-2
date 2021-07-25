@@ -1,8 +1,8 @@
-title: DMDS Workshop Name # *** Enter workshop title here 
+title: Named Entity Recognition # *** Enter workshop title here 
 subtitle: 'SCDS Do More with Digital Scholarship series'
 
 remote_theme: scds/just-the-docs
-github_repo_url: "https://scds.github.io/dmds-template/" # ***Enter workshop URL (in github pages) here
+github_repo_url: "https://scds.github.io/text-analysis-2/" # ***Enter workshop URL (in github pages) here
 color_scheme: mcmaster
 # logo: "https://github.com/scds/intro-voyant/blob/main/assets/img/dmds-tableau.png?raw=true"
 
