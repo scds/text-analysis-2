@@ -16,7 +16,7 @@ The natural language processing technique of named entity recognition (NER) iden
 
 ## Learning Outcomes
 
-By the end of the module, learners will be able to:
+By the end of the lesson, learners will be able to:
 * Describe how NER identifies possible entities within a text corpus
 * Identify potential names, places and organizations using NER tools
 * Explain why different NER tools may produce different results from each other
