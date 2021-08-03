@@ -13,7 +13,7 @@ Preparing for the lesson requires you to:
 ## 1. Get the data
 The document we will be working with in the lesson is "[Letters Written During a Short Residence in Sweden, Norway, and Denmark](https://www.gutenberg.org/ebooks/3529)" by Mary Wollstonecraft from Project Gutenberg: 
 
-1. Go to the[HTML text copy of the document](https://www.gutenberg.org/files/3529/3529-h/3529-h.htm),
+1. Go to the [HTML text copy of the document](https://www.gutenberg.org/files/3529/3529-h/3529-h.htm),
 2. Copy the text (ctrl/cmd + A to select all, then ctrl/cmd + C to copy) and,
 3. Paste into a text file (create one using Notepad on a Windows OS or TextEdit on a Mac and then ctrl/cmd + V to paste) and save with a .txt extension as wollstonecraft.txt.
 4. Remove the preamble 
