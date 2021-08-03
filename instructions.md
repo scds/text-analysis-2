@@ -16,7 +16,7 @@ The document we will be working with in the lesson is "[Letters Written During a
 1. Go to the [HTML text copy of the document](https://www.gutenberg.org/files/3529/3529-h/3529-h.htm),
 2. Copy the text (ctrl/cmd + A to select all, then ctrl/cmd + C to copy) and,
 3. Paste into a text file (create one using Notepad on a Windows OS or TextEdit on a Mac and then ctrl/cmd + V to paste) and save with a .txt extension as wollstonecraft.txt.
-4. Remove the preamble 
+4. Remove the preamble and end notes added by Project Gutenberg from the text file to exclude them from the analysis. 
 
 
 ## 2. Get the software
