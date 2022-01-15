@@ -1,11 +1,11 @@
 ---
 layout: default
-title: Visualize Named Entities
+title: Visualizing Named Entities
 parent: Lesson
 nav_order: 4
 ---
 
-# Visualize Named Entities with SpaCy
+# Visualizing Named Entities with SpaCy
 
 ## Creating HTML output
 
