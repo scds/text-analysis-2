@@ -1,14 +1,27 @@
 ---
 layout: default
-title: Getting Started
+title: Lesson
 nav_order: 3
+has_children: true
+has_toc: false
 ---
 
+# Named Entity Recognition
 
+## Lesson roadmap
 
-# Workshop preparation 
+1. How named entity recognition (NER) works
+2.
+
+## Lesson format
+
+The hands-on components of the lesson are available as videos with written instructions and screenshots of the video content below. You are encouraged to watch the videos and use the written sections for later reference but feel free to approach the lesson however you prefer!
+
 <br />
-Preparing for the lesson requires you to:
+
+Next --> [How Named Entity Recognition Works](ner.html)
+
+
 
 ## 1. Get the data
 The document we will be working with in the lesson is "[Letters Written During a Short Residence in Sweden, Norway, and Denmark](https://www.gutenberg.org/ebooks/3529)" by Mary Wollstonecraft from Project Gutenberg: 
@@ -33,4 +46,3 @@ Please contact the [Sherman Centre](mailto:scds@mcmaster.ca) if you have any dif
 ## 3. Assemble your own corpus (optional)
 In advance of the workshop, we also recommend that you assemble a collection of documents to work with for the *Try it with your data* sections. We will use the text collection, or corpus, provided above to practice the techniques demonstrated in the lesson but each dataset brings its own unique set of challenges. Even if you are not going through the lesson with a specific project in mind, having a different corpus to experiment with will help to reinforce the concepts and enrich your knowledge of the topic.
 
-Next ->
