@@ -10,7 +10,7 @@ has_toc: false
 
 ## Lesson roadmap
 
-1. How named entity recognition (NER) works
+1. How does named entity recognition (NER) work?
 2. Installing SpaCy
 3. Creating the NLP object
 4. Visualizing named entities
@@ -22,4 +22,4 @@ The hands-on components of the lesson are available as videos with written instr
 
 <br />
 
-Next --> [How Named Entity Recognition Works](ner.html)
+Next --> [How Does Named Entity Recognition Work?](ner.html)
