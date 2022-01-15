@@ -12,10 +12,9 @@ has_toc: false
 
 1. How named entity recognition (NER) works
 2. Installing SpaCy
-3. Create the NLP object
-4. Visualize entities
-5. Interpret the results
-6. Identify key terms
+3. Creating the NLP object
+4. Visualizing named entities
+5. Identifying key terms
 
 ## Lesson format
 
