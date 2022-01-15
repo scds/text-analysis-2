@@ -5,7 +5,7 @@ description: SCDS Do More with Digital Scholarship workshop series
 nav_order: 1
 ---
 
-# Identifying Proper Nouns with Named Entity Recognition
+# Welcome to Identifying Proper Nouns with Named Entity Recognition
 (in development)
 
 **Identifying Proper Nouns with Named Entity Recognition belongs to a series of workshops on computational text analysis.**
