@@ -12,5 +12,5 @@ nav_order: 3
 ## Process the text
 
 <br />
-Next --> [Visualize Entities](visualize.html)
+Next --> [Visualizing Named Entities](visualize.html)
 
