@@ -37,4 +37,4 @@ If you have not already gone through your corpus to get a sense of what errors i
 
 
 <br />
-Next --> [Named Entity Recognition](instructions.html)
+Next --> [Named Entity Recognition](instructions.html) (hands-on lesson)
