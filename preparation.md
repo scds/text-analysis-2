@@ -28,7 +28,7 @@ This workshop uses the [Python programming language](https://www.python.org/), a
 
 The Anaconda platform contains numerous other software applications used in research computing, such as Jupiter Notebook and RStudio, that you may also want to explore. Its size on disk, however, is quite large as a result - about 3GB. 
 
-**If you have programming experience with Python,** you are welcome to use the IDE you are familiar with instead. If you use `pip` to install Python packages, the lesson instructions will be applicable. 
+**If you have programming experience with Python,** you are welcome to use the IDE you are familiar with as an alternative. The lesson instructions use `pip` to install SpaCy. 
 
 Please contact the [Sherman Centre](mailto:scds@mcmaster.ca) if you have any difficulties downloading or opening the software.
 
