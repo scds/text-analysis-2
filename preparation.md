@@ -13,9 +13,10 @@ Preparation for this tutorial consists of two steps: [Getting the data](#get-the
 The document we will be working with in the lesson is "[Letters Written During a Short Residence in Sweden, Norway, and Denmark](https://www.gutenberg.org/ebooks/3529)" by Mary Wollstonecraft from Project Gutenberg: 
 
 1. Go to the [Plain Txt UTF-8](https://www.gutenberg.org/ebooks/3529.txt.utf-8) version of the document,
-2. You can either save the page as a text (.txt) file or copy the text (ctrl / cmd + A to select all, then ctrl / cmd + C to copy) and,
-3. Paste into a text file (create one using Notepad on a Windows OS or TextEdit on a Mac and then ctrl / cmd + V to paste) and save with a .txt extension as wollstonecraft.txt.
-4. Delete the preamble and license terms added by Project Gutenberg from the text file to exclude them from the analysis.
+2. You can either 
+   - save the page as a text (.txt) file or, 
+   - copy the text (ctrl / cmd + A to select all, then ctrl / cmd + C to copy) and paste into a text file (create one using Notepad on a Windows OS or TextEdit on a Mac and then ctrl / cmd + V to paste) and save with a .txt extension as wollstonecraft.txt.
+3. Delete the preamble and license terms added by Project Gutenberg from the text file to exclude them from the analysis.
 
 Alternatively, you can download [a copy of the same document](assets/wollstonecraft.txt) with the preamble and the license terms removed.
 
