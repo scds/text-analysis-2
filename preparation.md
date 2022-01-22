@@ -34,7 +34,7 @@ Please contact the [Sherman Centre](mailto:scds@mcmaster.ca) if you have any dif
 
 ### Software versions
 
-As the lesson is written, the software versions are as follows:
+For the lesson as it is currently written, the software versions are as follows:
 
 **Python:** 3.9
 
