@@ -22,13 +22,23 @@ Alternatively, you can download [a copy of the same document](assets/wollstonecr
 
 ## 2.  Get the software
 
-This workshop uses the [Python programming language](https://www.python.org/), and the [SpaCy](https://spacy.io/) natural language processing library in particular. We will be working with Python through the Spyder integrated development environment (IDE) to access tools that will make our tasks easier.
+This workshop uses the [Python programming language](https://www.python.org/), and the [SpaCy](https://spacy.io/) natural language processing library for Python. We will be working with Python through the Spyder integrated development environment (IDE) to access tools that will make our tasks easier. Although Spyder can be downloaded as a standalone application, we are going to use the Anaconda platform to simplify some of the set-up tasks so that we can get up and running quickly.
 
-[Download Spyder](https://www.spyder-ide.org/)
+[Download Anaconda](https://www.anaconda.com/products/individual) 
 
-If you have the [Anaconda platform](https://www.anaconda.com/products/individual) installed on your computer, you can access Spyder from the Anaconda Navigator interface. Anaconda's package manager may ask you to install or update Spyder if you have not opened it before or used it in a while. You do not have to install Anaconda for the purposes of the lesson; Spyder can be run as a standalone application.
+The Anaconda platform contains numerous other software applications used in research computing, such as Jupiter Notebook and RStudio, that you may also want to explore. Its size on disk, however, is quite large as a result - about 3GB. 
+
+**If you have programming experience with Python,** you are welcome to use the IDE you are familiar with instead. If you use `pip` to install Python packages, the lesson instructions will be applicable. 
 
 Please contact the [Sherman Centre](mailto:scds@mcmaster.ca) if you have any difficulties downloading or opening the software.
+
+### Software versions
+
+As the lesson is written, the software versions are as follows:
+
+**Python:** 3.9
+**Anaconda Navigator:** 2.1.1
+**Spyder:** 5.1.5
 
 ## 3. Assemble your own corpus (optional)
 
