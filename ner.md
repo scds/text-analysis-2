@@ -29,7 +29,7 @@ How does an NER tool like CoreNLP or SpaCy go about identifying named entities w
 
 ### Tokenization
 
-Most computational text analysis methods, including NER, first involve tokenizing the data - or segmenting the text into words based on the position of whitespace characters - so that each word can be examined individually. If you completed the “[Pre-processing Digitized Texts](https://scds.github.io/text-analysis-1)” workshop, you manually tokenized a text document in OpenRefine to make it possible to correct multiple errors with one operation. When performing computational text analysis, tokenization is done by the natural language processing system.
+Most computational text analysis methods, including NER, first involve tokenizing the data - or segmenting the text into tokens based on the position of whitespace characters - so that each word can be examined individually. If you completed the “[Pre-processing Digitized Texts](https://scds.github.io/text-analysis-1)” workshop, you manually tokenized a text document in OpenRefine to make it possible to correct multiple errors with one operation. When performing computational text analysis, tokenization is done by the natural language processing system.
 
 Once we can approach texts at the level of the word, other processing tasks in the text analysis workflow can then be performed such as:
 
@@ -46,6 +46,17 @@ NLP tools use trained language models to make their predictions, which are "taug
 As we might expect, how the tool arrives at its predictions can be utterly opaque to the user; we will discuss training data bias further in "[Behind the Interface](behind.html)." 
 
 ### Stemming or lemmatization
+
+A word can be expressed in different forms; for example, pluralized nouns (“pickle”, “pickles”) or conjugated verbs (“pickling”, “pickle”, “pickled”). Although we humans recognize that they are variations the same word, a computer must be instructed to regard them as such. For the purposes of being able to compare like with like, many NLP workflows involve reducing words to their root form, or *lemma*.
+
+There are two approaches to the task of determining the *lemma* of a word in NLP:
+* stemming, a faster but more error-prone technique that works by chopping off the end of a word in the hopes that it will achieve the intended goal most of the time, and
+* lemmatization, which uses a vocabulary and performs morphological analysis to more accurately identify the lemma or the version of the word that would appear in a dictionary
+
+
+
+### Dependency parsing
+
 
 
 <br />
