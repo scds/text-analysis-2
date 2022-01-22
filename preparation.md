@@ -37,7 +37,9 @@ Please contact the [Sherman Centre](mailto:scds@mcmaster.ca) if you have any dif
 As the lesson is written, the software versions are as follows:
 
 **Python:** 3.9
+
 **Anaconda Navigator:** 2.1.1
+
 **Spyder:** 5.1.5
 
 ## 3. Assemble your own corpus (optional)
