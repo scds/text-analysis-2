@@ -53,7 +53,7 @@ A word can be expressed in different forms; for example, pluralized nouns (“pi
 
 There are two approaches to the task of determining the lemma of a word in NLP:
 * stemming, a faster but more error-prone technique that works by chopping off the end of a word in the hopes that it will achieve the intended goal most of the time, and
-* lemmatization, which uses a vocabulary and performs morphological analysis to more accurately identify the lemma
+* lemmatization, which uses a vocabulary and performs morphological analysis to more accurately identify the lemma.
 
 > ***Trade offs: Speed Vs. Accuracy***
 
@@ -62,7 +62,11 @@ There are two approaches to the task of determining the lemma of a word in NLP:
 
 ### Dependency parsing
 
-Examining individual tokens in isolation can obscure crucial contextual information. Dependency parsing infers syntactic relationships between tokens, whic ; for example, tokenization would undermine the semantic connection between “New” and “York” but parsing can merge tokens that have been over-segmented.
+Examining individual tokens in isolation can obscure the contextual information from surrounding words that would be critical to their meaning. Dependency parsing infers syntactic relationships between tokens, which can then help other components of the NLP workflow; for example, tokenization would undermine the semantic connection between “New” and “York.” In addition to merging tokens that have been over-segmented, dependency parsing annotates the language data with lexical information in a tree-like structure.
+
+![](spacy-dependency.png)
+
+The above screenshot shows the first sentence of the introduction in the "wollstonecraft.txt" document visualized with SpaCy's dependency parsing visualizer. The curved line that connects the tokens "Mary" and "Wollstonecraft" and annotated with the "compound" label indicates that SpaCy has re-associated the two tokens which comprise a proper name. The dependency parsing visualizer has also identified relationships like prepositional modifiers ("prep") and the objects of preposition ("pobj"), sometimes nesting the labelled connecting lines to express more complex dependencies. A discussion of the grammatical rules that the dependency parse uses is outside of the scope of the workshop but you can refer to the [full list of the labels](https://github.com/clir/clearnlp-guidelines/blob/master/md/specifications/dependency_labels.md) used by the dependency parser for more information.
 
 <hr />
 
@@ -72,7 +76,7 @@ Not all tasks may be performed in a given NLP workflow or in the same order, and
 
 ## Classifying named entities
 
-Imagine writing a rule-based program that provides specific instructions on how to identify named entities.
+Imagine writing a rule-based program that provides specific instructions on how to identify named entities. With English language data, you might tell it to look for words beginning with a capital letter. As a broad strategy, it would - but also return a lot of false positives, with respect to . You could further refine the instructions to , but . Moreover, what about names like "danah boyd"
 
 With all the moving parts in the NLP workflow - the component tasks of PoS tagging, dependency parsing, NER and so on -  
 
