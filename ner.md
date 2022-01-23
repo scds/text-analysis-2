@@ -33,6 +33,8 @@ Most computational text analysis methods, including NER, first involve tokenizin
 
 Once we can approach texts at the level of the word, other processing tasks in the text analysis workflow can then be performed such as:
 
+<hr />
+
 ### Stop word removal
 
 Commonly used words - such as *the*, *of* and *its* in the English language - are typically filtered out from the corpus for the sake of efficiency because they are not likely to be of interest. With many NLP tools, it is possible to either add stop words that you may wish to ignore in your analysis or omit existing stop words from the list which are, in fact, relevant to your analysis.
@@ -53,11 +55,25 @@ There are two approaches to the task of determining the *lemma* of a word in NLP
 * stemming, a faster but more error-prone technique that works by chopping off the end of a word in the hopes that it will achieve the intended goal most of the time, and
 * lemmatization, which uses a vocabulary and performs morphological analysis to more accurately identify the lemma or the version of the word that would appear in a dictionary
 
+> ***Trade offs: Speed Vs. Accuracy***
 
+> As we get more familiar with the NLP workflow, we will encounter - which can demand significant processing resources, in terms of computing memory. For example, tokenization: we know that a space does not necessarily indicate the beginning of a new word but creating a comprehensive list of exceptions would be very time-consuming.
 
 ### Dependency parsing
 
+Examining individual tokens in isolation can contextual . Dependency parsing infers syntactic relationships between tokens, whic ; for example, tokenization would undermine the semantic connection between “New” and “York” but parsing can merge tokens that have been over-segmented.
 
+<hr />
+
+Some of the tasks above may depend on others, meaning that the order of operations matters. The lemmatization component of a workflow is aided by knowing whether “saw” is a verb or a noun from the PoS tagging task. Likewise, PoS tagging - which identifies proper nouns - can help the NER step focus on a subset of tokens. At the same time, dependency parsing happens after NER in the CoreNLP pipeline while SpaCy performs dependency parsing before NER.
+
+Not all tasks may be performed in a given NLP workflow or in the same order, and NLP systems can use different rules to perform them. The same analytical technique may therefore not return the same results across several NLP tools. As part of your analysis, then, consider comparing the tagged entities produced by multiple tools (e.g. SpaCy, NLTK and CoreNLP) with a small sample from your corpus. Although it will take a bit of time to get familiar with each tool, you can avoid the deflating experience of finding out that there may have been a better tool for your task after processing gigabytes of language data! 
+
+## Classifying named entities
+
+Imagine writing a rule-based program that provides specific instructions on how to identify named entities.
+
+With all the moving parts in the NLP workflow - the component tasks of PoS tagging, dependency parsing, NER and so on -  
 
 <br />
 Next --> [Installing SpaCy](install.html)
