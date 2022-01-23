@@ -76,7 +76,11 @@ Not all tasks may be performed in a given NLP workflow or in the same order, and
 
 ## Classifying named entities
 
-Imagine writing a rule-based program that provides specific instructions on how to identify named entities. With English language data, you might tell it to look for words beginning with a capital letter. As a broad strategy, it would - but also return a lot of false positives, with respect to . You could further refine the instructions to , but . Moreover, what about names like "danah boyd"
+Imagine writing a rule-based program that provides specific instructions on how to identify named entities. With English language data, you might tell it to look for tokens beginning with a capital letter. As a broad strategy, the program would probably work most of the time - but also return a lot of false positives, since sentences start with a capital letter in the English. 
+
+You could further refine the instructions to ignore tokens that follow a period, but there would be cases in which sentences start with named entities - not to mention, proper names that contain an initial! Moreover, what about names like "danah boyd"?
+
+The difficulties explicitly articulating the rules for idenitifying named entities quickly become apparent.
 
 With all the moving parts in the NLP workflow - the component tasks of PoS tagging, dependency parsing, NER and so on -  
 
