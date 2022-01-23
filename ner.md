@@ -11,21 +11,21 @@ nav_order: 1
 
 Named entity recognition (NER) identifies features of interest - such as names of people, places and organizations, in addtion to dates, currency and other special categories of nouns - within language data (e.g. unstructured text).
 
-The best way to grasp NER is to try it out! Visit the [CoreNLP demo](https://corenlp.run/) and paste a short passage of text containing at least some proper names into the "--Text to annotate--" field (the maximum number of characters in the online demo is 5000).
+The best way to grasp NER is to try it out! Visit the [CoreNLP demo](https://corenlp.run/) and paste a short passage of text containing at least some proper names into the "-- Text to annotate --" field (the maximum number of characters in the online demo is 5000).
 
 ![](assets/img/coreNLP-interface.png)
 
-Remove the "parts-of-speech" and "dependency parse" options from the "Annotations" field to limit our results to named entities and submit the text for analysis.
+Remove the "parts-of-speech" and "dependency parse" options from the "-- Annotations --" field to limit our results to named entities and submit the text for analysis.
 
 ![](assets/img/coreNLP-ner.png)
 
-In the screenshot above, CoreNLP has annotated the text from a [Wikipedia article on the American-Canadian anti-slavery activist Mary Ann Shadd](https://en.wikipedia.org/wiki/Mary_Ann_Shadd), tagging words (tokens) with labels like "Person," "Country," "Organization," and "Date." 
+In the screenshot above, CoreNLP has annotated the text from a [Wikipedia article](https://en.wikipedia.org/wiki/Mary_Ann_Shadd) on the American-Canadian anti-slavery activist Mary Ann Shadd, tagging words (tokens) with labels like "Person," "Country," "Organization," and "Date." 
 
 Although we can appreciate the utility of CoreNLP annotations in analyzing texts, the 5000 character maximum of the web-based version makes it impractical to scale up for larger corpora. You can download the full version of [CoreNLP](https://stanfordnlp.github.io/CoreNLP/) to experiment with but we will be using a different NLP tool, SpaCy, for the lesson.
 
-## A quick introduction to the computational text analysis workflow (pipeline)
+## A quick introduction to the NLP workflow (pipeline)
 
-How does an NER tool like CoreNLP or SpaCy go about identifying named entities within an unstructured text corpus, then?
+How does an NLP tool like CoreNLP or SpaCy go about identifying named entities within an unstructured text corpus, then? If you have ever gone through the intellectual exercise of considering how to tell a computer to do a simple task (for humans) - like make toast - you quickly discover that much of what is implicit in our own cognitive processes ("verify toaster is plugged in") must be articulated in a programmatic form. NER is no different, requiring a number of preparatory steps before it can be performed.   
 
 ### Tokenization
 
@@ -37,7 +37,7 @@ Once we can approach texts at the level of the word, other processing tasks in t
 
 ### Stop word removal
 
-Commonly used words - such as *the*, *of* and *its* in the English language - are typically filtered out from the corpus for the sake of efficiency because they are not likely to be of interest. With many NLP tools, it is possible to either add stop words that you may wish to ignore in your analysis or omit existing stop words from the list which are, in fact, relevant to your analysis.
+Commonly used words - like *the*, *of* and *its* in the English language - are typically filtered out from the corpus for the sake of efficiency because they are not likely to be of interest. With many NLP tools, it is possible to either add stop words that you may wish to ignore in your analysis or omit existing stop words from the list which are, in fact, relevant to your analysis.
 
 ### Part of speech (PoS or POS) tagging
 
@@ -57,7 +57,7 @@ There are two approaches to the task of determining the *lemma* of a word in NLP
 
 > ***Trade offs: Speed Vs. Accuracy***
 
-> As we get more familiar with the NLP workflow, we will encounter - which can demand significant processing resources, in terms of computing memory. For example, tokenization: we know that a space does not necessarily indicate the beginning of a new word but creating a comprehensive list of exceptions would be very time-consuming.
+> As we get more familiar with the NLP workflow, we will encounter a number of concessions that developers of tools . Indeed, in the we set the bar low!  - which can demand significant processing resources, in terms of computing memory. For example, tokenization: we know that a space does not necessarily indicate the beginning of a new word but creating a comprehensive list of exceptions would be very time-consuming.
 
 ### Dependency parsing
 
