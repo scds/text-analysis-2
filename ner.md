@@ -11,7 +11,7 @@ nav_order: 1
 
 Named entity recognition (NER) identifies features of interest - such as names of people, places and organizations, in addtion to dates, currency and other special categories of nouns - within language data (e.g. unstructured text).
 
-The best way to grasp NER is to try it out! Visit the [CoreNLP demo](https://corenlp.run/) and paste a short passage of text containing at least some proper names into the "-- Text to annotate --" field (the maximum number of characters in the online demo is 5000).
+The best way to grasp NER is to try it out! Visit the [CoreNLP demo](https://corenlp.run/) and paste a short passage of text (the maximum number of characters in the online demo is 5000) containing at least some proper names into the "-- Text to annotate --" field.
 
 ![](assets/img/coreNLP-interface.png)
 
