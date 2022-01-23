@@ -21,12 +21,18 @@ We will begin by installing the SpaCy library so that we can use it in our scrip
 
 To install SpaCy, in the console area of Spyder (the bottom-right pane in the default Spyder layout), type:
 
-`pip install -U pip setuptools wheel
-pip install spacy`
+`pip install -U pip setuptools wheel`
 
 The first line of code updates , while the second installs SpaCy.
 
-Hit `Enter` (Windows) / `Return` (Mac) to run the commands. The most recent version of SpaCy should be installed with the above command. 
+`pip install -U spacy`
+
+
+Hit `Enter` (Windows) / `Return` (Mac) to run the commands. 
+
+Restart the kernel.
+
+The most recent version of SpaCy should be installed with the above command. 
 
 ## Installing language models
 
