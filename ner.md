@@ -58,13 +58,14 @@ There are two approaches to the task of determining the lemma of a word in NLP:
 > ***Trade offs: Speed Vs. Accuracy***
 
 > As we get more familiar with the NLP workflow, we will encounter various concessions that developers make in designing their tools to increase the speed or maximize the efficiency of processes. For example, with respect to tokenization: we know that a space does not necessarily indicate the beginning of a new word but creating a comprehensive list of exceptions in various languages would be very time-consuming. Indeed, in the "[Pre-Processing Digitized Texts](https://scds.github.io/text-analysis-1/output.html)" lesson, we discussed setting the bar for accuracy relatively low because it would take too long to correct every error.
+>
 > Accuracy is not the only feature traded off for speed or efficiency in the design of computer programs and algorithms. The Python library we will be using for the lesson, SpaCy, limits the choices we have in how to approach the NLP workflow by making decisions for us in order to optimize for speed. Most troubling is the privileging of efficiency over equity - whether it is done consciously or unconsciously - by not involving minoritized groups in the design process, by assuming that the user shares the dominant subject position of the developer, by not taking the time to assemble fully representative training datasets and so on.   
 
 ### Dependency parsing
 
 Examining individual tokens in isolation can obscure the contextual information from surrounding words that would be critical to their meaning. Dependency parsing infers syntactic relationships between tokens, which can then help other components of the NLP workflow; for example, tokenization would undermine the semantic connection between “New” and “York.” In addition to merging tokens that have been over-segmented, dependency parsing annotates the language data with lexical information in a tree-like structure.
 
-![](spacy-dependency.png)
+![](assets/img/spacy-dependency.png)
 
 The above screenshot shows the first sentence of the introduction in the "wollstonecraft.txt" document visualized with SpaCy's dependency parsing visualizer. The curved line that connects the tokens "Mary" and "Wollstonecraft" and annotated with the "compound" label indicates that SpaCy has re-associated the two tokens which comprise a proper name. The dependency parsing visualizer has also identified relationships like prepositional modifiers ("prep") and the objects of preposition ("pobj"), sometimes nesting the labelled connecting lines to express more complex dependencies. A discussion of the grammatical rules that the dependency parse uses is outside of the scope of the workshop but you can refer to the [full list of the labels](https://github.com/clir/clearnlp-guidelines/blob/master/md/specifications/dependency_labels.md) used by the dependency parser for more information.
 
