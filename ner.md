@@ -25,7 +25,7 @@ Although we can appreciate the utility of CoreNLP annotations in analyzing texts
 
 ## A quick introduction to the NLP workflow (pipeline)
 
-How does an NLP tool like CoreNLP or SpaCy go about identifying named entities within an unstructured text corpus, then? If you have ever gone through the intellectual exercise of considering how to tell a computer to do a simple task (for humans) - like make toast - you quickly discover that much of what is implicit in our own cognitive processes ("verify toaster is plugged in") must be articulated in a programmatic form. NER is no different, requiring a number of preparatory steps before it can be performed.   
+How does an NLP tool like CoreNLP or SpaCy go about identifying named entities within an unstructured text corpus, then? If you have ever gone through the intellectual exercise of considering how to tell a computer to do a simple task (for humans) - like make toast - you quickly discover that much of what is implicit in our own cognitive processes ("verify toaster is plugged in") must be articulated in a programmatic manner. NER is no different, requiring a number of preparatory steps before it can be performed.   
 
 ### Tokenization
 
@@ -51,17 +51,17 @@ As we might expect, how the tool arrives at its predictions can be utterly opaqu
 
 A word can be expressed in different forms; for example, pluralized nouns (“pickle”, “pickles”) or conjugated verbs (“pickling”, “pickle”, “pickled”). Although we humans recognize that they are variations the same word, a computer must be instructed to regard them as such. For the purposes of being able to compare like with like, many NLP workflows involve reducing words to their root form, or *lemma*.
 
-There are two approaches to the task of determining the *lemma* of a word in NLP:
+There are two approaches to the task of determining the lemma of a word in NLP:
 * stemming, a faster but more error-prone technique that works by chopping off the end of a word in the hopes that it will achieve the intended goal most of the time, and
-* lemmatization, which uses a vocabulary and performs morphological analysis to more accurately identify the lemma or the version of the word that would appear in a dictionary
+* lemmatization, which uses a vocabulary and performs morphological analysis to more accurately identify the lemma
 
 > ***Trade offs: Speed Vs. Accuracy***
 
-> As we get more familiar with the NLP workflow, we will encounter a number of concessions that developers of tools . Indeed, in the we set the bar low!  - which can demand significant processing resources, in terms of computing memory. For example, tokenization: we know that a space does not necessarily indicate the beginning of a new word but creating a comprehensive list of exceptions would be very time-consuming.
+> As we get more familiar with the NLP workflow, we will encounter a number of concessions that developers of tools make in order to  . Indeed, in the we set the bar low!  - which can demand significant processing resources, in terms of computing memory. For example, tokenization: we know that a space does not necessarily indicate the beginning of a new word but creating a comprehensive list of exceptions would be very time-consuming.
 
 ### Dependency parsing
 
-Examining individual tokens in isolation can contextual . Dependency parsing infers syntactic relationships between tokens, whic ; for example, tokenization would undermine the semantic connection between “New” and “York” but parsing can merge tokens that have been over-segmented.
+Examining individual tokens in isolation can obscure crucial contextual information. Dependency parsing infers syntactic relationships between tokens, whic ; for example, tokenization would undermine the semantic connection between “New” and “York” but parsing can merge tokens that have been over-segmented.
 
 <hr />
 
