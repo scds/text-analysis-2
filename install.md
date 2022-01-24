@@ -29,9 +29,9 @@ In the default layout for Spyder, the editor is on the left-side pane - we will 
 
 We will learn about other features and shortcut keys in Spyder as we work through the lesson. If you would like a more comprehensive introduction to Spyder, [the developer's documentation](https://docs.spyder-ide.org/current/quickstart.html) is a great place to start.
 
-First, SpaCy's documentation recommends to update the Python packages that will help to install SpaCy - if you have downloaded Anaconda very recently, the packages may already be up-to-date - but it is good to check! 
+First, SpaCy's documentation recommends to update the Python packages that will help to install SpaCy. If you have downloaded Anaconda very recently, the packages may already be up-to-date - but it is good to check! 
 
-In the console area of Spyder - that is the bottom-right pane in the default Spyder layout - type:
+In the console area of Spyder - i.e. the bottom-right pane in the default Spyder layout - type:
 
 `pip install -U pip setuptools wheel`
 
@@ -59,7 +59,7 @@ SpaCy's models are trained on texts from the web, like blog posts, news articles
 
 For the purposes of the lesson, we will use SpaCy's trained language models. There are actually four English language models to choose from, with different strengths and limitations. 
 
-The English transformer pipeline, *en_core_web_trf*, has the highest accuracy score for NER and will be what we use in the lesson. You may wish to take a moment to [review the four models](https://spacy.io/models/en) to get a sense of how they were created and what tasks they are best suited for. 
+The English transformer pipeline, *en_core_web_trf*, has the highest accuracy score for NER - 0.90, as depicted in the screenshot below - and so, will be what we use in the lesson. Take a moment to [review the four models](https://spacy.io/models/en) to get a sense of how they were created and what tasks they are best suited for. 
 
 ![screenshot of the en_core_web_trf model's accuracy scores - for named entities, the accuracy is 0.90](assets/img/trf-accuracy.png)
 
@@ -71,15 +71,17 @@ If the above command returns an error, you can alternatively install the model d
 
 `pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.2.0/en_core_web_trf-3.2.0-py3-none-any.whl`
 
-At the time of authoring (January 2022), the en_core_web_trf model was in version 3.2.0, which is reflected in the GitHub URL. Verify that it is the most recent version by referring to the documentation on SpaCy's website.
+At the time of authoring (January 2022), the *en_core_web_trf* model was in version 3.2.0, which is reflected in the GitHub URL. Verify that it is the most recent version by referring to the documentation on SpaCy's website.
 
-![screenshot of the en_core_web_trf model emphasizing the "Release Details" link that points to the most recent version of the model on GitHub](assets/img/trf-release.png)
+The "RELEASE DETAILS" link will take you to the GitHub repository for the model, where you can download the more recent data from the "Assets" area of the repository.
 
-If you need to update the model version, copy the newer link to the wheel file (.whl) from GitHub and replace the URL in your own install command.
+![screenshot of the en_core_web_trf model on the SpaCy website, emphasizing the "Release Details" link](assets/img/trf-release.png)
 
-![screenshot of GitHub repository for en_core_web_trf showing the "Copy link" contextual menu command, which is accessed by right clicking on the current .whl file, under the "Assets" heading of the repository](assets/img/trf-link.png)
+If you need to update the model version, copy the link to the newer wheel file (.whl) from GitHub and replace the URL in your own install command.
 
-We are now ready to use SpaCy in our script! You only have to install SpaCy and the language model once, but if you take a break from NER and want to use SpaCy again after a while, we recommend that you update your version of SpaCy and the language model following the same instructions.
+![screenshot of GitHub repository for en_core_web_trf showing the "Copy link" contextual menu command, which is accessed by right clicking on the current .whl file](assets/img/trf-link.png)
+
+We are now ready to use SpaCy in our script! You only have to install SpaCy and the language model once, but if you take a break from your NER analysis and want to use SpaCy again after a while, we recommend that you update your version of SpaCy and the language model following the same instructions.
 
 <br />
 Next --> [Create the NLP object](object.html)
