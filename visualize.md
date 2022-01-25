@@ -41,7 +41,7 @@ displacy.serve(doc, style='ent')
 
 ![](assets/img/spacy-displacy.png)
 
-DisplaCy will start up a simple web server on your local machine to produduce a visualization that you can access through your web browser.
+DisplaCy will start up a simple web server on your local machine to produce a visualization that you can access through your web browser.
 
 After running the script (`F5`), wait until the console returns:
 
@@ -49,7 +49,7 @@ After running the script (`F5`), wait until the console returns:
 > 
 > Serving on http://0.0.0.0:5000 ...
 
-Because SpaCy has to process the entire `Doc` object, it might take a few minutes for the message to appear! When te server is ready, open a web browser and go to the following URL:
+Because SpaCy has to process the entire `Doc` object, it might take a few minutes for the message to appear! When the server is ready, open a web browser and go to the following URL:
 
 ```
 http://localhost:5000/
@@ -101,7 +101,7 @@ The server that displaCy creates will continue to run until we stop the process 
 
 ## Outputting displaCy visualizations to HTML and SVG
 
-Although using the displaCy server may suffice for exploratory data analysis, you may want to create a more permanent representation to present or easily refer to later. Adding the next few lines of code to the end of your ner.py script will create an HTML file called "wollstonecraft.html" in the same directory as your Python script. Comment out or delete the previous `displacy.serve` code as we do not need the server to create the file.
+Although using the displaCy server may suffice for exploratory data analysis, you may want to create a more permanent representation to present or easily refer to later. Adding the next few lines of code to the end of your ner.py script will create an HTML file called "wollstonecraft.html" in the same directory as your Python script. 
 
 ```
 # Render displaCy visualization as HTML output
@@ -113,6 +113,8 @@ f.write(html)
 f.close()
 html = displacy.render(doc, style="ent", page=True)
 ```
+Comment out or delete the previous `displacy.serve` code as we do not need the server to create the file.
+
 ![](assets/img/displacy-html.png)
 
 <br />
