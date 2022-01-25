@@ -33,7 +33,7 @@ nlp = spacy.load('en_core_web_trf')
 
 ![](assets/img/spacy-nlp.png)
 
-Next, we create the `Doc` object as described earlier and assign it to the *doc* variable.
+Next, we create the `Doc` object as described earlier from the contents of the "wollstonecraft.txt" file and assign it to the *doc* variable.
 
 ```
 
@@ -85,11 +85,32 @@ If you would like to see the full list of entities, type the following command i
 print(nlp.pipe_labels['ner'])
 `
 
-It will return a list of 18 
+It will return a list of 18 entity types:
 
-`['CARDINAL', 'DATE', 'EVENT', 'FAC', 'GPE', 'LANGUAGE', 'LAW', 'LOC', 'MONEY', 'NORP', 'ORDINAL', 'ORG', 'PERCENT', 'PERSON', 'PRODUCT', 'QUANTITY', 'TIME', 'WORK_OF_ART']`
+| Entity Type | Type Description |
+| ----------- | ---------------- |
+| CARDINAL | Numerals that do not fall under another type |
+| DATE | Absolute or relative dates or periods |
+| EVENT | Named hurricanes, battles, wars, sports events, etc. |
+| FAC | Buildings, airports, highways, bridges, etc. |
+| GPE | Countries, cities, states |
+| LANGUAGE | Any named language |
+| LAW | Named documents made into law |
+| LOC | Non-GPE locations, mountain ranges, bodies of water |
+| MONEY | Monetary values, including unit |
+| NORP | Nationalities or religious or political groups |
+| ORDINAL | "first", "second", etc. |
+| ORG | Companies, agencies, institutions, etc. |
+| PERCENT | Percentage, including "%" |
+| PERSON | People, including fictional |
+| PRODUCT | Objects, vehicles, foods, etc. (not services) |
+| QUANTITY | Measurements, as of weight or distance |
+| TIME | Times smaller than a day |
+| WORK_OF_ART | Titles of books, songs, etc. |
 
-If you wouldlike 
+
+SpaCy also allows you to create your own entity types. 
+
 We can print named entities, but the output is not particularly user-friendly. Our next step is to visualize the entities.
 
 
