@@ -7,7 +7,7 @@ nav_order: 4
 
 # Visualizing Named Entities with SpaCy
 
-To render the output from spaCy in a form more amenable to analysis, we will use spaCy's built-in visualizer: displaCy.
+To render the output from SpaCy in a form more amenable to analysis, we will use SpaCy's built-in visualizer: displaCy.
 
 ## Creating HTML output
 
@@ -24,7 +24,7 @@ for ent in doc.ents:
 """
 ```
 
-Next, we will import displaCy just as we did with the SpaCy library. Under our initial import statement, add `from space import displacy`. That is:
+Next, we will import displaCy just as we did with the SpaCy library. Under our initial import statement, add `from space import displacy`:
 
 ```
 # Import SpaCy library
@@ -32,36 +32,37 @@ import spacy
 from spacy import displacy
 ```
 
-With displaCy imported, we can now make use of it to visualize named entities by adding the following at the end of our ner.py script:
+With displaCy imported, we can now make use of it to visualize named entities by adding the following lines of code to the end of our ner.py script:
 
-`
+```
 # Create a visualization of entities in context
 displacy.serve(doc, style='ent')
-`
+```
+
 ![](assets/img/spacy-displacy.png)
 
-DisplaCy will 
+DisplaCy will start up a simple web server on your local machine to produduce a visualization that you can access through your web browser.
 
-When the console returns:
+After running the script (`F5`), wait until the console returns:
 
 > Using the 'ent' visualizer
 > Serving on http://0.0.0.0:5000 ...
 
-Open a web browser, and visit the following URL:
+Because SpaCy has to process the entire `Doc` object, it might take a few minutes for the message to appear! When te server is ready, open a web browser and go to the following URL:
 
 `http://localhost:5000/`
 
-You should have a web page with the 
+You should now have a web page with the contents of the "wollstonecraft.txt" document marked up to show named entities.
 
 ![](assets/img/displacy-server.png)
 
 ## Interpreting the results
 
-If you would like to see the full list of entities, type the following command in the console:
+Some of the named entity labels may be obvious - such as PERSON - but others are more cryptic. If you would like to see the full list of entities that SpaCy recognizes, type the following command in the console:
 
-`
+```
 print(nlp.pipe_labels['ner'])
-`
+```
 
 It will return a list of 18 entity types:
 
@@ -87,7 +88,8 @@ It will return a list of 18 entity types:
 | WORK_OF_ART | Titles of books, songs, etc. |
 
 
-SpaCy also allows you to create your own entity types.
+In reviewing your results, you will likely notice some errors - named entities that SpaCy has missed or misclassified. Recall that the *en_core_web_trf* model has an accuracy evaluation score of about 0.90 - which is better than SpaCy's other trained English models, but not perfect!
+
 
 <br />
 Next --> [Identifying Key Terms](key.html)
