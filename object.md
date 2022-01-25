@@ -79,6 +79,17 @@ When running the code in the console, be patient! It will likely take a few minu
 
 You can, of course, omit some of the values from your `print` request if you would like to speed up the process.
 
+If you would like to see the full list of entities, type the following command in the console:
+
+`
+print(nlp.pipe_labels['ner'])
+`
+
+It will return a list of 18 
+
+`['CARDINAL', 'DATE', 'EVENT', 'FAC', 'GPE', 'LANGUAGE', 'LAW', 'LOC', 'MONEY', 'NORP', 'ORDINAL', 'ORG', 'PERCENT', 'PERSON', 'PRODUCT', 'QUANTITY', 'TIME', 'WORK_OF_ART']`
+
+If you wouldlike 
 We can print named entities, but the output is not particularly user-friendly. Our next step is to visualize the entities.
 
 
