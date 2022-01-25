@@ -33,7 +33,7 @@ nlp = spacy.load('en_core_web_trf')
 
 ![](assets/img/spacy-nlp.png)
 
-Next, we create the `Doc` object.
+Next, we create the `Doc` object as described earlier and assign it to the *doc* variable.
 
 ```
 
@@ -50,7 +50,7 @@ doc = nlp(ner_text)
 
 ![](assets/img/spacy-doc.png)
 
-In the above code, we create the `Doc` object as described earlier and assign it to the *doc* variable. If you would like to work with your own documents, simply change the *filename* variable to the name of your text file (verifying that it is also in the same folder as the ner.py script).
+If you would like to work with your own documents, simply change the *filename* variable to the name of your text file (verifying that it is also in the same folder as the ner.py script).
 
 Run the script (`F5`) and note the results in the console. Nothing much will happen but let us have a look at the top-right pane in Spyder that we have been ignoring thus far. Select the "Variable Explorer" tab and notice that we have three variable names and associated values: "doc," "filename" and "ner_text" that we created by running the script.
 
@@ -58,23 +58,28 @@ Run the script (`F5`) and note the results in the console. Nothing much will hap
 
 Checking the status of our variables let us know that we have successfully connected to our document, as evidenced by the *filename* and *ner_text* variables, and that we now have a `Doc` object, *doc*, to work with.
 
-We are now ready to
+We are now ready to run named entity recognition:
 
 ```
 # Run NER on the Doc object
 for ent in doc.ents:    
     print(ent.text, ent.start_char, ent.end_char, ent.label_, spacy.explain(ent.label_))
 ```
+![](assets/img/spacy-ents.png)
 
-When running the code in the console, be patient! It will likely take a few minutes for your results to appear but they will print out in the console.
+When running the code in the console, be patient! It will likely take a few minutes for your results to appear but they will evenutally print out in the console. You should have a long list of named entities. The code above helps us to interpret the rest of the line:
 
-Refresh the variables (`Ctrl` / `cmd` + `R`) and notice that we now have three new variable names and associated values: "doc," "filename" and "ner_text."
+1. The name of the entity (`ent.text`)
+2. The character number where the named entity starts, relative to all the characters in the document (`ent.start_char`)
+3. The character number where the named entity ends, relative to all the characters in the document (`ent.end_char`)
+4. The entity type code, based on the  (`ent.label_`)
+5. An explanation of the entity type code (`spacy.explain(ent.label_)`)
 
+![](assets/img/ner-results.png)
 
+You can, of course, omit some of the values from your `print` request if you would like to speed up the process.
 
-In the console, you may receive a warning about CUDA device which is [a known issue with the transformer pipeline (*en_core_web_trf*)](https://github.com/explosion/spaCy/discussions/9571).
-
-
+We can print named entities, but the output is not particularly user-friendly. Our next step is to visualize the entities.
 
 
 <br />
