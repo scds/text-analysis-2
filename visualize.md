@@ -101,7 +101,19 @@ The server that displaCy creates will continue to run until we stop the process 
 
 ## Outputting displaCy visualizations to HTML and SVG
 
-Although using the displaCy server may suffice for exploratory data analysis, we may want to create a more permanent representation to refer to later or share.
+Although using the displaCy server may suffice for exploratory data analysis, you may want to create a more permanent representation to present or easily refer to later. Adding the next few lines of code to the end of your ner.py script will create an HTML file called "wollstonecraft.html" in the same directory as your Python script. Comment out or delete the previous `displacy.serve` code as we do not need the server to create the file.
+
+```
+# Render displaCy visualization as HTML output
+html = displacy.render(doc, style='ent', page=True)
+
+# Create a new file and write contents of html variable to it
+f = open('wollstonecraft.html', 'w')
+f.write(html)
+f.close()
+html = displacy.render(doc, style="ent", page=True)
+```
+![](assets/img/displacy-html.png)
 
 <br />
 Next --> [Identifying Key Terms](key.html)
