@@ -56,7 +56,7 @@ Run the script (`F5`) and note the results in the console. Nothing much will hap
 
 ![](assets/img/spyder-variables1.png)
 
-Checking the status of our variables let us know that we have successfully connected to our document, as evidenced by the *filename* and *ner_text* variables, and that we now have a `Doc` object, *doc*, to work with.
+Checking the status of our variables let us know that we have successfully connected to our document, as evidenced by the *filename* and *ner_text* variables, and that we have a `Doc` object, *doc*, to work with.
 
 We are now ready to run named entity recognition:
 
