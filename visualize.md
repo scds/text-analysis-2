@@ -7,7 +7,53 @@ nav_order: 4
 
 # Visualizing Named Entities with SpaCy
 
+To render the output from spaCy in a form more amenable to analysis, we will use spaCy's built-in visualizer: displaCy.
+
 ## Creating HTML output
+
+DisplaCy uses JavaScript, SVG and CSS - web design and programming languages - to render visualizations of entities and dependencies in a web browser.
+
+To begin, we will comment out the code we previously wrote which printed entities to the console as we do not need it at the moment. You can precede each of the lines with the "#" symbol or you can wrap the three lines of code in triple-quotes as demonstrated in the example below. We are not *technically* commenting out the code but we are turning it into a string that Python will ignore. 
+
+```
+"""
+# Run NER on the Doc object
+for ent in doc.ents:    
+    print(ent.text, ent.start_char, ent.end_char, ent.label_, 
+          spacy.explain(ent.label_))
+"""
+```
+
+Next, we will import displaCy just as we did with the SpaCy library. Under our initial import statement, add `from space import displacy`. That is:
+
+```
+# Import SpaCy library
+import spacy
+from spacy import displacy
+```
+
+With displaCy imported, we can now make use of it to visualize named entities by adding the following at the end of our ner.py script:
+
+`
+# Create a visualization of entities in context
+displacy.serve(doc, style='ent')
+`
+![](assets/img/spacy-displacy.png)
+
+DisplaCy will 
+
+When the console returns:
+
+> Using the 'ent' visualizer
+> Serving on http://0.0.0.0:5000 ...
+
+Open a web browser, and visit the following URL:
+
+`http://localhost:5000/`
+
+You should have a web page with the 
+
+![](assets/img/displacy-server.png)
 
 ## Interpreting the results
 
