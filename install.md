@@ -81,6 +81,10 @@ If you need to update the model version, copy the link to the newer wheel file (
 
 ![screenshot of GitHub repository for en_core_web_trf showing the "Copy link" contextual menu command, which is accessed by right clicking on the current .whl file](assets/img/trf-link.png)
 
+> ***Known issue***
+> 
+> In the console, you may occasionally receive warnings about not having a CUDA device which is [a known issue with the transformer pipeline (*en_core_web_trf*)](https://github.com/explosion/spaCy/discussions/9571). You can safely disregard it so long as your script is still working correctly. You can avoid the error by installing and using the *en_core_web_lg* language model instead, but its accuracy in recognizing named entities is slightly lower.
+
 We are now ready to use SpaCy in our script! You only have to install SpaCy and the language model once, but if you take a break from your NER analysis and want to use SpaCy again after a while, we recommend that you update your version of SpaCy and the language model following the same instructions.
 
 <br />
