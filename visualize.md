@@ -46,11 +46,14 @@ DisplaCy will start up a simple web server on your local machine to produduce a 
 After running the script (`F5`), wait until the console returns:
 
 > Using the 'ent' visualizer
+> 
 > Serving on http://0.0.0.0:5000 ...
 
 Because SpaCy has to process the entire `Doc` object, it might take a few minutes for the message to appear! When te server is ready, open a web browser and go to the following URL:
 
-`http://localhost:5000/`
+```
+http://localhost:5000/
+```
 
 You should now have a web page with the contents of the "wollstonecraft.txt" document marked up to show named entities.
 
