@@ -56,11 +56,11 @@ Run the script (`F5`) and note the results in the console. Nothing much will hap
 
 ![](assets/img/spyder-variables1.png)
 
-Checking the status of our variables let us know that we have successfully connected to our document, as evidenced by the *filename* and *ner_text* variables, and that we have a `Doc` object, *doc*, to work with.
+Checking the status of our variables lets us know that we have successfully connected to our document, as evidenced by the values of the *filename* and *ner_text* variables, and that we have a `Doc` object, *doc*, to work with.
 
 > ***Known issue***
 > 
-> In the console, you may occasionally receive warnings that "CUDA \[device] is not available" which is [a known issue with the transformer pipeline (*en_core_web_trf*)](https://github.com/explosion/spaCy/discussions/9571). You can safely disregard it so long as your script is still working correctly. You can avoid the error by installing and using the *en_core_web_lg* language model instead, but its accuracy in recognizing named entities is slightly lower.
+> In the console, you may occasionally receive warnings that "CUDA \[device] is not available" which is [a known issue with the transformer pipeline (*en_core_web_trf*)](https://github.com/explosion/spaCy/discussions/9571). You can safely disregard it so long as your script is still working as you expect it to. You can avoid the error by installing and using the *en_core_web_lg* language model instead, but its accuracy in recognizing named entities is slightly lower.
 
 We are now ready to run named entity recognition:
 
@@ -82,9 +82,8 @@ When running the code in the console, be patient! It will likely take a few minu
 ![](assets/img/ner-results.png)
 
 You can, of course, omit some of the values from your `print` request if you would like to speed up the process.
- 
 
-We can print named entities, but the output is not particularly user-friendly. Our next step is to visualize the entities.
+We have printed the named entities from the "wollstonecraft.txt" document, but the output is not particularly user-friendly. Our next step is to visualize the entities in the context of the document.
 
 
 <br />
