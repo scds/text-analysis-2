@@ -63,14 +63,12 @@ The English transformer pipeline, *en_core_web_trf*, has the highest accuracy sc
 
 ![screenshot of the en_core_web_trf model's accuracy scores - for named entities, the accuracy is 0.90](assets/img/trf-accuracy.png)
 
-> ***Known issue***
-> 
-> In the console, you may occasionally receive warnings about not having a CUDA device which is [a known issue with the transformer pipeline (*en_core_web_trf*)](https://github.com/explosion/spaCy/discussions/9571). You can safely disregard it so long as your script is still working correctly. You can avoid the error by installing and using the *en_core_web_lg* language model instead, but its accuracy in recognizing named entities is slightly lower.
-
 
 To install the model, type the command below into the console:
 
-`python -m spacy download en_core_web_trf`
+`
+python -m spacy download en_core_web_trf
+`
 
 If the above command returns an error, you can alternatively install the model directly using the link to it from GitHub:
 
