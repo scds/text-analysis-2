@@ -9,7 +9,7 @@ nav_order: 4
 
 To render the output from SpaCy in a form more amenable to analysis, we will use SpaCy's built-in visualizer: displaCy.
 
-## Creating HTML output
+## Using the displaCy server
 
 DisplaCy uses JavaScript, SVG and CSS - web design and programming languages - to render visualizations of entities and dependencies in a web browser.
 
@@ -93,6 +93,15 @@ It will return a list of 18 entity types:
 
 In reviewing your results, you will likely notice some errors - named entities that SpaCy has missed or misclassified. Recall that the *en_core_web_trf* model has an accuracy evaluation score of about 0.90 - which is better than SpaCy's other trained English models, but not perfect!
 
+## Stopping the displaCy server
+
+The server that displaCy creates will continue to run until we stop the process in the console. To stop the command, use the small square icon at the top right of the console - which will be red when a command is running - or from Spyder's menu area: Consoles > Interrupt kernel.
+
+![](assets/img/console-stop.png)
+
+## Outputting displaCy visualizations to HTML and SVG
+
+Although using the displaCy server may suffice for exploratory data analysis, we may want to create a more permanent representation to refer to later or share.
 
 <br />
 Next --> [Identifying Key Terms](key.html)
