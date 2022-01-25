@@ -58,6 +58,10 @@ Run the script (`F5`) and note the results in the console. Nothing much will hap
 
 Checking the status of our variables let us know that we have successfully connected to our document, as evidenced by the *filename* and *ner_text* variables, and that we have a `Doc` object, *doc*, to work with.
 
+> ***Known issue***
+> 
+> In the console, you may occasionally receive warnings that "CUDA \[device] is not available" which is [a known issue with the transformer pipeline (*en_core_web_trf*)](https://github.com/explosion/spaCy/discussions/9571). You can safely disregard it so long as your script is still working correctly. You can avoid the error by installing and using the *en_core_web_lg* language model instead, but its accuracy in recognizing named entities is slightly lower.
+
 We are now ready to run named entity recognition:
 
 ```
@@ -78,38 +82,7 @@ When running the code in the console, be patient! It will likely take a few minu
 ![](assets/img/ner-results.png)
 
 You can, of course, omit some of the values from your `print` request if you would like to speed up the process.
-
-If you would like to see the full list of entities, type the following command in the console:
-
-`
-print(nlp.pipe_labels['ner'])
-`
-
-It will return a list of 18 entity types:
-
-| Entity Type | Type Description |
-| ----------- | ---------------- |
-| CARDINAL | Numerals that do not fall under another type |
-| DATE | Absolute or relative dates or periods |
-| EVENT | Named hurricanes, battles, wars, sports events, etc. |
-| FAC | Buildings, airports, highways, bridges, etc. |
-| GPE | Countries, cities, states |
-| LANGUAGE | Any named language |
-| LAW | Named documents made into law |
-| LOC | Non-GPE locations, mountain ranges, bodies of water |
-| MONEY | Monetary values, including unit |
-| NORP | Nationalities or religious or political groups |
-| ORDINAL | "first", "second", etc. |
-| ORG | Companies, agencies, institutions, etc. |
-| PERCENT | Percentage, including "%" |
-| PERSON | People, including fictional |
-| PRODUCT | Objects, vehicles, foods, etc. (not services) |
-| QUANTITY | Measurements, as of weight or distance |
-| TIME | Times smaller than a day |
-| WORK_OF_ART | Titles of books, songs, etc. |
-
-
-SpaCy also allows you to create your own entity types. 
+ 
 
 We can print named entities, but the output is not particularly user-friendly. Our next step is to visualize the entities.
 
