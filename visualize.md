@@ -111,11 +111,18 @@ html = displacy.render(doc, style='ent', page=True)
 f = open('wollstonecraft.html', 'w')
 f.write(html)
 f.close()
-html = displacy.render(doc, style="ent", page=True)
 ```
 Comment out or delete the previous `displacy.serve` code as we do not need the server to create the file.
 
 ![](assets/img/displacy-html.png)
+
+## Visualizing dependencies
+
+To create a dependency visualization, simply substitute `'dep'` for `'ent'` in the style attribute:
+
+```
+html = displacy.render(doc, style='dep', page=True, minify=True)
+```
 
 <br />
 Next --> [Identifying Key Terms](key.html)
