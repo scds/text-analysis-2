@@ -49,7 +49,12 @@ print(Counter(items).most_common(15))
 
 ## Visualizing key terms
 
-##Caveats: on the limits of counting in computational text analysis
+Matplotlib
+
+## Try it with your own data
+
+Uncomment the comments and run the full script.
+
 
 <br />
 Next --> [Other NER Tools](tools.html)
