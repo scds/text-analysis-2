@@ -101,7 +101,7 @@ Although we do not have the counts to refer to in the "labels" variable, the lab
 
 ![](assets/img/tuple-view.png)
 
-You can save the plot as a PNG file directly from the "Plots" tab in Spyder. Right click on the plot and select "Save plot as..." (`Ctrl` / `cmd` + `S`).
+When the console has processed your script, the plot will appear in the "Plots" tab within the same pane as the Variable Explorer. You can save the plot as a PNG file directly from the "Plots" tab in Spyder. Right click on the plot and select "Save plot as..." (`Ctrl` / `cmd` + `S`).
 
 ![](assets/img/spyder-plots.png)
 
