@@ -44,19 +44,49 @@ print(Counter(persons).most_common(15))
 
 ![](assets/img/key-persons.png)
 
+Using the entity types from "[Interpreting the results](https://scds.github.io/text-analysis-2/visualize.html#interpreting-the-results)" on the previous page, you can change the sought value of `ent.label_` to return a list of events or places, alternatively.
+
 > ***Caveat: on the limits of counting in computational text analysis***
 > 
-> *Although counting terms in a corpus can point us towards avenues for further investigation, there are numerous points within the text analysis workflow that may lead to inaccurate counts: OCR errors, variations in spelling, mis- or missed classification by SpaCy and so on. Not to mention that we do not know the manner in which terms are used without verifying the context of their appearance. All to say: counts can be unreliable, so delve deeper into the corpus before making any claims about the text!
+> *Although counting terms in a corpus can point us towards avenues for further investigation, there are numerous points within the text analysis workflow that may lead to inaccurate counts: OCR errors, variations in spelling, mis- or missed classification by SpaCy and so on. Not to mention that we do not know the manner in which terms are used without verifying the context of their appearance. All to say: counts can be unreliable, so delve deeper into the corpus before making any claims about the text!*
 
-## Visualizing key terms
+## Visualizing relative weights of key terms
 
-Visualizations are often used in exploratory data analysis as they can quickly convey information to sighted . In addition to  Matplotlib.
+Visualizations are often used in exploratory data analysis as they can quickly convey information about the data to sighted folks. In addition to the visualizers in SpaCy, which are limited to dependencies and named entities, we can draw on other Python libraries like Matplotlib.
 
 If you are using the Anaconda environment as the launchpad for Spyder, Matplotlib should already be installed.
 
-The labels are quite tiny for the purpose, ironically, of being able to read them more easily. We can refer back to the Variable Explorer to .
+As with `collections` module, we will import Matplotlib with our other import statements at the beginning of the script:
 
-You can also save the plot as a PNG file directly from the "Plots" tab in Spyder. Right click on the plot and select "Save plot as..." (`Ctrl` / `cmd` + `S`).
+```
+import spacy
+import matplotlib.pyplot as plt
+from spacy import displacy
+from collections import Counter
+```
+
+With Matplotlib imported as the shorthand variable `plt`, we will start to build out our visualization. The first step is to gather the data we are going to visualize. Here, we will return to our earlier statement about returning the most commonly occurring named entities (not just persons). To avoid crowding, we can limit the number of results to 10.
+
+```
+# Assign 10 most common named entities to variables "labels" and "values" for plotting
+entities = [ent.text for ent in doc.ents]
+labels, values = zip(*(Counter(entities).most_common(10)))
+```
+
+The code above creates a variable of the list type called `entities` that we are assigning to the labels and values of a bar chart, respectively.
+
+Next, we will plot the most common entities and their counts in a simple bar graph:
+
+```
+# Plot the most common entities
+plt.bar(labels, values)
+plt.xticks(fontsize=7.5, rotation=45)
+plt.show()
+```
+
+Run the script - as usual, it will take some time! Your plot should appear in the same pane as the Variable Explorer. The labels are quite tiny for the purpose, ironically, of being able to read them more easily by avoiding overlap. We can refer back to "entities" in the Variable Explorer if any of them are unclear.
+
+You can save the plot as a PNG file directly from the "Plots" tab in Spyder. Right click on the plot and select "Save plot as..." (`Ctrl` / `cmd` + `S`).
 
 The plot output is unlikely to win any visualization beauty contests but useful enough for the purposes of exploratory data analysis. Styling the bar graph is out of the scope of the current lesson, but you can find out more by visiting the [Matplotlib tutorials](https://matplotlib.org/stable/tutorials/index.html).
 
