@@ -29,7 +29,7 @@ Again, we can comment out the code from the previous step where we created an HT
 
 ![](assets/img/spacy-key.png)
 
-Run the script, which will return the 15 most frequently occurring entities. You can adjust the number of entities by changing the argument (value) of `.most_common()`.
+Run the script, which will return the 15 most frequently occurring entities as well as the entity type label. You can adjust the number of entities by changing the argument (value) of `.most_common()`.
 
 ![](assets/img/key-results.png)
 
@@ -38,11 +38,16 @@ You can also limit the scope of the count to a specific entity type - if you are
 After `doc.ents`, add `if ent.label_ == 'PERSON'` to limit the results to named entities of the type 'PERSON' only. We will assign the returned values to the variable `persons` to more accurately reflect the output.
 
 ```
+# Return a list of persons and print the 15 most commonly occurring values
 persons = [(ent.text, ent.label_) for ent in doc.ents if ent.label_ == 'PERSON']    
 print(Counter(persons).most_common(15))
 ```
 
 ![](assets/img/key-persons.png)
+
+The results returned should be limited to the names of persons; including `ent.label_` in our statement allows us to verify our results (as well as getting a peek at the aformentioned "CUDA device" error):
+
+![Screenshot of console showing entities with "PERSONS" entity type, e.g. (('Mary Wollstonecraft', 'PERSON'), 18)](assets/img/persons-results.png)
 
 Using the entity types from "[Interpreting the results](https://scds.github.io/text-analysis-2/visualize.html#interpreting-the-results)" on the previous page, you can change the sought value of `ent.label_` to return a list of events or places, alternatively.
 
@@ -65,6 +70,8 @@ from spacy import displacy
 from collections import Counter
 ```
 
+![](assets/img/import-full.png)
+
 With Matplotlib imported as the shorthand variable `plt`, we will start to build out our visualization. The first step is to gather the data we are going to visualize. Here, we will return to our earlier statement about returning the most commonly occurring named entities (not just persons). To avoid crowding, we can limit the number of results to 10.
 
 ```
@@ -84,15 +91,27 @@ plt.xticks(fontsize=7.5, rotation=45)
 plt.show()
 ```
 
+![](assets/img/matplotlib-plot.png)
+
 Run the script - as usual, it will take some time! Your plot should appear in the same pane as the Variable Explorer. The labels are quite tiny for the purpose, ironically, of being able to read them more easily by avoiding overlap. We can refer back to "entities" in the Variable Explorer if any of them are unclear.
 
+![Screenshot of Variable Explorer pane showing the contextual menu for "label"](assets/img/label-values.png)
+
+Although we do not have the counts to refer to in the "labels" variable, the label names will be arranged from largest to smallest count size.
+
+![](assets/img/tuple-view.png)
+
 You can save the plot as a PNG file directly from the "Plots" tab in Spyder. Right click on the plot and select "Save plot as..." (`Ctrl` / `cmd` + `S`).
+
+![](assets/img/spyder-plots.png)
 
 The plot output is unlikely to win any visualization beauty contests but useful enough for the purposes of exploratory data analysis. Styling the bar graph is out of the scope of the current lesson, but you can find out more by visiting the [Matplotlib tutorials](https://matplotlib.org/stable/tutorials/index.html).
 
 ## Try it with your own data
 
 In about 50 lines of code - spaces included - we have a script that identifies and visualizes names entities, counts them and plots the most frequently occurring terms. Working through the code step by step, you should now have an idea of what each part of the script does, so that you can uncomment the code you wish to use and run the full script with your own data. Try it out!
+
+![](assets/img/script-full.png)
 
 <br />
 Next --> [Other NER Tools](tools.html)
