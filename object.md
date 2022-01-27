@@ -22,13 +22,11 @@ Although we have installed the SpaCy library, we need to let Python know to call
 Copy and paste the code below in the ner.py file, or write it out for additional practice. If you receive an error when you run the code in the console, compare what is in your file with the code below - programming languages are very particular!
 
 ```
-
 # Import SpaCy library
 import spacy
 
 # Instantiate NLP pipeline object
 nlp = spacy.load('en_core_web_trf')
-
 ```
 
 ![](assets/img/spacy-nlp.png)
@@ -36,7 +34,6 @@ nlp = spacy.load('en_core_web_trf')
 Next, we create the `Doc` object as described earlier from the contents of the "wollstonecraft.txt" file and assign it to the *doc* variable.
 
 ```
-
 # Assign the filename to a variable
 filename = 'wollstonecraft.txt'
 
@@ -45,7 +42,6 @@ ner_text = open(filename).read()
 
 # Create the Doc object by passing it through the text pipeline (nlp)
 doc = nlp(ner_text)
-
 ```
 
 ![](assets/img/spacy-doc.png)
