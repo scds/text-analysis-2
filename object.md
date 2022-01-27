@@ -43,7 +43,7 @@ filename = 'wollstonecraft.txt'
 # Make the text of the file available to our script
 ner_text = open(filename).read()
 
-# Create the Doc object by passing it through the text pipleine (nlp)
+# Create the Doc object by passing it through the text pipeline (nlp)
 doc = nlp(ner_text)
 
 ```
@@ -54,7 +54,7 @@ If you would like to work with your own documents, simply change the *filename* 
 
 Run the script (`F5`) and note the results in the console. Nothing much will happen but let us have a look at the top-right pane in Spyder that we have been ignoring thus far. Select the "Variable Explorer" tab and notice that we have three variable names and associated values: "doc," "filename" and "ner_text" that we created by running the script.
 
-![](assets/img/spyder-variables1.png)
+![](assets/img/spyder-variables.png)
 
 Checking the status of our variables lets us know that we have successfully connected to our document, as evidenced by the values of the *filename* and *ner_text* variables, and that we have a `Doc` object, *doc*, to work with.
 
