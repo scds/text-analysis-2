@@ -33,7 +33,9 @@ First, SpaCy's documentation recommends to update the Python packages that will 
 
 In the console area of Spyder - i.e. the bottom-right pane in the default Spyder layout - type:
 
-`pip install -U pip setuptools wheel`
+```
+pip install -U pip setuptools wheel
+```
 
 ![](assets/img/spyder-pack.png)
 
@@ -45,7 +47,9 @@ You may be instructed to restart the kernel - or refresh the console by erasing 
 
 With our environment updated, we will now install SpaCy by typing into the console as we did in the previous step:
 
-`pip install -U spacy`
+```
+pip install -U spacy
+```
 
 The most recent version of SpaCy will be installed with the above command. The console may indicate that other dependencies are required and will often install them for you. Assuming that SpaCy has been installed successfully, you will again be instructed by the console to restart the kernel.
 
@@ -66,15 +70,17 @@ The English transformer pipeline, *en_core_web_trf*, has the highest accuracy sc
 
 To install the model, type the command below into the console:
 
-`
+```
 python -m spacy download en_core_web_trf
-`
+```
 
 If the above command returns an error, you can alternatively install the model directly using the link to it from GitHub:
 
-`pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.2.0/en_core_web_trf-3.2.0-py3-none-any.whl`
+```
+pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.2.0/en_core_web_trf-3.2.0-py3-none-any.whl
+```
 
-At the time of authoring (January 2022), the *en_core_web_trf* model was in version 3.2.0, which is reflected in the GitHub URL. Verify that it is the most recent version by referring to the documentation on SpaCy's website.
+At the time of authoring - January 2022 - the *en_core_web_trf* model was in version 3.2.0, which is reflected in the GitHub URL. Verify that it is the most recent version by referring to the documentation on SpaCy's website.
 
 The "RELEASE DETAILS" link will take you to the GitHub repository for the model, where you can download the more recent data from the "Assets" area of the repository.
 
