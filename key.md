@@ -114,4 +114,4 @@ In about 50 lines of code - spaces included - we have a script that identifies a
 ![](assets/img/script-full.png)
 
 <br />
-Next --> [Other NER Tools](tools.html)
+Next --> [Fine-tuning SpaCy](tuning.html)
