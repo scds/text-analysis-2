@@ -92,7 +92,7 @@ The plot output is unlikely to win any visualization beauty contests but useful 
 
 ## Try it with your own data
 
-In less than 50 lines of code - spaces included - we have a script that identifies and visualizes names entities, counts them and plots the most frequently occurring terms. Working through the code step by step, you should now have an idea of what each part of the script does, so that you can uncomment the code you wish to use and run the full script with your own data. Try it out!
+In about 50 lines of code - spaces included - we have a script that identifies and visualizes names entities, counts them and plots the most frequently occurring terms. Working through the code step by step, you should now have an idea of what each part of the script does, so that you can uncomment the code you wish to use and run the full script with your own data. Try it out!
 
 <br />
 Next --> [Other NER Tools](tools.html)
