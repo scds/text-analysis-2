@@ -77,13 +77,15 @@ Not all tasks may be performed in a given NLP workflow or in the same order, and
 
 ## Classifying named entities
 
-Imagine writing a rule-based program that provides specific instructions on how to identify named entities. With English language data, you might tell it to look for tokens beginning with a capital letter. As a broad strategy, the program would probably work most of the time - but also return a lot of false positives, since sentences start with a capital letter in the English. 
+Imagine writing a rule-based program that provides specific instructions on how to identify named entities. With English language data, you might tell it to look for tokens beginning with a capital letter. As a broad strategy, the program would probably work most of the time - but also return a lot of false positives, since sentences start with a capital letter in English. 
 
-You could further refine the instructions to ignore tokens that follow a period, but there would be cases in which sentences start with named entities - not to mention, proper names that contain an initial! Moreover, what about names like "danah boyd"?
+You could further refine the instructions to ignore tokens that follow a period, but there would be cases where sentences start with named entities - not to mention, proper names that contain an initial! Moreover, what about names like "danah boyd"?
 
-The difficulties explicitly articulating the rules for idenitifying named entities quickly become apparent.
+The difficulties in explicitly articulating rules for identifying named entities quickly become apparent. Many NER tools instead rely on machine learning to make predictions regarding whether or not a term is a named entity. 
 
-With all the moving parts in the NLP workflow - the component tasks of PoS tagging, dependency parsing, NER and so on -  
+Supervised machine learning systems are trained with a dataset that has been annotated by humans; in the case of NER, the annotations would reflect the entity type labels that the trained pipleline uses. Training the machine learning system allows it to create a statistical model - that is, a generalized theory - that informs predictions when encountering novel, unannotated datasets.
+
+Needless to say, the composition of the training dataset has a tremendous influence on what entities the NER tool is able to recognize. We will return to the relationship between training data and bias in "[Behind the Interface](behind.html)."
 
 <br />
 Next --> [Installing SpaCy](install.html)
