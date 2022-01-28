@@ -83,7 +83,7 @@ You could further refine the instructions to ignore tokens that follow a period,
 
 The difficulties in explicitly articulating rules for identifying named entities quickly become apparent. Many NER tools instead rely on machine learning to make predictions regarding whether or not a term is a named entity. 
 
-Supervised machine learning systems are trained with a dataset that has been annotated by humans; in the case of NER, the annotations would reflect the entity type labels that the trained pipleline uses. Training the machine learning system allows it to create a statistical model - that is, a generalized theory - that informs predictions when encountering novel, unannotated datasets.
+Supervised machine learning systems are trained with a dataset that has been annotated by humans; in the case of NER, the annotations would reflect the entity type labels that the trained pipleline uses (e.g. "PERSON", "ORG", "GPE" etc.). Training the machine learning system allows it to create a statistical model - that is, a generalized theory - that informs predictions when encountering novel, unannotated datasets.
 
 Needless to say, the composition of the training dataset has a tremendous influence on what entities the NER tool is able to recognize. We will return to the relationship between training data and bias in "[Behind the Interface](behind.html)."
 
