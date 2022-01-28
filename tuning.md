@@ -34,7 +34,7 @@ Followed by a command to print the contents of the *stopwords* variable:
 ```
 print(stopwords)
 ```
-1[](assets/img/console-stopwords)
+![](assets/img/console-stopwords)
 
 ## Adding entity names
 
