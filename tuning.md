@@ -5,7 +5,7 @@ parent: Lesson
 nav_order: 6
 ---
 
-# Fine-tuning SpaCy
+# Fine-tuning SpaCy (Optional)
 
 Although SpaCy does an impressive job of recognizing named entities, it falls short of being perfect. In fact, the first few lines of the "wollstonecraft.txt" document, when visualized with displaCy, contain several obvious named entities - "SWEDEN", "MARY WOLLSTONECRAFT", "CASSEL & COMPANY Limited" and so on - that SpaCy misses entirely. And yet, SpaCy is able to recognize those same entities at other points in the document. 
 
@@ -45,7 +45,25 @@ When you print the list of stop words, you should now observe that the terms in 
 
 SpaCy's language models are trained on texts from the web: news articles, blog posts and comments. If your corpus does not orginate from the web, you might find that SpaCy is less reliable for NER. Even if your corpus is made up of tweets, you may still find that SpaCy misses or mis-classifies some entities.
 
-If there are features of interest, .
+If there are proper names relevant to your analyis, you can use SpaCy's *EntityRuler* pipeline component to ensure that they are recognized. The entity ruler allows you to create rules to label specific entities with the entity type of your choosing. Recall that SpaCy uses machine learning rather than a formal set of rules to recognize named entities, but we can fine-tune our results with rule-based commands.
+
+It can take some experimentation to arrive at the correct pattern to capture the named entity you would like to recognize, so you may want to create a new script with a much smaller amount of text that can be processed more quickly than the entire "wollstonecraft.txt" document.
+
+In Spyder, create a new Python file; in the examples, we will use entity-ruler.py as the filename. The file should save to the same directory as your previous ner.py file.
+
+We will begin the script with the same lines of code we used in the early versions of our ner.py script, as we do not need the other libraries to test the entity ruler.   
+
+```
+import spacy
+
+# Instantiate NLP pipeline
+nlp = spacy.load('en_core_web_trf')
+```
+
+After importing SpaCy and instructing the NLP pipeline to use the *en_core_web_trf* language model, we will now invoke the entity ruler component:
+
+
+
 
 "Thoughts on the Education of Daughters"
 
