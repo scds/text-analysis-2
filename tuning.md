@@ -9,9 +9,9 @@ nav_order: 6
 
 Although SpaCy does an impressive job of recognizing named entities, it falls short of being perfect. In fact, the first few lines of the "wollstonecraft.txt" document, when visualized with displaCy, contains several obvious named entities - "SWEDEN", "MARY WOLLSTONECRAFT", "CASSEL & COMPANY Limited" and so on - that SpaCy misses entirely. And yet, it is able to recognize those same entities at other points in the document. 
 
-Although we can expect the small margin of error implied by an accuracy score of 0.90 for the *en_core_web_trf* language model, there are steps we can take in our script to fine-tune our results. 
-
 ![](assets/img/ner-misses.png)
+
+Although we can expect the small margin of error implied by an accuracy score of 0.90 for the *en_core_web_trf* language model, there are steps we can take in our script to fine-tune our results. 
 
 ## Restoring removed stop words
 
@@ -34,9 +34,13 @@ Followed by a command to print the contents of the *stopwords* variable:
 ```
 print(stopwords)
 ```
-![](assets/img/console-stopwords)
+![](assets/img/console-stopwords.png)
 
 ## Adding entity names
+
+SpaCy's language models are trained on texts from the web: news articles, blog posts and comments. If your corpus 
+
+"Thoughts on the Education of Daughters"
 
 ## Establish ground truth
 
