@@ -5,7 +5,7 @@ parent: Lesson
 nav_order: 3
 ---
 
-# 2. Creating the Doc Object
+# 2. Creating the *Doc* Object
 
 SpaCy takes an object-oriented approach to NLP instead of treating text as strings the way NLTK does. With Spacy, the *Doc* object contains a sequence of *Token* objects. The *Language* class is a text processing pipeline that contains resources like a shared vocabulary and the various workflow components, and is used to create the *Doc* object from text (usually via the `nlp` variable). The *Doc* object is what we work with when we ask SpaCy to return candidates for named entities (`ents`), as an example. We will come across these concepts as we write our Python script. 
 
