@@ -11,7 +11,7 @@ Although SpaCy does a fairly reliable job of recognizing named entities, it fall
 
 ![](assets/img/ner-misses.png)
 
-Although we can expect - and tolertate - a small margin of error as implied by an accuracy score of 0.90 for the *en_core_web_trf* language model, there are steps we can take in our script to fine-tune our results. 
+Although we can expect - and tolerate - a small margin of error as implied by an accuracy score of 0.90 for the *en_core_web_trf* language model, there are steps we can take in our script to fine-tune our results. 
 
 ## Restoring stop words
 
