@@ -52,11 +52,13 @@ If you would like to work with your own documents, simply change the `filename` 
 
 ![](assets/img/spyder-variables.png)
 
-Checking the status of our variables lets us know that we have successfully connected to our document, as evidenced by the values of the `filename` and `ner_text` variables, and that we have a *Doc* object, `doc`, to work with.
-
 > ***Known issue***
 > 
 > In the console, you may occasionally receive warnings that "CUDA \[device] is not available" which is [a known issue with the transformer pipeline (*en_core_web_trf*)](https://github.com/explosion/spaCy/discussions/9571). You can safely disregard it so long as your script is still working as you expect it to. You can avoid the error by installing and using the *en_core_web_lg* language model instead, but its accuracy in recognizing named entities is slightly lower.
+
+Checking the status of our variables lets us know that we have successfully connected to our document, as evidenced by the values of the `filename` and `ner_text` variables, and that we have a *Doc* object, `doc`, to work with.
+
+**IMPORTANT:** Restarting the console kernel will remove all the variables from the Variable Explorer, meaning that you can no longer work with them. If you have restarted the kernel and need to work with any of the variables (e.g. `doc`), run the script to create them again.
 
 2.5 We are now ready to run named entity recognition:
 
