@@ -106,10 +106,42 @@ on the memory of her own friendship for Fanny Blood.
 )
 ```
 
-Earlier, we used triple quotes to comment out multiple lines of text. Because 
+Earlier, we used triple quotes to comment out multiple lines of code. When we assign the text within the triple quotes to a variable, however, it is no longer ignored by the console and instead becomes a multi-lined string that is passed to the variable. Above, we have limited to the scope to a paragraph which should shorten our wait time for results considerably!
 
+Lastly, we will print the named entities within the paragraph and visualize them with the displaCy server to verify our work. We can reuse the code from our ner.py script:
 
-## Establish ground truth
+```
+# Print named entities     
+for ent in doc.ents:    
+    print(ent.text, ent.start_char, ent.end_char, ent.label_, spacy.explain(ent.label_))
+
+# Create a visualization of entities in context  
+displacy.serve(doc, style='ent')
+```
+
+![](assets/img/entity-ruler.png)
+
+Save the file and run the code (`F5`) to test out the script. The named entities should appear fairly quickly in the console, and remember to visit [http://localhost:5000/] in your web browser to access the visualization.
+
+![](assets/img/ruler-console.png)
+
+![](assets/img/ruler-viz.png)
+
+If the script worked, we should see the results in both the console output and the displaCy visualization in our web brower. Having had success with a small sample of the text that we could run very rapidly, we can now write it into our longer ner.py script.
+
+![](assets/img/ruler-full.png)
+
+If you have a large number of named entities to manually label, you can create the patterns in a JSON file and upload to the NLP pipeline [as described in SpaCy's documentation](https://spacy.io/usage/rule-based-matching#entityruler-files).
+
+## Optimizing the NLP pipeline for efficiency, training your own models and more
+
+There are other ways you can exercise a greater degree of control over the NER process in SpaCy, such as omitting components from the NLP pipeline and training your own models. Because they are more involved than what could be considered fine-tuning, we will not cover them in the workshop but encourage you to consult the SpaCy documentation if your use case might require them.
+
+* [Exclude NLP components from the (transformer) pipeline](https://spacy.io/models#design-trf) 
+* [Expanding named entities](https://spacy.io/usage/rule-based-matching#models-rules-ner), to address named entities that SpaCy clips
+* [Training your own language model](https://spacy.io/usage/training), if web-based content is not an adequate representation of your language data
+* [Training a custom entity linking model](https://spacy.io/universe/project/video-entity-linking/) to normalize or disambiguate entities
+
 
 <br />
 Next --> [Other NER Tools](tools.html)
