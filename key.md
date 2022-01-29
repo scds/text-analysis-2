@@ -126,4 +126,4 @@ Thanks to several Python libraries, we have a script that identifies and visuali
 ![](assets/img/script-full.png)
 
 <br />
-Next --> [Fine-tuning SpaCy](tuning.html)
+Next --> [Fine-tuning SpaCy's NLP Pipeline](tuning.html)
