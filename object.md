@@ -9,11 +9,15 @@ nav_order: 3
 
 SpaCy takes an object-oriented approach to NLP instead of treating text as strings the way NLTK does. With Spacy, the *Doc* object contains a sequence of *Token* objects. The *Language* class is a text processing pipeline that contains resources like a shared vocabulary and the various workflow components, and is used to create the *Doc* object from text (usually via the `nlp` variable). The *Doc* object is what we work with when we ask SpaCy to return candidates for named entities (`ents`), as an example. We will come across these concepts as we write our Python script. 
 
+\[video: creating the doc object]
+
 ## Set up the environment
 
 2.1 Before we start working with SpaCy, we will first save the Python script in Spyder (File > Save or `Ctrl` / `cmd` + `S`). Spyder will choose a default location which you can change if you would like to keep your Python scripts in an easier-to-locate spot. Going forward, Spyder will continue to save any new files to the folder you choose. You can choose your own name for the Python script, but we will refer to it as "ner.py" for consistency.
 
 **IMPORTANT**: Move the "wollstonecraft.txt" file and any other text files you may be working with to the same directory (folder) as the Python script you are creating. While not a best practice from a file management standpoint, it simplifies having to specify the file path in our script for the purposes of the lesson.
+
+<hr />
 
 ## Process the text
 
@@ -30,6 +34,8 @@ nlp = spacy.load('en_core_web_trf')
 ```
 
 ![](assets/img/spacy-nlp.png)
+
+<hr />
 
 2.3. Next, we create the *Doc* object as described earlier from the contents of the "wollstonecraft.txt" file and assign it to the `doc` variable.
 
@@ -48,6 +54,8 @@ doc = nlp(ner_text)
 
 If you would like to work with your own documents, simply change the `filename` variable to the name of your text file (verifying that it is also in the same folder as the ner.py script).
 
+<hr />
+
 2.4 Run the script (`F5`) and note the results in the console. Nothing much will happen but let us have a look at the top-right pane in Spyder that we have been ignoring thus far. Select the "Variable Explorer" tab and notice that we have three variable names and associated values: "doc," "filename" and "ner_text" that we created by running the script.
 
 ![](assets/img/spyder-variables.png)
@@ -59,6 +67,8 @@ If you would like to work with your own documents, simply change the `filename` 
 Checking the status of our variables lets us know that we have successfully connected to our document, as evidenced by the values of the `filename` and `ner_text` variables, and that we have a *Doc* object, `doc`, to work with.
 
 **IMPORTANT:** Restarting the console kernel will remove all the variables from the Variable Explorer, meaning that you can no longer work with them. If you have restarted the kernel and need to work with any of the variables (e.g. `doc`), run the script to create them again.
+
+<hr />
 
 2.5 We are now ready to run named entity recognition:
 
