@@ -51,10 +51,11 @@ It can take some experimentation to arrive at the correct pattern to capture the
 
 In Spyder, create a new Python file; in the examples, we will use entity-ruler.py as the filename. The file should save to the same directory as your previous ner.py file.
 
-We will begin the script with the same lines of code we used in the early versions of our ner.py script, as we do not need the other libraries to test the *EntityRuler*.   
+We will begin the script by importing the SpaCy library. As we will want to visualize our results, we will also need to call displaCy.   
 
 ```
 import spacy
+from spacy import displacy
 
 # Instantiate NLP pipeline
 nlp = spacy.load('en_core_web_trf')
@@ -67,7 +68,7 @@ After importing SpaCy and instructing the NLP pipeline to use the *en_core_web_t
 ruler = nlp.add_pipe("entity_ruler")
 ```
 
-Next, we will create a rule to ask SpaCy to annotate a pattern of characters with an entity type label. In the visualization of the "wollstonecraft.txt" document, you likely noticed some missed entities. For example, "the Earl of Kingston" is not annotated as a person, or even as a place.
+Next, we will create a rule to ask SpaCy to annotate a pattern of characters with an entity type label. In the visualization of the "wollstonecraft.txt" document, you likely noticed some missed entities. For example, "the Earl of Kingston" is not labelled as a person, or even as a place.
 
 ![](assets/img/ruler-before.png)
 
@@ -79,9 +80,33 @@ patterns = [{"label": "PERSON", "pattern": "Kingston"},
             {"label": "LOC", "pattern": [{"LOWER": "continent"}]}]
 ruler.add_patterns(patterns)
 ```
- The "LOWER" attribute of the *Token* object contains the lowercase version of the token. You can search for multi-token entities by expanding the list: `"pattern": [{"LOWER": "san"}, {"LOWER": "franciso"}]`. You can explore [other *Token* attributes](https://spacy.io/api/token#attributes) in the SpaCy documentation.
+
+The "LOWER" attribute of the *Token* object contains the lowercase version of the token. You can search for multi-token entities by expanding the list: `"pattern": [{"LOWER": "san"}, {"LOWER": "franciso"}]`. You can explore [other *Token* attributes](https://spacy.io/api/token#attributes) in the SpaCy documentation.
  
-Now that we have our pipeline fully set up, we can create the `Doc` object. In the ner.py script, we wrote code to open a text file whose contents we passed to the *doc* variable. 
+Now that we have our pipeline fully set up, we can create the *Doc* object. In the ner.py script, we wrote code to open a text file whose contents we passed to the `doc` variable. In fact, SpaCy does not require text to come from a file - you can also assign a string of text to the *Doc* object.
+
+```
+# Create the Doc object by passing it through the text pipeline (nlp)
+doc = nlp(
+    """
+The little payment for her pamphlet on the "Education of Daughters"
+caused Mary Wollstonecraft to think more seriously of earning by her pen.
+The pamphlet seems also to have advanced her credit as a teacher.  After
+giving up her day school, she spent some weeks at Eton with the Rev. Mr.
+Prior, one of the masters there, who recommended her as governess to the
+daughters of Lord Kingsborough, an Irish viscount, eldest son of the Earl
+of Kingston.  Her way of teaching was by winning love, and she obtained
+the warm affection of the eldest of her pupils, who became afterwards
+Countess Mount-Cashel.  In the summer of 1787, Lord Kingsborough's
+family, including Mary Wollstonecraft, was at Bristol Hot-wells, before
+going to the Continent.  While there, Mary Wollstonecraft wrote her
+little tale published as "Mary, a Fiction," wherein there was much based
+on the memory of her own friendship for Fanny Blood.
+"""
+)
+```
+
+Earlier, we used triple quotes to comment out multiple lines of text. Because 
 
 
 ## Establish ground truth
