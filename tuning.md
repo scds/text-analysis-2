@@ -15,7 +15,7 @@ Although we can expect the small margin of error implied by an accuracy score of
 
 ## Restoring stop words
 
-Stop words, as described in "[How Does NER Work?](ner.html)", are commonly occurring words that SpaCy ignores in the `Doc` object. 
+Stop words, as mentioned in "[How Does NER Work?](ner.html)", are commonly occurring words that SpaCy ignores in the `Doc` object. 
 
 [A full list of stop words](https://github.com/explosion/spaCy/blob/master/spacy/lang/en/stop_words.py) is listed on SpaCy's GitHub repository. There may, however, be cases in which we want to preserve the stop words within the corpus if they belong to named entites, like musicians with numbers in their names.
 
