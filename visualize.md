@@ -49,9 +49,7 @@ displacy.serve(doc, style='ent')
 
 DisplaCy will start up a simple web server on your local machine to produce a visualization that you can access through your web browser.
 
-<hr />
-
-**3.4.** After running the script (`F5`), wait until the console returns:
+After running the script (`F5`), wait until the console returns:
 
 > Using the 'ent' visualizer
 > 
@@ -111,7 +109,7 @@ The server that displaCy creates will continue to run until we stop the process 
 
 ## Outputting displaCy visualizations to HTML and SVG
 
-**3.5.** Although using the displaCy server may suffice for exploratory data analysis, you may want to create a more permanent representation to present or easily refer to later. Adding the next few lines of code to the end of your ner.py script will create an HTML file called "wollstonecraft.html" in the same directory as your Python script. 
+**3.4.** Although using the displaCy server may suffice for exploratory data analysis, you may want to create a more permanent representation to present or easily refer to later. Adding the next few lines of code to the end of your ner.py script will create an HTML file called "wollstonecraft.html" in the same directory as your Python script. 
 
 ```
 # Render displaCy visualization as HTML output
@@ -128,7 +126,7 @@ Comment out or delete the previous `displacy.serve` code as we do not need the s
 
 ## Visualizing dependencies
 
-**3.6. (Optional)** To create a dependency visualization, simply substitute `'dep'` for `'ent'` in the style attribute:
+**3.5. (Optional)** To create a dependency visualization, simply substitute `'dep'` for `'ent'` in the style attribute:
 
 ```
 html = displacy.render(doc, style='dep', page=True, minify=True)
