@@ -81,7 +81,7 @@ patterns = [{"label": "PERSON", "pattern": "Kingston"},
 ruler.add_patterns(patterns)
 ```
 
-The "LOWER" attribute of the *Token* object contains the lowercase version of the token. You can search for multi-token entities by expanding the list: `"pattern": [{"LOWER": "san"}, {"LOWER": "franciso"}]`. You can explore [other *Token* attributes](https://spacy.io/api/token#attributes) in the SpaCy documentation.
+The "LOWER" attribute of the *Token* object contains the lowercase version of the token. You can search for multi-token entities by expanding the list: `"pattern": [{"LOWER": "san"}, {"LOWER": "francisco"}]`. You can explore [other *Token* attributes](https://spacy.io/api/token#attributes) in the SpaCy documentation.
  
 Now that we have our pipeline fully set up, we can create the *Doc* object. In the ner.py script, we wrote code to open a text file whose contents we passed to the `doc` variable. In fact, SpaCy does not require text to come from a file - you can also assign a string of text to the *Doc* object.
 
