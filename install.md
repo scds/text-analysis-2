@@ -98,4 +98,4 @@ If you need to update the model version, copy the link to the newer wheel file (
 We are now ready to use SpaCy in our script! You only have to install SpaCy and the language model once, but if you take a break from your NER analysis and want to use SpaCy again after a while, we recommend that you update your version of SpaCy and the language model following the same instructions.
 
 <br />
-Next --> [Create the NLP object](object.html)
+Next --> [Create the *Doc* object](object.html)
