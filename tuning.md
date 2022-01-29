@@ -45,13 +45,13 @@ When you print the list of stop words, you should now observe that the terms in 
 
 SpaCy's language models are trained on texts from the web: news articles, blog posts and comments. If your corpus does not orginate from the web, you might find that SpaCy is less reliable for NER. Even if your corpus is made up of tweets, you may still find that SpaCy misses or mis-classifies some entities.
 
-If there are proper names relevant to your analyis, you can use SpaCy's *EntityRuler* pipeline component to ensure that they are recognized. The entity ruler allows you to create rules to label specific entities with the entity type of your choosing. Recall that SpaCy uses machine learning rather than a formal set of rules to recognize named entities, but we can fine-tune our results with rule-based commands.
+If there are proper names relevant to your analyis, you can use SpaCy's *EntityRuler* pipeline component to ensure that they are recognized. The *EntityRuler* allows you to create rules to label specific entities with the entity type of your choosing. Recall that SpaCy uses machine learning rather than a formal set of rules to recognize named entities, but we can fine-tune our results with rule-based commands.
 
-It can take some experimentation to arrive at the correct pattern to capture the named entity you would like to recognize, so you may want to create a new script with a much smaller amount of text that can be processed more quickly than the entire "wollstonecraft.txt" document.
+It can take some experimentation to arrive at the correct pattern to capture the named entity you would like to recognize, so you may want to start a new script with a much smaller amount of text that can be processed more quickly than the entire "wollstonecraft.txt" document.
 
 In Spyder, create a new Python file; in the examples, we will use entity-ruler.py as the filename. The file should save to the same directory as your previous ner.py file.
 
-We will begin the script with the same lines of code we used in the early versions of our ner.py script, as we do not need the other libraries to test the entity ruler.   
+We will begin the script with the same lines of code we used in the early versions of our ner.py script, as we do not need the other libraries to test the *EntityRuler*.   
 
 ```
 import spacy
@@ -62,10 +62,27 @@ nlp = spacy.load('en_core_web_trf')
 
 After importing SpaCy and instructing the NLP pipeline to use the *en_core_web_trf* language model, we will now invoke the entity ruler component:
 
+```
+# Add the EntityRuler component to the pipeline
+ruler = nlp.add_pipe("entity_ruler")
+```
 
+Next, we will create a rule to ask SpaCy to annotate a pattern of characters with an entity type label. In the visualization of the "wollstonecraft.txt" document, you likely noticed some missed entities. For example, "the Earl of Kingston" is not annotated as a person, or even as a place.
 
+![](assets/img/ruler-before.png)
 
-"Thoughts on the Education of Daughters"
+For further practice, we will also annotate "Continent" with the location entity type. SpaCy's *EntityRuler* component will accept strings ("Kingston") and tokens ("LOWER": "continent") as patterns.
+
+```
+# Specify named entities to recognize
+patterns = [{"label": "PERSON", "pattern": "Kingston"}, 
+            {"label": "LOC", "pattern": [{"LOWER": "continent"}]}]
+ruler.add_patterns(patterns)
+```
+ The "LOWER" attribute of the *Token* object contains the lowercase version of the token. You can search for multi-token entities by expanding the list: `"pattern": [{"LOWER": "san"}, {"LOWER": "franciso"}]`. You can explore [other *Token* attributes](https://spacy.io/api/token#attributes) in the SpaCy documentation.
+ 
+Now that we have our pipeline fully set up, we can create the `Doc` object. In the ner.py script, we wrote code to open a text file whose contents we passed to the *doc* variable. 
+
 
 ## Establish ground truth
 
