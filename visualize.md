@@ -13,6 +13,8 @@ To render the output from SpaCy in a form more amenable to analysis, we will use
 
 DisplaCy uses JavaScript, SVG and CSS - web programming and design languages - to render visualizations of entities and dependencies in a web browser.
 
+<hr />
+
 **3.1.** To begin, we will comment out the code we previously wrote which printed entities to the console as we do not need it at the moment. You can precede each of the lines with the "#" symbol or you can wrap the three lines of code in triple-quotes as demonstrated in the example below. We are not *technically* commenting out the code but we are turning it into a string that Python will ignore. 
 
 ```
@@ -24,6 +26,8 @@ for ent in doc.ents:
 """
 ```
 
+<hr />
+
 **3.2.** Next, we will import displaCy just as we did with the SpaCy library. Under our initial import statement, add `from space import displacy`:
 
 ```
@@ -31,6 +35,8 @@ for ent in doc.ents:
 import spacy
 from spacy import displacy
 ```
+
+<hr />
 
 **3.3.** With displaCy imported, we can now make use of it to visualize named entities by adding the following lines of code to the end of our ner.py script:
 
@@ -42,6 +48,8 @@ displacy.serve(doc, style='ent')
 ![](assets/img/spacy-displacy.png)
 
 DisplaCy will start up a simple web server on your local machine to produce a visualization that you can access through your web browser.
+
+<hr />
 
 **3.4.** After running the script (`F5`), wait until the console returns:
 
