@@ -29,6 +29,8 @@ In the default layout for Spyder, the editor is on the left-side pane - we will 
 
 We will learn about other features and shortcut keys in Spyder as we work through the lesson. If you would like a more comprehensive introduction to Spyder, [the developer's documentation](https://docs.spyder-ide.org/current/quickstart.html) is a great place to start.
 
+<hr />
+
 **1.1.** First, SpaCy's documentation recommends to update the Python packages that will help to install SpaCy. If you have downloaded Anaconda very recently, the packages may already be up-to-date - but it is good to check! 
 
 In the console area of Spyder - i.e. the bottom-right pane in the default Spyder layout - type:
@@ -44,6 +46,8 @@ Hit `Enter` (Windows) / `Return` (Mac) to run the command. Spyder will let you k
 You may be prompted to restart the kernel - or refresh the console by erasing previous variables and data - which you can do by going to the "Options" menu at the top-right of the console or using `Ctrl` / `cmd` and `.` as the shortcut keys.
 
 ![](assets/img/spyder-restart.png)
+
+<hr />
 
 **1.2.** With our environment updated, we will now install SpaCy by typing into the console as we did in the previous step:
 
@@ -66,6 +70,8 @@ For the purposes of the lesson, we will use SpaCy's trained language models. The
 The English transformer pipeline, *en_core_web_trf*, has the highest accuracy score for NER - 0.90, as depicted in the screenshot below - and so, will be what we use in the lesson. Take a moment to [review the four models](https://spacy.io/models/en) to get a sense of how they were created and what tasks they are best suited for. 
 
 ![screenshot of the en_core_web_trf model's accuracy scores - for named entities, the accuracy is 0.90](assets/img/trf-accuracy.png)
+
+<hr />
 
 **1.3.** To install the model, type the command below into the console:
 
