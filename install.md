@@ -29,7 +29,7 @@ In the default layout for Spyder, the editor is on the left-side pane - we will 
 
 We will learn about other features and shortcut keys in Spyder as we work through the lesson. If you would like a more comprehensive introduction to Spyder, [the developer's documentation](https://docs.spyder-ide.org/current/quickstart.html) is a great place to start.
 
-1.1 First, SpaCy's documentation recommends to update the Python packages that will help to install SpaCy. If you have downloaded Anaconda very recently, the packages may already be up-to-date - but it is good to check! 
+**1.1.** First, SpaCy's documentation recommends to update the Python packages that will help to install SpaCy. If you have downloaded Anaconda very recently, the packages may already be up-to-date - but it is good to check! 
 
 In the console area of Spyder - i.e. the bottom-right pane in the default Spyder layout - type:
 
@@ -45,7 +45,7 @@ You may be prompted to restart the kernel - or refresh the console by erasing pr
 
 ![](assets/img/spyder-restart.png)
 
-1.2 With our environment updated, we will now install SpaCy by typing into the console as we did in the previous step:
+**1.2.** With our environment updated, we will now install SpaCy by typing into the console as we did in the previous step:
 
 ```
 pip install -U spacy
@@ -67,8 +67,7 @@ The English transformer pipeline, *en_core_web_trf*, has the highest accuracy sc
 
 ![screenshot of the en_core_web_trf model's accuracy scores - for named entities, the accuracy is 0.90](assets/img/trf-accuracy.png)
 
-
-1.3 To install the model, type the command below into the console:
+**1.3.** To install the model, type the command below into the console:
 
 ```
 python -m spacy download en_core_web_trf
