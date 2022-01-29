@@ -9,6 +9,8 @@ nav_order: 5
 
 We have an overall sense of the named entities in our document - but which ones appear most frequently? We can draw from an existing Python module, `collections`, to count our named entities.
 
+\[video: key terms]
+
 ## Counting named entities
 
 **4.1.** The `collections` module is built in to Python, so we do not need to install it as we did with SpaCy. We do, however, need to let Python know that we want to use it. Underneath `from spacy import displacy`, write:
