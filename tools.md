@@ -41,9 +41,13 @@ If you find that CoreNLP does a better job of labeling entities for your purpose
 
 ### Mallet
 
+
+
 ### CoreNLP
 
-CoreNLP can also be run from the command line, allowing you to b
+CoreNLP can work with larger documents or batches of documents when run from the command line. You can read more about [how to use CoreNLP from the command line](https://stanfordnlp.github.io/CoreNLP/cmdline.html) in the CoreNLP documentation.
+
+Again, for simplicity's sake, move a copy of the document you will be processing to the "stanford-corenlp-4.4.0" folder. You may need to allocate more memory to CoreNLP to run a document or corpus the size of "wollstonecraft.txt" (~90 pages) by adding `-Xmx4g` or `-Xmx6g` before `-cp` in the command to run CoreNLP. [The output](assets/wollstonecraft-processed.txt) is extensive but requires further processing. 
 
 ## Named Entity Recognition with R
 
