@@ -10,6 +10,8 @@ As mentioned in the lesson, SpaCy is not the only NLP game in town! Numerous oth
 
 If you will be working with a large number of documents, you may wish to investigate other tools with a small sample from your corpus before getting into more advanced (i.e. time-consuming) features of SpaCy in the event that another tool is more suitable for your purposes "out of the box."
 
+The list below is not comprehensive - in fact, it is barely a list! - but they are relatively quick to set up and robustly supported.
+
 ## CoreNLP
 
 ### Grapical interface (GUI) option
