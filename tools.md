@@ -45,10 +45,6 @@ As with our SpaCy script, if you would prefer to avoid specifying a file path, m
 
 There are numerous [output options](https://stanfordnlp.github.io/CoreNLP/cmdline.html#output) available with CoreNLP; as an example, a text document using the [sample data from the workshop's lesson](assets/wollstonecraft-processed.txt). You may wish to experiment with [BRAT](https://github.com/nlplab/brat), the visualizer that the CoreNLP hosted demo uses.
 
-## OpenNLP
-
-
-
 ## Natural Language Toolkit (NLTK) - Python
 
 NLTK has a classifier component trained to recognize named entities. You can [read more about it](https://www.nltk.org/book/ch07.html#tab-ne-types) in the NLTK documentation. The function, `nltk.ne_chunk()`, outputs text with annotations.
