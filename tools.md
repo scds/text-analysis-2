@@ -10,9 +10,9 @@ As mentioned in the lesson, SpaCy is not the only NLP game in town! Numerous oth
 
 If you will be working with a large number of documents, you may wish to investigate other tools with a small sample from your corpus before getting into more advanced (i.e. time-consuming) features of SpaCy in the event that another tool is more suitable for your purposes "out of the box."
 
-## Tools with a graphical user interface (GUI)
+## CoreNLP
 
-### CoreNLP
+### Grapical interface (GUI) option
 
 At the beginning of the workshop's lesson, we tried the hosted version of CoreNLP to get a better grasp of NER. CoreNLP can also be downloaded and run as a web server on your local machine, similarly to the displaCy server we used in the lesson. 
 
@@ -37,19 +37,22 @@ The locally hosted version of the CoreNLP server has a much larger character lim
 
 If you find that CoreNLP does a better job of labeling entities for your purposes, you can use the command line version of CoreNLP (below) to process more language data at once.
 
-## Tools run from the command line interface (CLI)
+### Command line interface (CLI) option
 
-### Mallet
+Running CoreNLP From the command line allows you to work with larger documents or batches of documents. You can read more about [how to use CoreNLP from the command line](https://stanfordnlp.github.io/CoreNLP/cmdline.html) in the CoreNLP documentation.
+
+As with our SpaCy script, if you would prefer to avoid specifying a file path, move a copy of the document you will be processing to the "stanford-corenlp-4.4.0" folder. You may need to allocate more memory to CoreNLP to run a document or corpus the size of "wollstonecraft.txt" (~90 pages) by adding `-Xmx4g` or `-Xmx6g` before `-cp` in the command to run CoreNLP - if you happen to have 4GB or 6GB of processing resources to draw from. 
+
+There are numerous [output options](https://stanfordnlp.github.io/CoreNLP/cmdline.html#output) available with CoreNLP; as an example, a text document using the [sample data from the workshop's lesson](assets/wollstonecraft-processed.txt). You may wish to experiment with [BRAT](https://github.com/nlplab/brat), the visualizer that the CoreNLP hosted demo uses.
+
+## OpenNLP
 
 
 
-### CoreNLP
+## Natural Language Toolkit (NLTK) - Python
 
-CoreNLP can work with larger documents or batches of documents when run from the command line. You can read more about [how to use CoreNLP from the command line](https://stanfordnlp.github.io/CoreNLP/cmdline.html) in the CoreNLP documentation.
+NLTK has a classifier component trained to recognize named entities. You can [read more about it](https://www.nltk.org/book/ch07.html#tab-ne-types) in the NLTK documentation. The function, `nltk.ne_chunk()`, outputs text with annotations.
 
-Again, for simplicity's sake, move a copy of the document you will be processing to the "stanford-corenlp-4.4.0" folder. You may need to allocate more memory to CoreNLP to run a document or corpus the size of "wollstonecraft.txt" (~90 pages) by adding `-Xmx4g` or `-Xmx6g` before `-cp` in the command to run CoreNLP. [The output](assets/wollstonecraft-processed.txt) is extensive but requires further processing. 
-
-## Named Entity Recognition with R
 
 <br />
 Next --> [Behind the Interface: Training Data Bias](behind.html)
