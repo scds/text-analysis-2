@@ -11,7 +11,7 @@ nav_order: 1
 
 Named entity recognition (NER) identifies features of interest - such as names of people, places and organizations, in addtion to dates, currency and other special categories of nouns - within language data (e.g. unstructured text).
 
-The best way to grasp NER is to try it out! Visit the [CoreNLP demo](https://corenlp.run/) and paste a short passage of text (the maximum number of characters in the online demo is 5000) containing at least some proper names into the "-- Text to annotate --" field.
+The best way to grasp NER is to try it out! Visit the [CoreNLP demo](https://corenlp.run/) and paste a short passage of text containing at least some proper names into the "-- Text to annotate --" field (the maximum number of characters in the online demo is 5000).
 
 ![](assets/img/coreNLP-interface.png)
 
@@ -25,11 +25,13 @@ Although we can appreciate the utility of CoreNLP annotations in analyzing texts
 
 ## A quick introduction to the NLP workflow (pipeline)
 
-How does an NLP tool like CoreNLP or SpaCy go about identifying named entities within an unstructured text corpus, then? If you have ever gone through the intellectual exercise of considering how to tell a computer to do a simple task (for humans) - like make toast - you quickly discover that much of what is implicit in our own cognitive processes ("verify toaster is plugged in") must be articulated in a programmatic manner. NER is no different, requiring a number of preparatory steps before it can be performed.   
+How does an NLP tool like CoreNLP or SpaCy go about identifying named entities within an unstructured text corpus? 
+
+If you have ever gone through the intellectual exercise of considering how to tell a computer to do a simple task (for humans) - like make toast - you quickly discover that much of what is implicit in our own cognitive processes ("verify toaster is plugged in") must be articulated in a programmatic manner. NER is no different, requiring a number of preparatory steps before it can be performed.   
 
 ### Tokenization
 
-Most computational text analysis methods, including NER, first involve tokenizing the data - or segmenting the text into tokens based on the position of whitespace characters - so that each word can be examined individually. If you completed the “[Pre-processing Digitized Texts](https://scds.github.io/text-analysis-1)” workshop, you manually tokenized a text document in OpenRefine to make it possible to correct multiple errors with one operation. When performing computational text analysis, tokenization is done by the natural language processing system.
+Most computational text analysis methods, including NER, first involve tokenizing the data - or segmenting the text into tokens - so that each word can be examined individually. If you completed the “[Pre-processing Digitized Texts](https://scds.github.io/text-analysis-1)” workshop, you tokenized a text document in OpenRefine to make it possible to correct multiple errors with one operation. When performing computational text analysis, tokenization is done by the natural language processing system.
 
 Once we can approach texts at the level of the word, other processing tasks in the text analysis workflow can then be performed such as:
 
@@ -49,7 +51,7 @@ As we might expect, how the tool arrives at its predictions can be utterly opaqu
 
 ### Stemming or lemmatization
 
-A word can be expressed in different forms; for example, pluralized nouns (“pickle”, “pickles”) or conjugated verbs (“pickling”, “pickle”, “pickled”). Although we humans recognize that they are variations the same word, a computer must be instructed to regard them as such. For the purposes of being able to compare like with like, many NLP workflows involve reducing words to their root form, or *lemma*.
+A word can be expressed in different forms; for example, pluralized nouns (“pickle”, “pickles”) or conjugated verbs (“pickling”, “pickle”, “pickled”). Although we humans recognize that they are semantically related, a computer must be instructed to regard them as such. For the purposes of being able to compare like with like, many NLP workflows involve reducing words to their root form, or *lemma*.
 
 There are two approaches to the task of determining the lemma of a word in NLP:
 * stemming, a faster but more error-prone technique that works by chopping off the end of a word in the hopes that it will achieve the intended goal most of the time, and
@@ -67,13 +69,13 @@ Examining individual tokens in isolation can obscure the contextual information 
 
 ![](assets/img/spacy-dependency.png)
 
-The above screenshot shows the first sentence of the introduction in the "wollstonecraft.txt" document visualized with SpaCy's dependency parsing visualizer. The curved line that connects the tokens "Mary" and "Wollstonecraft" and annotated with the "compound" label indicates that SpaCy has re-associated the two tokens which comprise a proper name. The dependency parsing visualizer has also identified relationships like prepositional modifiers ("prep") and the objects of preposition ("pobj"), sometimes nesting the labelled connecting lines to express more complex dependencies. A discussion of the grammatical rules that the dependency parse uses is outside of the scope of the workshop but you can refer to the [full list of the labels](https://github.com/clir/clearnlp-guidelines/blob/master/md/specifications/dependency_labels.md) used by the dependency parser for more information.
+The above screenshot shows the first sentence of the introduction in the "wollstonecraft.txt" document visualized with SpaCy's dependency parsing visualizer. The curved line that connects the tokens "Mary" and "Wollstonecraft" and annotated with the "compound" label indicates that SpaCy has re-associated the two tokens which comprise a proper name. The dependency parsing visualizer has also identified relationships like prepositional modifiers ("prep") and the objects of preposition ("pobj"), sometimes nesting the labelled connecting lines to express more complex dependencies. A discussion of the grammatical rules that the dependency parser uses is outside of the scope of the workshop but you can refer to the [full list of the labels](https://github.com/clir/clearnlp-guidelines/blob/master/md/specifications/dependency_labels.md) for more information.
 
 <hr />
 
 Some of the tasks above may depend on others, meaning that the order of operations matters. The lemmatization component of a workflow is aided by knowing whether “saw” is a verb or a noun from the PoS tagging task. Likewise, PoS tagging - which identifies proper nouns - can help the NER step focus on a subset of tokens. At the same time, dependency parsing happens after NER in the CoreNLP pipeline while SpaCy performs dependency parsing before NER.
 
-Not all tasks may be performed in a given NLP workflow or in the same order, and NLP systems can use different rules to perform them. The same analytical technique may therefore not return the same results across several NLP tools. As part of your analysis, then, consider comparing the tagged entities produced by multiple tools (e.g. SpaCy, NLTK and CoreNLP) with a small sample from your corpus. Although it will take a bit of time to get familiar with each tool, you can avoid the deflating experience of finding out that there may have been a better tool for your task after processing gigabytes of language data! 
+Not all tasks may be performed in a given NLP workflow or in the same order, and NLP systems can use different rules to perform them. The same analytical technique may therefore not return the same results across several NLP tools. As part of your analysis, consider comparing the tagged entities produced by multiple tools (e.g. SpaCy, NLTK and CoreNLP) with a small sample from your corpus. Although it will take a bit of time to get familiar with each tool, you can avoid the deflating experience of finding out that there may have been a better tool for your task after processing gigabytes of language data! 
 
 ## Classifying named entities
 
@@ -83,7 +85,7 @@ You could further refine the instructions to ignore tokens that follow a period,
 
 The difficulties in explicitly articulating rules for identifying named entities quickly become apparent. Many NER tools instead rely on machine learning to make predictions regarding whether or not a term is a named entity. 
 
-Supervised machine learning systems are trained with a dataset that has been annotated by humans; in the case of NER, the annotations would reflect the entity type labels that the trained pipleline uses (e.g. "PERSON", "ORG", "GPE" etc.). Training the machine learning system allows it to create a statistical model - that is, a generalized theory - that informs predictions when encountering novel, unannotated datasets.
+Supervised machine learning systems are trained with a dataset that has been annotated by humans; in the case of NER, the annotations would reflect the entity type labels that the trained pipleline uses (e.g. "PERSON", "ORG", "GPE" etc.). Training the machine learning system allows it to create a statistical model - that is, a generalized theory - to inform predictions when encountering novel, unannotated datasets.
 
 Needless to say, the composition of the training dataset has a tremendous influence on what entities the NER tool is able to recognize. We will return to the relationship between training data and bias in "[Behind the Interface](behind.html)."
 
