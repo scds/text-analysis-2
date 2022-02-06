@@ -13,6 +13,8 @@ Although SpaCy does a fairly reliable job of recognizing named entities, it fall
 
 Although we can expect - and tolerate - a small margin of error as implied by an accuracy score of 0.90 for the *en_core_web_trf* language model, there are steps we can take in our script to fine-tune our results. 
 
+<div style="max-width:1140px"><div style="position:relative;padding-bottom:56.228070175439%"><iframe id="kmsembed-1_g71shs33" width="1140" height="641" src="https://www.macvideo.ca/embed/secure/iframe/entryId/1_g71shs33/uiConfId/39241881" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div></div>
+
 ## Restoring stop words
 
 Stop words, as mentioned earlier in "[How Does NER Work?](ner.html)", are commonly occurring words that SpaCy ignores when recognizing named entities the `Doc` object. 
