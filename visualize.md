@@ -58,7 +58,9 @@ DisplaCy will start up a simple web server on your local machine to produce a vi
 > Alternatively: if you wish to try the displaCy server, before running the script you will need to "free up" the localhost address so that the console can make use of it. You can stop the AirPlay Receiver process by going to System Preferences \> Sharing and uncheck "AirPlay Receiver" for as long as you need the displaCy server. Turn the AirPlay Receiver back on when you are done (if you use AirPlay). 
 > ![](assets/img/5000-error) 
 
-Instead of running the whole script, we will just run parts of it by selecting the relevant lines of code and using the shortcut key `F9`. Make sure to import displaCy (`from spacy import displacy`) before asking it to create a server (`displacy.serve(doc, style='ent')`)! Wait until the console returns:
+Instead of running the whole script, we will again just run parts of it by selecting the relevant lines of code and using the shortcut key `F9`. Remember to run the code that imports displaCy (`from spacy import displacy`) before asking it to create a server (`displacy.serve(doc, style='ent')`) or you will get an error message. 
+
+Wait until the console returns:
 
 > Using the 'ent' visualizer
 > 
@@ -76,7 +78,7 @@ You should now have a web page with the contents of the "wollstonecraft.txt" doc
 
 ## Interpreting the results
 
-Some of the named entity labels may be obvious - such as PERSON - but others are more cryptic. If you would like to see the full list of entities that SpaCy recognizes, type the following command in the console:
+Some of the named entity labels may be obvious - such as PERSON - but others are more esoteric. If you would like to see the full list of entities that SpaCy recognizes, type the following command in the console:
 
 ```
 print(nlp.pipe_labels['ner'])
@@ -110,11 +112,11 @@ In reviewing your results, you will likely notice some errors - named entities t
 
 ## Stopping the displaCy server
 
-The server that displaCy creates will continue to run until we stop the process in the console. To stop the command, use the small square icon at the top right of the console - which will be red when a command is running - or from Spyder's menu area: Consoles > Interrupt kernel.
+The server that displaCy creates will continue to run until we stop the process in the console. To stop the command, use the small square icon at the top right of the console - which will be red when a command is running - or choose "Interrupt kernel" from the IPython console menu, or from Spyder's menu area: Consoles > Interrupt kernel.
 
 ![](assets/img/console-stop.png)
 
-**IMPORTANT:** remember to stop the server process in the console when you are done with it by interrupting the kernel (choose "Interrupt kernel" from the IPython console menu). You will not be able to type any other commands in the active console while the console is running the server, though you can open a new console in Spyer (`Ctrl` / `cmd` + `T`) if you want to perform another task concurrently. 
+**IMPORTANT:** remember to stop the server process in the console when you are done with it by interrupting the kernel. You will not be able to type any other commands in the active console while the console is running the server, though you can open a new console in Spyer (`Ctrl` / `cmd` + `T`) if you want to perform another task concurrently. 
 
 ## Outputting displaCy visualizations to HTML and SVG
 
