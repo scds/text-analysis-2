@@ -73,19 +73,13 @@ The English transformer pipeline, *en_core_web_trf*, has the highest accuracy sc
 
 <hr />
 
-**1.3.** To install the model, type the command below into the console:
-
-```
-python -m spacy download en_core_web_trf
-```
-
-If the above command returns an error, you can alternatively install the model directly using the link to it from GitHub:
+**1.3.** To install the model, type the command below into the console, which installs the model using the link to it from GitHub:
 
 ```
 pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.2.0/en_core_web_trf-3.2.0-py3-none-any.whl
 ```
 
-At the time of authoring - January 2022 - the *en_core_web_trf* model was in version 3.2.0, which is reflected in the GitHub URL. Verify that it is the most recent version by referring to the documentation on SpaCy's website.
+At the time of authoring - February 2022 - the *en_core_web_trf* model was in version 3.2.0, which is reflected in the GitHub URL. Verify that it is the most recent version by referring to the documentation on SpaCy's website.
 
 The "RELEASE DETAILS" link will take you to the GitHub repository for the model, where you can download the more recent data from the "Assets" area of the repository.
 
