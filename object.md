@@ -13,7 +13,7 @@ SpaCy takes an object-oriented approach to NLP instead of treating text as strin
 
 ## Set up the environment
 
-**2.1.** Before we start working with SpaCy, we will first save the Python script in Spyder (File > Save or `Ctrl` / `cmd` + `S`). Spyder will choose a default location which you can change if you would like to keep your Python scripts in an easier-to-locate spot. Going forward, Spyder will continue to save any new files to the folder you choose. You can choose your own name for the Python script, but we will refer to it as "ner.py" for consistency.
+**2.1.** Before we start working with SpaCy, we will first save the Python script in Spyder (File > Save or Save as... - also: `Ctrl` / `cmd` + `S`). Spyder will choose a default location which you can change if you would like to keep your Python scripts in an easier-to-locate spot. Going forward, Spyder will continue to save any new files to the folder you choose. You can choose your own name for the Python script, but we will refer to it as "ner.py" for consistency.
 
 **IMPORTANT**: Move the "wollstonecraft.txt" file and any other text files you may be working with to the same directory (folder) as the Python script you are creating. While not a best practice from a file management standpoint, it simplifies having to specify the file path in our script for the purposes of the lesson.
 
@@ -29,7 +29,7 @@ Although we have installed the SpaCy library, we need to let Python know to call
 # Import SpaCy library
 import spacy
 
-# Instantiate NLP pipeline object
+# Instantiate NLP pipeline
 nlp = spacy.load('en_core_web_trf')
 ```
 
@@ -56,7 +56,9 @@ If you would like to work with your own documents, simply change the `filename` 
 
 <hr />
 
-**2.4.** Run the script (`F5`) and note the results in the console. Nothing much will happen but let us have a look at the top-right pane in Spyder that we have been ignoring thus far. Select the "Variable Explorer" tab and notice that we have three variable names and associated values: "doc," "filename" and "ner_text" that we created by running the script.
+**2.4.** Run the script (`F5`) and note the results in the console. It will likely take a few minutes to run through the entire document, so grab yourself a tea! 
+
+Nothing much will seem to have happened in the console but head over to the top-right pane in Spyder that we have been ignoring thus far. Select the "Variable Explorer" tab and notice that we have three variable names and associated values: "doc," "filename" and "ner_text" that we created by running the script.
 
 ![](assets/img/spyder-variables.png)
 
@@ -66,7 +68,7 @@ If you would like to work with your own documents, simply change the `filename` 
 
 Checking the status of our variables lets us know that we have successfully connected to our document, as evidenced by the values of the `filename` and `ner_text` variables, and that we have a *Doc* object, `doc`, to work with.
 
-**IMPORTANT:** Restarting the console kernel will remove all the variables from the Variable Explorer, meaning that you can no longer work with them. If you have restarted the kernel and need to work with any of the variables (e.g. `doc`), run the script to create them again.
+**IMPORTANT:** Restarting the console kernel will remove all the variables from the Variable Explorer, meaning that you can no longer work with them. If you have restarted the kernel and need to work with any of the variables (e.g. `doc`), run the full script (`F5`) to create them again.
 
 <hr />
 
@@ -79,7 +81,9 @@ for ent in doc.ents:
 ```
 ![](assets/img/spacy-ents.png)
 
-When running the code in the console, be patient! It will likely take a few minutes for your results to appear but they will evenutally print out in the console. You should have a long list of named entities. The code above helps us to interpret the rest of the line:
+Rather than running the full script (`F5`), we will instead simply select the lines of code we just created and run them using the shortcut key `F9` instead. The console should return a long list of named entities much faster than in the previous step, because the *Doc* object has already been created and exists as a variable in the Variable Explorer (`doc`). 
+
+The code above helps us to interpret the rest of the line in the console:
 
 * The name of the entity (`ent.text`)
 * The character number where the named entity starts, relative to all the characters in the document (`ent.start_char`)
@@ -89,7 +93,7 @@ When running the code in the console, be patient! It will likely take a few minu
 
 ![](assets/img/ner-results.png)
 
-You can, of course, omit some of the values from your `print` request if you would like to speed up the process.
+You can, of course, omit some of the values from your `print` request to limit the output to details of interest only.
 
 We have printed the named entities from the "wollstonecraft.txt" document, but the output is not particularly user-friendly. Our next step is to visualize the entities in the context of the document.
 
