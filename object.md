@@ -9,7 +9,7 @@ nav_order: 3
 
 SpaCy takes an object-oriented approach to NLP instead of treating text as strings the way NLTK does. With Spacy, the *Doc* object contains a sequence of *Token* objects. The *Language* class is a text processing pipeline that contains resources like a shared vocabulary and the various workflow components, and is used to create the *Doc* object from text (usually via the `nlp` variable). The *Doc* object is what we work with when we ask SpaCy to return candidates for named entities (`ents`), as an example. We will come across these concepts as we write our Python script. 
 
-\[video: creating the doc object]
+<div style="max-width:1140px"><div style="position:relative;padding-bottom:56.228070175439%"><iframe id="kmsembed-1_qtyo5bak" width="1140" height="641" src="https://www.macvideo.ca/embed/secure/iframe/entryId/1_qtyo5bak/uiConfId/39241881" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div></div>
 
 ## Set up the environment
 
