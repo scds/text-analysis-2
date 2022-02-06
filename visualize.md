@@ -49,13 +49,20 @@ displacy.serve(doc, style='ent')
 
 DisplaCy will start up a simple web server on your local machine to produce a visualization that you can access through your web browser.
 
-After running the script (`F5`), wait until the console returns:
+> ***MacOS Monterey Users***
+> 
+> In the Monterey version of the MacOS (12+), the 5000 port to which displaCy serves is used by the AirPlay receiver. You can opt to skip to step 3.4 to produce a file with the same contents that served to the web browser.  
+> 
+> Alternatively: if you wish to try the displaCy server, before running the script you will need to "free up" the localhost address so that the console can make use of it. You can stop the AirPlay Receiver process by going to System Preferences \> Sharing and uncheck "AirPlay Receiver" for as long as you need the displaCy server. Turn the AirPlay Receiver back on when you are done (if you use AirPlay). 
+> ![](assets/img/5000-error) 
+
+Instead of running the whole script, we will just run parts of it by selecting the relevant lines of code and using the shortcut key `F9`. Make sure to import displaCy (`from spacy import displacy`) before asking it to create a server (`displacy.serve(doc, style='ent')`)! Wait until the console returns:
 
 > Using the 'ent' visualizer
 > 
 > Serving on http://0.0.0.0:5000 ...
 
-Because SpaCy has to process the entire `Doc` object, it might take a few minutes for the message to appear! When the server is ready, open a web browser and go to the following URL:
+When the server is ready, open a web browser and go to the following URL:
 
 ```
 http://localhost:5000/
