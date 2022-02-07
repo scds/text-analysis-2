@@ -13,11 +13,14 @@ We have an overall sense of the named entities in our document - but which ones 
 
 ## Counting named entities
 
-**4.1.** The `collections` module is built in to Python, so we do not need to install it as we did with SpaCy. We do, however, need to let Python know that we want to use it. Underneath `from spacy import displacy`, write:
+**4.1.** The `collections` module is built in to Python, so we do not need to install it as we did with SpaCy. We do, however, need to let Python know that we want to use it. Above `from spacy import displacy` in our script, write:
 
 ```
+# Import Counter to count named entities
 from collections import Counter
 ```
+
+![](assets/img/import-counter.png)
 
 <hr />
 
@@ -33,7 +36,7 @@ Again, we can comment out the code from the previous step where we created an HT
 
 ![](assets/img/spacy-key.png)
 
-Run the script (`F5`), which will return the 15 most frequently occurring entities as well as the entity type label. You can adjust the number of entities by changing the argument (value) of `.most_common()`.
+Run just the lines of code we wrote in steps 4.1 & 4.2 with `F9`, which will return the 15 most frequently occurring entities as well as the entity type label. You can adjust the number of entities by changing the argument (value) of `.most_common()`.
 
 ![](assets/img/key-results.png)
 
@@ -72,10 +75,8 @@ If you are using the Anaconda environment as the launchpad for Spyder, Matplotli
 **4.4.** As with `collections` module, we will import Matplotlib with our other import statements at the beginning of the script:
 
 ```
-import spacy
+# Import matplotlib.pyplot to create bar graph
 import matplotlib.pyplot as plt
-from spacy import displacy
-from collections import Counter
 ```
 
 ![](assets/img/import-full.png)
@@ -90,7 +91,7 @@ entities = [ent.text for ent in doc.ents]
 labels, values = zip(*(Counter(entities).most_common(10)))
 ```
 
-The code above creates a variable of the list type called `entities` that we are assigning to the labels and values of a bar chart, respectively.
+The code above creates a variable of the list type called `entities` that we are assigning to the labels and values of a bar chart, respectively. The labels will be the text of the entity (i.e. the entity name) and values will be the counts.
 
 <hr />
 
@@ -105,7 +106,7 @@ plt.show()
 
 ![](assets/img/matplotlib-plot.png)
 
-Run the script - as usual, it will take some time! When the console has processed your script, the plot will appear in the "Plots" tab within the same pane as the Variable Explorer. The labels are quite tiny for the purpose, ironically, of being able to read them more easily by avoiding overlap. We can refer back to "entities" in the Variable Explorer if any of them are unclear.
+Select and run the new lines of code with `F9` - again, first running the matplotlib `import` statement. When the console has processed your script, the plot will appear in the "Plots" tab within the same pane as the Variable Explorer. The labels are quite tiny for the purpose, ironically, of being able to read them more easily by avoiding overlap. We can refer back to "entities" in the Variable Explorer if any of them are unclear.
 
 ![Screenshot of Variable Explorer pane showing the contextual menu for "label"](assets/img/label-values.png)
 
@@ -122,8 +123,6 @@ The plot output is unlikely to win any visualization beauty contests but useful 
 ## Try it with your own data
 
 Thanks to several Python libraries, we have a script that identifies and visualizes named entities, counts them and plots the most frequently occurring terms in about 50 lines of code - spaces included. Working through the code step by step, you should now have an idea of what each part of the script does, so that you can uncomment the code you wish to use and run the full script with your own data. Try it out!
-
-![](assets/img/script-full.png)
 
 <br />
 Next --> [Fine-tuning SpaCy's NLP Pipeline](tuning.html)
