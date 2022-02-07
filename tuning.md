@@ -63,7 +63,6 @@ It can take some experimentation to arrive at the correct pattern to capture the
 
 ```
 import spacy
-from spacy import displacy
 
 # Instantiate NLP pipeline
 nlp = spacy.load('en_core_web_trf')
@@ -130,9 +129,6 @@ Earlier, we used triple quotes to comment out multiple lines of code. When we as
 # Print named entities     
 for ent in doc.ents:    
     print(ent.text, ent.start_char, ent.end_char, ent.label_, spacy.explain(ent.label_))
-
-# Create a visualization of entities in context  
-displacy.serve(doc, style='ent')
 ```
 
 ![](assets/img/entity-ruler.png)
