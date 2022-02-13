@@ -10,7 +10,7 @@ nav_order: 5
 
 ## Dominant Datasets
 
-As we have already  in the lesson, there are numerous in which natural language processing can be . is the training dataset used in machine learning to recognize patterns that will be applied to .
+As we have already  in the lesson, there are numerous in which natural language processing can be . is the training dataset used in machine learning to recognize patterns that will be applied to . For example, choices in how to label data, what data is included 
 
 For example, 
 
@@ -23,7 +23,7 @@ Benjamin does not , and stresses that there are sites of resistance to the new J
 
 The importance of working together with communities who are impacted  and their data sovereignty. 
 
-Initiatives like the Corpus of Regional African American Language (CORAAL) project, which  point to possibilit
+Initiatives like the [Corpus of Regional African American Language (CORAAL)](https://oraal.uoregon.edu/coraal) project, which  point to possibilities
 
 ## Algorithmic Opacity
 
