@@ -6,7 +6,9 @@ nav_order: 2
 
 # Workshop preparation 
 
-Preparation for this tutorial consists of two steps: [Getting the data](#get-the-data) and [Getting the software](#get-the-software). Follow the steps below. 
+Preparation for this tutorial consists of two steps: [Getting the data](#get-the-data) and [Getting the software](#get-the-software). Please follow the steps below before beginning the lesson.
+
+<hr />
   
 ## 1. Get the data
 
@@ -20,6 +22,8 @@ The document we will be working with in the lesson is "[Letters Written During a
 
 Alternatively, you can download [a copy of the same document](assets/wollstonecraft.txt) with the preamble and the license terms removed.
 
+<hr />
+
 ## 2.  Get the software
 
 This workshop uses the [Python programming language](https://www.python.org/), and the [SpaCy](https://spacy.io/) natural language processing library for Python. We will be working with Python through the Spyder integrated development environment (IDE) to access tools that will make our tasks easier. Although Spyder can be downloaded as a standalone application, we are going to use the Anaconda platform to simplify some of the set-up tasks so that we can get up and running quickly.
@@ -32,6 +36,8 @@ The Anaconda platform contains numerous other software applications used in rese
 
 Please contact the [Sherman Centre](mailto:scds@mcmaster.ca) if you have any difficulties downloading or opening the software.
 
+<hr />
+
 ### Software versions
 
 For the lesson as it is currently written, the software versions are as follows:
@@ -42,6 +48,8 @@ For the lesson as it is currently written, the software versions are as follows:
 
 **Spyder:** 5.1.5
 
+<hr />
+
 ## 3. Assemble your own corpus (optional)
 
 In advance of the lesson, we also recommend that you assemble a collection of documents to work with for the *Try it with your data* sections. We will use the text  provided above to practice the techniques demonstrated in the lesson but each dataset brings its own unique features. Even if you are not going through the lesson with a specific project in mind, having a different corpus to experiment with will help to reinforce the concepts and enrich your knowledge of the topic.
@@ -50,4 +58,4 @@ If you have not already gone through your corpus to get a sense of what errors i
 
 
 <br />
-Next --> [Named Entity Recognition](instructions.html) (hands-on lesson)
+Next --> Start the [Named Entity Recognition](instructions.html) Lesson
