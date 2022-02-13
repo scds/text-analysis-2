@@ -17,6 +17,18 @@ The trade-off here is that you have less control over what occurs in the workflo
 
 <div style="max-width:1140px"><div style="position:relative;padding-bottom:56.228070175439%"><iframe id="kmsembed-1_xae3bics" width="1140" height="641" src="https://www.macvideo.ca/embed/secure/iframe/entryId/1_xae3bics/uiConfId/39241881" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div></div>
 
+<hr />
+
+Jump to step >
+
+[1.1. Update packages used during SpaCy install]
+
+[1.2. Install SpaCy]
+
+[1.3. Install SpaCy's trained language model (pipeline)]
+
+<hr />
+
 ## Installing the SpaCy library
 
 We will begin by installing the SpaCy library so that we can use it in our script. Start by opening Anaconda and then launching Spyder, the integrated development environment - or IDE - that we will use to write our Python script.
@@ -31,7 +43,9 @@ We will learn about other features and shortcut keys in Spyder as we work throug
 
 <hr />
 
-**1.1.** First, SpaCy's documentation recommends to update the Python packages that will help to install SpaCy. If you have downloaded Anaconda very recently, the packages may already be up-to-date - but it is good to check! 
+### **1.1.** Update packages used during SpaCy install
+
+First, SpaCy's documentation recommends to update the Python packages that will help to install SpaCy. If you have downloaded Anaconda very recently, the packages may already be up-to-date - but it is good to check! 
 
 In the console area of Spyder - i.e. the bottom-right pane in the default Spyder layout - type:
 
@@ -49,7 +63,9 @@ You may be prompted to restart the kernel - or refresh the console by erasing pr
 
 <hr />
 
-**1.2.** With our environment updated, we will now install SpaCy by typing into the console as we did in the previous step:
+### **1.2.** Install SpaCy 
+
+With our environment updated, we will now install SpaCy by typing into the console as we did in the previous step:
 
 ```
 pip install -U spacy
@@ -73,7 +89,9 @@ The English transformer pipeline, *en_core_web_trf*, has the highest accuracy sc
 
 <hr />
 
-**1.3.** To install the model, type the command below into the console, which installs the model using the link to it from GitHub:
+### **1.3.** Install SpaCy's trained language model (pipeline)
+
+To install the model, type the command below into the console, which installs the model using the link to it from GitHub:
 
 ```
 pip install https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.2.0/en_core_web_trf-3.2.0-py3-none-any.whl
@@ -92,4 +110,5 @@ If you need to update the model version, copy the link to the newer wheel file (
 We are now ready to use SpaCy in our script! You only have to install SpaCy and the language model once, but if you take a break from your NER analysis and want to use SpaCy again after a while, we recommend that you update your version of SpaCy and the language model following the same instructions.
 
 <br />
+
 Next --> [Create the *Doc* object](object.html)
