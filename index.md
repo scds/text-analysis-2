@@ -24,7 +24,7 @@ By the end of the workshop, participants will be able to:
 
 ## Workshop duration
 
-Going through the workshop from start to finish (and you need not necessarily!) will take you approximately 2 hours to complete, depending on your familiarity with Python and whether you are working with your own dataset alongside the sample corpus.
+Going through the workshop from start to finish (and you need not necessarily!) will take you approximately 1 hour to complete, depending on your familiarity with Python and whether you are working with your own dataset alongside the sample corpus.
 
 <br />
 Next --> [Preparation](preparation.html)
