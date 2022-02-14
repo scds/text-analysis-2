@@ -27,7 +27,7 @@ Jump to step >
 
 <hr />
 
-## **2.1.** Set up the environment
+### **2.1.** Set up the environment
 
 Before we start working with SpaCy, we will first save the Python script in Spyder (File > Save or Save as... - also: `Ctrl` / `cmd` + `S`). Spyder will choose a default location which you can change if you would like to keep your Python scripts in an easier-to-locate spot. Going forward, Spyder will continue to save any new files to the folder you choose. You can choose your own name for the Python script, but we will refer to it as "ner.py" for consistency.
 
@@ -39,7 +39,7 @@ Before we start working with SpaCy, we will first save the Python script in Spyd
 
 Although we have installed the SpaCy library, we need to let Python know to call it up for our use. Just as downloading all Python packages would result in a giant file size, so too would loading them all at once slow Python down to an imperceptible crawl.
 
-## **2.2.** Import SpaCy and the English transformer pipeline
+### **2.2.** Import SpaCy and the English transformer pipeline
 
 Copy and paste the code below in the ner.py file, or write it out for additional practice. If you receive an error when you run the code in the console, compare what is in your file with the code below - programming languages are very particular about syntax and spelling!
 
@@ -55,7 +55,7 @@ nlp = spacy.load('en_core_web_trf')
 
 <hr />
 
-## **2.3.** Pass the text through SpaCy's NLP pipeline
+### **2.3.** Pass the text through SpaCy's NLP pipeline
 
 Next, we create the *Doc* object as described earlier from the contents of the "wollstonecraft.txt" file and assign it to the `doc` variable.
 
@@ -76,7 +76,7 @@ If you would like to work with your own documents, simply change the `filename` 
 
 <hr />
 
-## **2.4.** Run the script to create the *Doc* object
+### **2.4.** Run the script to create the *Doc* object
 
 Run the script (`F5`) and note the results in the console. It will likely take a few minutes to run through the entire document, so grab yourself a tea! 
 
@@ -94,7 +94,7 @@ Checking the status of our variables lets us know that we have successfully conn
 
 <hr />
 
-## **2.5.** Perform named entity recognition
+### **2.5.** Perform named entity recognition
 
 We are now ready to return the results of the named entity recognition task:
 
