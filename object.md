@@ -11,19 +11,37 @@ SpaCy takes an object-oriented approach to NLP instead of treating text as strin
 
 <div style="max-width:1140px"><div style="position:relative;padding-bottom:56.228070175439%"><iframe id="kmsembed-1_qtyo5bak" width="1140" height="641" src="https://www.macvideo.ca/embed/secure/iframe/entryId/1_qtyo5bak/uiConfId/39241881" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div></div>
 
-## Set up the environment
+<hr />
 
-**2.1.** Before we start working with SpaCy, we will first save the Python script in Spyder (File > Save or Save as... - also: `Ctrl` / `cmd` + `S`). Spyder will choose a default location which you can change if you would like to keep your Python scripts in an easier-to-locate spot. Going forward, Spyder will continue to save any new files to the folder you choose. You can choose your own name for the Python script, but we will refer to it as "ner.py" for consistency.
+Jump to step >
+
+[2.1. Set up the environment]
+
+[2.2. Import SpaCy and the English transformer pipeline]
+
+[2.3. Pass the text through SpaCy's NLP pipeline]
+
+[2.4.  Run the script to create the *Doc* object]
+
+[2.5. Perform named entity recognition]
+
+<hr />
+
+## **2.1.** Set up the environment
+
+Before we start working with SpaCy, we will first save the Python script in Spyder (File > Save or Save as... - also: `Ctrl` / `cmd` + `S`). Spyder will choose a default location which you can change if you would like to keep your Python scripts in an easier-to-locate spot. Going forward, Spyder will continue to save any new files to the folder you choose. You can choose your own name for the Python script, but we will refer to it as "ner.py" for consistency.
 
 **IMPORTANT**: Move the "wollstonecraft.txt" file and any other text files you may be working with to the same directory (folder) as the Python script you are creating. While not a best practice from a file management standpoint, it simplifies having to specify the file path in our script for the purposes of the lesson.
+
+<hr />
 
 ## Process the text
 
 Although we have installed the SpaCy library, we need to let Python know to call it up for our use. Just as downloading all Python packages would result in a giant file size, so too would loading them all at once slow Python down to an imperceptible crawl.
 
-<hr />
+## **2.2.** Import SpaCy and the English transformer pipeline
 
-**2.2.** Copy and paste the code below in the ner.py file, or write it out for additional practice. If you receive an error when you run the code in the console, compare what is in your file with the code below - programming languages are very particular about syntax and spelling!
+Copy and paste the code below in the ner.py file, or write it out for additional practice. If you receive an error when you run the code in the console, compare what is in your file with the code below - programming languages are very particular about syntax and spelling!
 
 ```
 # Import SpaCy library
@@ -37,7 +55,9 @@ nlp = spacy.load('en_core_web_trf')
 
 <hr />
 
-**2.3.** Next, we create the *Doc* object as described earlier from the contents of the "wollstonecraft.txt" file and assign it to the `doc` variable.
+## **2.3.** Pass the text through SpaCy's NLP pipeline
+
+Next, we create the *Doc* object as described earlier from the contents of the "wollstonecraft.txt" file and assign it to the `doc` variable.
 
 ```
 # Assign the filename to a variable
@@ -56,7 +76,9 @@ If you would like to work with your own documents, simply change the `filename` 
 
 <hr />
 
-**2.4.** Run the script (`F5`) and note the results in the console. It will likely take a few minutes to run through the entire document, so grab yourself a tea! 
+## **2.4.** Run the script to create the *Doc* object
+
+Run the script (`F5`) and note the results in the console. It will likely take a few minutes to run through the entire document, so grab yourself a tea! 
 
 Nothing much will seem to have happened in the console but head over to the top-right pane in Spyder that we have been ignoring thus far. Select the "Variable Explorer" tab and notice that we have three variable names and associated values: "doc," "filename" and "ner_text" that we created by running the script.
 
@@ -72,7 +94,9 @@ Checking the status of our variables lets us know that we have successfully conn
 
 <hr />
 
-**2.5.** We are now ready to run named entity recognition:
+## **2.5.** Perform named entity recognition
+
+We are now ready to return the results of the named entity recognition task:
 
 ```
 # Run NER on the Doc object
@@ -83,7 +107,9 @@ for ent in doc.ents:
 
 Rather than running the full script (`F5`), we will instead simply select the lines of code we just created and run them using the shortcut key `F9` instead. The console should return a long list of named entities much faster than in the previous step, because the *Doc* object has already been created and exists as a variable in the Variable Explorer (`doc`). 
 
-The code above helps us to interpret the rest of the line in the console:
+In fact, we are not performing named entity recognition with the command above; named entity recognition was done as the text was passed through Spacy's NLP pipeline, which is why it takes so long to create the *Doc* object. We are merely printing the named entity data (`ents`) from the `doc` variable.
+
+The code helps us to interpret the rest of the line in the console:
 
 * The name of the entity (`ent.text`)
 * The character number where the named entity starts, relative to all the characters in the document (`ent.start_char`)
