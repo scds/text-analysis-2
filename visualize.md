@@ -15,15 +15,15 @@ To render the output from SpaCy in a form more amenable to analysis, we will use
 
 Jump to step >
 
-[3.1. Comment out previous code]
+[3.1. Comment out previous code](#31-comment-out-previous-code)
 
-[3.2. Import displaCy]
+[3.2. Import displaCy](#32-import-displacy)
 
-[3.3. Visualize named entities in a web browser]
+[3.3. Visualize named entities in a web browser](#33-visualize-named-entities-in-a-web-browser)
 
-[3.4. Send displaCy's visualization to an HTML file]
+[3.4. Send displaCy's visualization to an HTML file](#34-send-displacys-visualization-to-a-static-html-file)
 
-[3.5. Create a dependency visualization with displaCy (optional)]
+[3.5. Create a dependency visualization with displaCy (optional)](#35-create-a-dependency-visualization-with-displacy-optional)
 
 ## Using the displaCy server
 
@@ -46,7 +46,7 @@ for ent in doc.ents:
 
 <hr />
 
-## **3.2.** Import displaCy
+### **3.2.** Import displaCy
 
 Next, we will import displaCy just as we did with the SpaCy library. Under our initial import statement, add `from space import displacy`:
 
@@ -159,7 +159,7 @@ Comment out or delete the previous `displacy.serve` code as we do not need the s
 
 ## Visualizing dependencies
 
-### **3.5. Create a dependency visualization with displaCy (optional)** 
+### **3.5.** Create a dependency visualization with displaCy (optional)
 
 To create a dependency visualization, simply substitute `'dep'` for `'ent'` in the style attribute:
 
