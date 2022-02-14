@@ -11,9 +11,29 @@ We have an overall sense of the named entities in our document - but which ones 
 
 <div style="max-width:1140px"><div style="position:relative;padding-bottom:56.228070175439%"><iframe id="kmsembed-1_lxxwr0sb" width="1140" height="641" src="https://www.macvideo.ca/embed/secure/iframe/entryId/1_lxxwr0sb/uiConfId/39241881" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div></div>
 
+<hr />
+
+Jump to step >
+
+[4.1. Import Python's Collections module]
+
+[4.2. Print most commonly occurring named entities]
+
+[4.3. Return results for a single entity type]
+
+[4.4. Import Matplotlib]
+
+[4.5. Assign entity values to variables for plotting]
+
+[4.6. Create a bar graph comparing the most common entities]
+
+<hr />
+
 ## Counting named entities
 
-**4.1.** The `collections` module is built in to Python, so we do not need to install it as we did with SpaCy. We do, however, need to let Python know that we want to use it. Above `from spacy import displacy` in our script, write:
+### **4.1.** Import Python's Collections module
+
+The `collections` module is built in to Python, so we do not need to install it as we did with SpaCy. We do, however, need to let Python know that we want to use it. Above `from spacy import displacy` in our script, write:
 
 ```
 # Import Counter to count named entities
@@ -24,7 +44,9 @@ from collections import Counter
 
 <hr />
 
-**4.2.** Then, at the end of the ner.py script:
+### **4.2.** Print most commonly occurring named entities
+
+Then, at the end of the ner.py script:
 
 ```
 # Return a list of named entities and print the 15 most commonly occurring values
@@ -42,7 +64,9 @@ Run just the lines of code we wrote in steps 4.1 & 4.2 with `F9`, which will ret
 
 <hr />
 
-**4.3.** You can also limit the scope of the count to a specific entity type - if you are only interested in persons mentioned, for example.
+### **4.3.** Return results for a single entity type 
+
+You can also limit the scope of the count to a specific entity type - if you are only interested in persons mentioned, for example.
 
 After `doc.ents`, add `if ent.label_ == 'PERSON'` to limit the results to named entities of the type 'PERSON' only. We will assign the returned values to the variable `persons` to more accurately reflect the output.
 
@@ -72,7 +96,9 @@ If you are using the Anaconda environment as the launchpad for Spyder, Matplotli
 
 <hr />
 
-**4.4.** As with `collections` module, we will import Matplotlib with our other import statements at the beginning of the script:
+### **4.4.** Import Matplotlib
+
+As with `collections` module, we will import Matplotlib with our other import statements at the beginning of the script:
 
 ```
 # Import matplotlib.pyplot to create bar graph
@@ -83,7 +109,9 @@ import matplotlib.pyplot as plt
 
 <hr />
 
-**4.5.** With Matplotlib imported as the shorthand variable `plt`, we will start to build out our visualization. The first step is to gather the data we are going to visualize. Here, we will return to our earlier statement about returning the most commonly occurring named entities (not just persons). To avoid crowding, we can limit the number of results to 10.
+### **4.5.** Assign entity values to variables for plotting
+
+With Matplotlib imported as the shorthand variable `plt`, we will start to build out our visualization. The first step is to gather the data we are going to visualize. Here, we will return to our earlier statement about returning the most commonly occurring named entities (not just persons). To avoid crowding, we can limit the number of results to 10.
 
 ```
 # Assign 10 most common named entities to variables "labels" and "values" for plotting
@@ -95,7 +123,9 @@ The code above creates a variable of the list type called `entities` that we are
 
 <hr />
 
-**4.5.** Next, we will plot the most common entities and their counts in a simple bar graph:
+### **4.6.** Create a bar graph comparing the most common entities 
+
+Next, we will plot the most common entities and their counts in a simple bar graph:
 
 ```
 # Plot the most common entities
