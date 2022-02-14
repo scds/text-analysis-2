@@ -15,6 +15,24 @@ Although we can expect - and tolerate - a small margin of error as implied by an
 
 <div style="max-width:1140px"><div style="position:relative;padding-bottom:56.228070175439%"><iframe id="kmsembed-1_g71shs33" width="1140" height="641" src="https://www.macvideo.ca/embed/secure/iframe/entryId/1_g71shs33/uiConfId/39241881" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div></div>
 
+<hr />
+
+Jump to step >
+
+[5.1. Remove stopwords from SpaCy's default list]
+
+[5.2. Create a new sample code script]
+
+[5.3. Add the *EntityRuler* to the NLP pipeline]
+
+[5.4. Specify named entities for SpaCy to recognize]
+
+[5.5. Create the *Doc* object with a text string]
+
+[5.6. Test the *EntityRuler* rules]
+
+<hr />
+
 ## Restoring stop words
 
 Stop words, as mentioned earlier in "[How Does NER Work?](ner.html)", are commonly occurring words that SpaCy ignores when recognizing named entities the `Doc` object. 
@@ -23,7 +41,9 @@ Stop words, as mentioned earlier in "[How Does NER Work?](ner.html)", are common
 
 <hr />
 
-**5.1.** You can remove stopword from SpaCy's list by including the code below in your ner.py script after the NLP pipeline is instantiated (ensure that you wrap the term in quotation marks to indicate a string literal, or text that is to be treated as text and not as code). Alternatively, type the code directly in the console if you have already run the ner.py script at least once, creating the `nlp` variable referred to in the command:
+### **5.1.** Remove stopwords from SpaCy's default list
+
+You can remove stopwords from SpaCy's list by including the code below in your ner.py script after the NLP pipeline is instantiated (ensure that you wrap the term in quotation marks to indicate a string literal, or text that is to be treated as text and not as code). Alternatively, type the code directly in the console if you have already run the ner.py script at least once, creating the `nlp` variable referred to in the command:
 
 ```
 nlp.Defaults.stop_words -= {"again", "anyhow"}
@@ -55,11 +75,11 @@ It can take some experimentation to arrive at the correct pattern to capture the
 
 <hr />
 
-**5.2** In Spyder, create and save a new Python file; the file should save to the same directory as the previous ner.py file.
+### **5.2** Create a new sample code script
 
-<hr />
+In Spyder, create and save a new Python file; the file should save to the same directory as the previous ner.py file.
 
-**5.3.** We will begin the script by importing the SpaCy library. As we will want to visualize our results, we will also need to call displaCy:   
+We will begin the script by importing the SpaCy library. As we will want to visualize our results, we will also need to call displaCy:   
 
 ```
 import spacy
@@ -70,7 +90,9 @@ nlp = spacy.load('en_core_web_trf')
 
 <hr />
 
-**5.4.** After importing SpaCy and instructing the NLP pipeline to use the *en_core_web_trf* language model, we will now invoke the entity ruler component:
+### **5.3.** Add the *EntityRuler* to the NLP pipeline
+
+After importing SpaCy and instructing the NLP pipeline to use the *en_core_web_trf* language model, we will now invoke the entity ruler component:
 
 ```
 # Add the EntityRuler component to the pipeline
@@ -79,7 +101,9 @@ ruler = nlp.add_pipe("entity_ruler")
 
 <hr />
 
-**5.5.** Next, we will create a rule to ask SpaCy to annotate a certain pattern of characters with an entity type label. In the visualization of the "wollstonecraft.txt" document, you likely noticed some missed entities. For example, "the Earl of Kingston" is not labelled as a person, or even as a place.
+### **5.4.** Specify named entities for SpaCy to recognize
+
+Next, we will create a rule to ask SpaCy to annotate a certain pattern of characters with an entity type label. In the visualization of the "wollstonecraft.txt" document, you likely noticed some missed entities. For example, "the Earl of Kingston" is not labelled as a person, or even as a place.
 
 ![](assets/img/ruler-before.png)
 
@@ -96,7 +120,9 @@ The "LOWER" attribute of the *Token* object contains the lowercase version of th
  
 <hr />
 
-**5.6.** Now that we have our pipeline fully set up, we can create the *Doc* object. In the ner.py script, we wrote code to open a text file whose contents we passed to the `doc` variable. In fact, SpaCy does not require text to come from a file - you can also assign a string of text to the *Doc* object.
+### **5.5.** Create the *Doc* object with a text string
+
+Now that we have our pipeline fully set up, we can create the *Doc* object. In the ner.py script, we wrote code to open a text file whose contents we passed to the `doc` variable. In fact, SpaCy does not require text to come from a file - you can also assign a string of text to the *Doc* object.
 
 ```
 # Create the Doc object by passing it through the text pipeline (nlp)
@@ -123,7 +149,9 @@ Earlier, we used triple quotes to comment out multiple lines of code. When we as
 
 <hr />
 
-**5.7.** Lastly, we will print the named entities within the paragraph and visualize them with the displaCy server to verify our work. We can reuse the code from our ner.py script:
+### **5.6.** Test the *EntityRuler* rules 
+
+Lastly, we will print the named entities within the paragraph to verify our work. We can reuse the code from our ner.py script:
 
 ```
 # Print named entities     
