@@ -15,23 +15,23 @@ We have an overall sense of the named entities in our document - but which ones 
 
 Jump to step >
 
-[4.1. Import Python's Collections module]
+[4.1. Import Python's `Collections` module](#41-import-pythons-collections-module)
 
-[4.2. Print most commonly occurring named entities]
+[4.2. Print most commonly occurring named entities](#42-print-most-commonly-occurring-named-entities)
 
-[4.3. Return results for a single entity type]
+[4.3. Return results for a single entity type](#43-return-results-for-a-single-entity-type)
 
-[4.4. Import Matplotlib]
+[4.4. Import Matplotlib](#44-import-matplotlib)
 
-[4.5. Assign entity values to variables for plotting]
+[4.5. Assign entity values to variables for plotting](#45-assign-entity-values-to-variables-for-plotting)
 
-[4.6. Create a bar graph comparing the most common entities]
+[4.6. Create a bar graph comparing the most common entities](#46-create-a-bar-graph-comparing-the-most-common-entities)
 
 <hr />
 
 ## Counting named entities
 
-### **4.1.** Import Python's Collections module
+### **4.1.** Import Python's `Collections` module
 
 The `collections` module is built in to Python, so we do not need to install it as we did with SpaCy. We do, however, need to let Python know that we want to use it. Above `from spacy import displacy` in our script, write:
 
