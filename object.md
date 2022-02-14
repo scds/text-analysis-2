@@ -15,15 +15,15 @@ SpaCy takes an object-oriented approach to NLP instead of treating text as strin
 
 Jump to step >
 
-[2.1. Set up the environment]
+[2.1. Set up the environment](#21-set-up-the-environment)
 
-[2.2. Import SpaCy and the English transformer pipeline]
+[2.2. Import SpaCy and the English transformer pipeline](#22-import-spacy-and-the-english-transformer-pipeline)
 
-[2.3. Pass the text through SpaCy's NLP pipeline]
+[2.3. Pass the text through SpaCy's NLP pipeline](#23-pass-the-text-through-spacys-nlp-pipeline)
 
-[2.4.  Run the script to create the *Doc* object]
+[2.4. Run the script to create the *Doc* object](#24-run-the-script-to-create-the-doc-object)
 
-[2.5. Perform named entity recognition]
+[2.5. Perform named entity recognition](#25-perform-named-entity-recognition)
 
 <hr />
 
