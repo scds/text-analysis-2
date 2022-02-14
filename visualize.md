@@ -11,13 +11,29 @@ To render the output from SpaCy in a form more amenable to analysis, we will use
 
 <div style="max-width:1140px"><div style="position:relative;padding-bottom:56.228070175439%"><iframe id="kmsembed-1_tkfgh74a" width="1140" height="641" src="https://www.macvideo.ca/embed/secure/iframe/entryId/1_tkfgh74a/uiConfId/39241881" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div></div>
 
+<hr />
+
+Jump to step >
+
+[3.1. Comment out previous code]
+
+[3.2. Import displaCy]
+
+[3.3. Visualize named entities in a web browser]
+
+[3.4. Send displaCy's visualization to an HTML file]
+
+[3.5. Create a dependency visualization with displaCy (optional)]
+
 ## Using the displaCy server
 
 DisplaCy uses JavaScript, SVG and CSS - web programming and design languages - to render visualizations of entities and dependencies in a web browser.
 
 <hr />
 
-**3.1.** To begin, we will comment out the code we previously wrote which printed entities to the console as we do not need it at the moment. You can precede each of the lines with the "#" symbol or you can wrap the three lines of code in triple-quotes as demonstrated in the example below. We are not *technically* commenting out the code but we are turning it into a string that Python will ignore. 
+### **3.1.** Comment out previous code
+
+To begin, we will comment out the code we previously wrote which printed entities to the console as we do not need it at the moment. You can precede each of the lines with the "#" symbol or you can wrap the three lines of code in triple-quotes as demonstrated in the example below. We are not *technically* commenting out the code but we are turning it into a string that Python will ignore. 
 
 ```
 """
@@ -30,7 +46,9 @@ for ent in doc.ents:
 
 <hr />
 
-**3.2.** Next, we will import displaCy just as we did with the SpaCy library. Under our initial import statement, add `from space import displacy`:
+## **3.2.** Import displaCy
+
+Next, we will import displaCy just as we did with the SpaCy library. Under our initial import statement, add `from space import displacy`:
 
 ```
 # Import SpaCy library
@@ -40,7 +58,9 @@ from spacy import displacy
 
 <hr />
 
-**3.3.** With displaCy imported, we can now make use of it to visualize named entities by adding the following lines of code to the end of our ner.py script:
+### **3.3.** Visualize named entities in a web browser
+
+With displaCy imported, we can now make use of it to visualize named entities by adding the following lines of code to the end of our ner.py script:
 
 ```
 # Create a visualization of entities in context
@@ -120,7 +140,9 @@ The server that displaCy creates will continue to run until we stop the process 
 
 ## Outputting displaCy visualizations to HTML and SVG
 
-**3.4.** Although using the displaCy server may suffice for exploratory data analysis, you may want to create a more permanent representation to present or easily refer to later. Adding the next few lines of code to the end of your ner.py script will create an HTML file called "wollstonecraft.html" in the same directory as your Python script. 
+### **3.4.** Send displaCy's visualization to a static HTML file
+
+Although using the displaCy server may suffice for exploratory data analysis, you may want to create a more permanent representation to present or easily refer to later. Adding the next few lines of code to the end of your ner.py script will create an HTML file called "wollstonecraft.html" in the same directory as your Python script. 
 
 ```
 # Render displaCy visualization as HTML output
@@ -137,7 +159,9 @@ Comment out or delete the previous `displacy.serve` code as we do not need the s
 
 ## Visualizing dependencies
 
-**3.5. (Optional)** To create a dependency visualization, simply substitute `'dep'` for `'ent'` in the style attribute:
+### **3.5. Create a dependency visualization with displaCy (optional)** 
+
+To create a dependency visualization, simply substitute `'dep'` for `'ent'` in the style attribute:
 
 ```
 html = displacy.render(doc, style='dep', page=True, minify=True)
