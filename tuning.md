@@ -19,17 +19,17 @@ Although we can expect - and tolerate - a small margin of error as implied by an
 
 Jump to step >
 
-[5.1. Remove stopwords from SpaCy's default list]
+[5.1. Remove stopwords from SpaCy's default list](#51-remove-stopwords-from-spacys-default-list)
 
-[5.2. Create a new sample code script]
+[5.2. Create a new practice code script](#52-create-a-new-practice-code-script)
 
-[5.3. Add the *EntityRuler* to the NLP pipeline]
+[5.3. Add the *EntityRuler* to the NLP pipeline](#53-add-the-entityruler-to-the-nlp-pipeline)
 
-[5.4. Specify named entities for SpaCy to recognize]
+[5.4. Specify named entities for SpaCy to recognize](#54-specify-named-entities-for-spacy-to-recognize)
 
-[5.5. Create the *Doc* object with a text string]
+[5.5. Create the *Doc* object with a sample text string](#55-create-the-doc-object-with-a-sample-text-string)
 
-[5.6. Test the *EntityRuler* rules]
+[5.6. Test the *EntityRuler* rules](#56-test-the-entityruler-rules)
 
 <hr />
 
@@ -75,7 +75,7 @@ It can take some experimentation to arrive at the correct pattern to capture the
 
 <hr />
 
-### **5.2** Create a new sample code script
+### **5.2** Create a new practice code script
 
 In Spyder, create and save a new Python file; the file should save to the same directory as the previous ner.py file.
 
@@ -120,7 +120,7 @@ The "LOWER" attribute of the *Token* object contains the lowercase version of th
  
 <hr />
 
-### **5.5.** Create the *Doc* object with a text string
+### **5.5.** Create the *Doc* object with a sample text string
 
 Now that we have our pipeline fully set up, we can create the *Doc* object. In the ner.py script, we wrote code to open a text file whose contents we passed to the `doc` variable. In fact, SpaCy does not require text to come from a file - you can also assign a string of text to the *Doc* object.
 
