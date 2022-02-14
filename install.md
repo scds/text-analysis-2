@@ -21,11 +21,11 @@ The trade-off here is that you have less control over what occurs in the workflo
 
 Jump to step >
 
-[1.1. Update packages used during SpaCy install]
+[1.1. Update packages used during SpaCy install](#11-update-packages-used-during-spacy-install)
 
-[1.2. Install SpaCy]
+[1.2. Install SpaCy](#12-install-spacy)
 
-[1.3. Install SpaCy's trained language model (pipeline)]
+[1.3. Install SpaCy's trained language model (pipeline)](#13-install-spacys-trained-language-model-pipeline)
 
 <hr />
 
