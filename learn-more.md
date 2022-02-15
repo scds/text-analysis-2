@@ -4,14 +4,27 @@ title: Learn More
 nav_order: 6
 ---
 
-<!-- Edit the content below for the workshop in question. Once you're ready to publish, remove the comment characters e.g. "<!--" at the start and end -->
+# Learn More
 
-<!--
+If you would like to take your learning further, we have provided some additional resources below:
 
-## More info and other tools
+## SpaCy
 
-- Tableau [free training videos](https://www.tableau.com/learn/training/20201)
-- LinkedIn Learning [Tableau training page](https://www.linkedin.com/learning/topics/tableau)
-- Data visualization design considerations for beginners: [Berkeley Library](https://guides.lib.berkeley.edu/data-visualization/design) | [University of Guelph Library](https://guides.lib.uoguelph.ca/c.php?g=700755&p=4976239)
+[SpaCy's documentation](https://spacy.io/usage) is extensive as it is designed for use by application developers. A few resources in particular that you may find helpful:
 
--->
+* [Advanced NLP with Spacy](https://course.spacy.io/en/) course, which goes over more complex tasks in SpaCy like training a language model
+* [Linguistic Features Guide](https://spacy.io/usage/linguistic-features), if you would like to explore other natural language processing tasks you can perform with SpaCy, such as part-of-speech tagging
+* [Training Models](https://spacy.io/usage/training), if you've decided to go for it!
+
+SpaCy's developers, Explosion AI, also have [a YouTube channel](https://www.youtube.com/c/ExplosionAI) with numerous videos around the design and use of SpaCy.
+
+## Natural Language Toolkit (NLTK)
+
+NLTK, briefly referenced in "[Other NER Tools](tools.html)," is another natural language processing library for Python that is widely used within the academic Digital Scholarship community. If you are using Spyder through the Anaconda environment, NLTK will already be installed for you.
+
+* [Read more about NLTK](https://www.nltk.org/), including installation instructions and numerous [examples of use](https://www.nltk.org/howto.html) for different NLP tasks
+* Tutorials from the [Programming Historian](https://programminghistorian.org/) on performing [sentiment analysis](https://programminghistorian.org/en/lessons/sentiment-analysis) (Z. Saldaña) and [stylometric analysis](https://programminghistorian.org/en/lessons/introduction-to-stylometry-with-python) (F. Laramée) with NLTK
+* [Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit](https://www.nltk.org/book/), a free online textbook on NLTK that is actively maintained
+
+
+
