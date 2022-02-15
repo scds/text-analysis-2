@@ -29,7 +29,7 @@ Note: the screenshots are taken on a Windows OS while the video is filmed on a M
 
 ## Lesson prerequisites
 
-While a familiarity with basic programming concepts - such as variables, comments and the importance of correct syntax - will be an asset in completing the lesson, the videos explain the code in greater depth if you are newer to programming, or a bit rusty. If you have experience writing programs in Python, you will be able to move through the lesson quite quickly - you may wish to go directly to the [finished script](https://github.com/scds/text-analysis-2/blob/main/assets/ner.py).
+While a familiarity with basic programming concepts - such as variables, comments and the importance of correct syntax - will be an asset in completing the lesson, the videos explain the code in greater depth if you are newer to programming or a bit rusty. If you have experience writing programs in Python, you will be able to move through the lesson quite quickly - you may wish to go directly to the [finished script](https://github.com/scds/text-analysis-2/blob/main/assets/ner.py).
 
 
 <br />
