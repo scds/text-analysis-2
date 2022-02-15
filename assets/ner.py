@@ -9,7 +9,7 @@ workshop series on computational text analysis:
 * Passes it through SpaCy's transformer English pipeline
 * Identifies named entities in the document, visualizes them in the context of the document and returns the most frequently used entities
 
-Cobbled together by Devon Mordell (mordelld@mcmaster.ca).
+Kludged together by Devon Mordell (mordelld@mcmaster.ca).
 
 """
 
