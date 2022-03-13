@@ -8,6 +8,10 @@ nav_order: 6
 
 If you would like to take your learning further, we have provided some additional resources below:
 
+## Developing your NER expertise
+
+The current workshop is intended to provide an accessible introduction to the concepts and practices of named entity recognition. Once you are comfortable with the basics, William Mattingly's [Introduction to Named Entity Recognition](https://ner.pythonhumanities.com/intro.html) is a great next step in reinforcing and building on what you have learned. Mattingly's lesson explores how to train your own model in SpaCy and takes you through an actual use case. 
+
 ## SpaCy
 
 [SpaCy's documentation](https://spacy.io/usage) is extensive as it is designed for use by application developers. A few resources in particular that you may find helpful:
