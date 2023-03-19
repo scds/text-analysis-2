@@ -32,6 +32,8 @@ This workshop uses the [Python programming language](https://www.python.org/), a
 
 The Anaconda platform contains numerous other software applications used in research computing, such as Jupiter Notebook and RStudio, that you may also want to explore. Its size on disk, however, is quite large as a result - about 3GB. 
 
+**If you are unable to download and/or install Anaconda,** you can alternatively follow along in the [Jupyter notebook version of the workshop](https://colab.research.google.com/drive/1a2tt05ijDuSrNDQ0G-9XfsYijONt8Eeg?usp=sharing) in Google Colab. You will need to upload the Wollstonecraft.txt file to the file area in Google Colab as described in [Jay Brodeur's "Basic Text Prep with Python" Colab notebook](https://colab.research.google.com/drive/1ynkHM3WOQUGj9mj8R060p3BYqI6ThbAj), step 3. Run the code cell by cell using the "play" button at the left of each cell.
+
 **If you have programming experience with Python,** you are welcome to use the IDE you are familiar with as an alternative. The lesson instructions use `pip` to install SpaCy. 
 
 Please contact the [Sherman Centre](mailto:scds@mcmaster.ca) if you have any difficulties downloading or opening the software.
