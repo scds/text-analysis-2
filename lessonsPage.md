@@ -1,9 +1,10 @@
 ---
 layout: default
-title: Lesson
-nav_order: 3
+title: Lessons
+nav_order: 4
 has_children: true
 has_toc: false
+blank: true
 ---
 
 # Named Entity Recognition

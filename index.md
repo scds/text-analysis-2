@@ -1,11 +1,16 @@
 ---
 layout: home
 title: Home
-description: SCDS Do More with Digital Scholarship workshop series
 nav_order: 1
+has_toc: false
+
+# Set this to "false" if you removed 'previousOffering.md'
+has_children: false
 ---
 
-# Welcome to Identifying Proper Nouns with Named Entity Recognition
+<img src="assets/img/titleSlide.png" alt="Workshop Title Slide" width="100%">
+
+# Identifying Proper Nouns with Named Entity Recognition
 
 ***Identifying Proper Nouns with Named Entity Recognition* belongs to a series of workshops on computational text analysis.**
 
@@ -15,20 +20,14 @@ The natural language processing technique of named entity recognition (NER) iden
 
 In this workshop, we will explore how NER works and apply it to a text corpus using a Python library named SpaCy.
 
-## Learning outcomes
+## Prerequisites
+* Basic computer literacy (creating and working with different file types, navigating interfaces, using shortcut keys and so on)
 
-By the end of the workshop, participants will be able to:
+## Learning Objectives
+By the end of the workshop, you will be able to:
 * Describe how NER identifies possible entities within a text corpus
 * Identify potential names, places and organizations using NER tools
 * Explain why different NER tools may produce different results from each other
 
-## Workshop duration
-
+## Duration
 Going through the workshop from start to finish (and you need not necessarily!) will take you approximately 1 hour to complete, depending on your familiarity with Python and whether you are working with your own dataset alongside the sample corpus.
-
-<br />
-Next --> [Preparation](preparation.html)
-
-
-
-

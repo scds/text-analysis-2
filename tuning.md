@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Fine-tuning SpaCy
-parent: Lesson
+title: Fine-tuning SpaCy (Optional)
+parent: Lessons
 nav_order: 6
 ---
 

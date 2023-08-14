@@ -1,54 +1,46 @@
 ---
 layout: default
 title: Identifying Key Terms
-parent: Lesson
+parent: Lessons
 nav_order: 5
 ---
 
-# 4 .Identifying Key Terms
+# 4. Identifying Key Terms
 
 We have an overall sense of the named entities in our document - but which ones appear most frequently? We can draw from an existing Python module, `collections`, to count our named entities.
 
-<div style="max-width:1140px"><div style="position:relative;padding-bottom:56.228070175439%"><iframe id="kmsembed-1_lxxwr0sb" width="1140" height="641" src="https://www.macvideo.ca/embed/secure/iframe/entryId/1_lxxwr0sb/uiConfId/39241881" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player" style="position:absolute;top:0;left:0;width:100%;height:100%"></iframe></div></div>
+<iframe id="kmsembed-1_lxxwr0sb" width="100%" height="416" src="https://www.macvideo.ca/embed/secure/iframe/entryId/1_lxxwr0sb/uiConfId/39241881" class="kmsembed" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" referrerPolicy="no-referrer-when-downgrade" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
 
-<hr />
-
-Jump to step >
-
-[4.1. Import Python's `Collections` module](#41-import-pythons-collections-module)
-
-[4.2. Print most commonly occurring named entities](#42-print-most-commonly-occurring-named-entities)
-
-[4.3. Return results for a single entity type](#43-return-results-for-a-single-entity-type)
-
-[4.4. Import Matplotlib](#44-import-matplotlib)
-
-[4.5. Assign entity values to variables for plotting](#45-assign-entity-values-to-variables-for-plotting)
-
-[4.6. Create a bar graph comparing the most common entities](#46-create-a-bar-graph-comparing-the-most-common-entities)
-
-<hr />
+<div markdown="1" style="border: 1px solid #7a003c; border-radius: 6px; margin-bottom: 1em; padding: 0.5em 1em 0; margin-top: 1em;" class="toc">
+<summary style="cursor:default; display: block; border-bottom: 1px solid #302d36; margin-bottom: 0.5em">
+  Jump to step >
+</summary>
+- [4.1. Import Python's 'Collections' module](#step1)
+- [4.2. Print most commonly occurring named entities](#step2)
+- [4.3. Return results for a single entity type](#step3)
+- [4.4. Import Matplotlib](#step4)
+- [4.5. Assign entity values to variables for plotting](#step5)
+- [4.6. Create a bar graph comparing the most common entities](#step6)
+</div>
 
 ## Counting named entities
 
-### **4.1.** Import Python's `Collections` module
+### 4.1. Import Python's 'Collections' module {#step1}
 
 The `collections` module is built in to Python, so we do not need to install it as we did with SpaCy. We do, however, need to let Python know that we want to use it. Above `from spacy import displacy` in our script, write:
 
-```
+```py
 # Import Counter to count named entities
 from collections import Counter
 ```
 
-![](assets/img/import-counter.png)
+<img src="assets/img/key/import-counter.png" width="100%">
 
-<hr />
-
-### **4.2.** Print most commonly occurring named entities
+### **4.2.** Print most commonly occurring named entities {#step2}
 
 Then, at the end of the ner.py script:
 
-```
+```py
 # Return a list of named entities and print the 15 most commonly occurring values
 entities = [(ent.text, ent.label_) for ent in doc.ents]
 print(Counter(entities).most_common(15))
@@ -56,35 +48,34 @@ print(Counter(entities).most_common(15))
 
 Again, we can comment out the code from the previous step where we created an HTML file visualizing named entities for the time being. In Spyder, you may receive a code analysis warning next to `from spacy import displacy` because you are no longer using displaCy at all in the script. You can ignore it!
 
-![](assets/img/spacy-key.png)
+<img src="assets/img/key/spacy-key.png" width="100%">
 
 Run just the lines of code we wrote in steps 4.1 & 4.2 with `F9`, which will return the 15 most frequently occurring entities as well as the entity type label. You can adjust the number of entities by changing the argument (value) of `.most_common()`.
 
-![](assets/img/key-results.png)
+<img src="assets/img/key/key-results.png" width="100%">
 
-<hr />
-
-### **4.3.** Return results for a single entity type 
+### 4.3. Return results for a single entity type {#step3}
 
 You can also limit the scope of the count to a specific entity type - if you are only interested in persons mentioned, for example.
 
 After `doc.ents`, add `if ent.label_ == 'PERSON'` to limit the results to named entities of the type 'PERSON' only. We will assign the returned values to the variable `persons` to more accurately reflect the output.
 
-```
+```py
 # Return a list of persons and print the 15 most commonly occurring values
 persons = [(ent.text, ent.label_) for ent in doc.ents if ent.label_ == 'PERSON']    
 print(Counter(persons).most_common(15))
 ```
 
-![](assets/img/key-persons.png)
+<img src="assets/img/key/key-persons.png" width="100%">
 
 The results returned should be limited to the names of persons; including `ent.label_` in our statement allows us to verify our results (as well as getting a peek at the aformentioned "CUDA device" error):
 
-![Screenshot of console showing entities with "PERSONS" entity type, e.g. (('Mary Wollstonecraft', 'PERSON'), 18)](assets/img/persons-results.png)
+<img src="assets/img/key/persons-results.png" width="100%" alt="Screenshot of console showing entities with 'PERSONS' entity type, e.g. (('Mary Wollstonecraft', 'PERSON'), 18)">
 
 Using the entity types from "[Interpreting the results](https://scds.github.io/text-analysis-2/visualize.html#interpreting-the-results)" on the previous page, you can change the value of `ent.label_` to return a list of events or places, alternatively.
 
-> ***Caveat: on the limits of counting in computational text analysis***
+{: .note -title}
+> Caveat: on the limits of counting in computational text analysis
 > 
 > *Although counting terms in a corpus can point us towards avenues for further investigation, there are numerous points within the text analysis workflow that may lead to inaccurate counts: OCR errors, variations in spelling, mis- or missed classification by SpaCy and so on. Not to mention that we do not know the manner in which terms are used without verifying the context of their appearance. All to say: counts can be unreliable, so delve deeper into the corpus before making any claims about the text!*
 
@@ -96,7 +87,7 @@ If you are using the Anaconda environment as the launchpad for Spyder, Matplotli
 
 <hr />
 
-### **4.4.** Import Matplotlib
+### **4.4.** Import Matplotlib {#step4}
 
 As with `collections` module, we will import Matplotlib with our other import statements at the beginning of the script:
 
@@ -109,7 +100,7 @@ import matplotlib.pyplot as plt
 
 <hr />
 
-### **4.5.** Assign entity values to variables for plotting
+### **4.5.** Assign entity values to variables for plotting {#step5}
 
 With Matplotlib imported as the shorthand variable `plt`, we will start to build out our visualization. The first step is to gather the data we are going to visualize. Here, we will return to our earlier statement about returning the most commonly occurring named entities (not just persons). To avoid crowding, we can limit the number of results to 10.
 
@@ -123,7 +114,7 @@ The code above creates a variable of the list type called `entities` that we are
 
 <hr />
 
-### **4.6.** Create a bar graph comparing the most common entities 
+### **4.6.** Create a bar graph comparing the most common entities {#step6}
 
 Next, we will plot the most common entities and their counts in a simple bar graph:
 

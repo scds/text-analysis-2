@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Other NER Tools
-nav_order: 4
+nav_order: 5
 ---
 
 # Other Tools for Named Entity Recognition
@@ -50,7 +50,3 @@ There are numerous [output options](https://stanfordnlp.github.io/CoreNLP/cmdlin
 ## Natural Language Toolkit (NLTK) - Python
 
 NLTK has a classifier component trained to recognize named entities. You can [read more about it](https://www.nltk.org/book/ch07.html#tab-ne-types) in the NLTK documentation. The function, `nltk.ne_chunk()`, outputs text with annotations.
-
-
-<br />
-Next --> [Behind the Interface: Training Data Bias](behind.html)
