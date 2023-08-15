@@ -31,3 +31,7 @@ By the end of the workshop, you will be able to:
 
 ## Duration
 Going through the workshop from start to finish (and you need not necessarily!) will take you approximately 1 hour to complete, depending on your familiarity with Python and whether you are working with your own dataset alongside the sample corpus.
+
+## Land Acknowledgement
+
+We’d like to acknowledge that McMaster University sits on the Territories of the Mississauga and Haudenosaunee Nations, and within the lands protected by the Dish With One Spoon wampum agreement.

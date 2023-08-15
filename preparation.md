@@ -16,7 +16,7 @@ The document we will be working with in the lesson is "[Letters Written During a
    - copy the text (ctrl / cmd + A to select all, then ctrl / cmd + C to copy) and paste into a text file (create one using Notepad on a Windows OS or TextEdit on a Mac and then ctrl / cmd + V to paste) and save with a .txt extension as wollstonecraft.txt.
 3. Delete the preamble and license terms added by Project Gutenberg from the text file to exclude them from the analysis.
 
-Alternatively, you can download <a href="assets/wollstonecraft.txt" download>a copy of the error list</a> with the preamble and the license terms removed.
+Alternatively, you can download <a href="data/wollstonecraft.txt" download>a copy of the error list</a> with the preamble and the license terms removed.
 
 ## 2. Install Anaconda
 
@@ -41,8 +41,6 @@ For the lesson as it is currently written, the software versions are as follows:
 **Spyder:** 5.1.5
 
 If the versions differ from your own, that's ok! There's no need to track down older versions of the software to complete the lesson. The steps should remain the same, but there might be some small variations that can be attributed to using a later version (with the exception of your Python version, which *might* break the code; Python 3.9 will be supported until October 2025).
-
-<hr />
 
 ## 3. Assemble your own corpus (optional)
 

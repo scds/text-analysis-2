@@ -12,11 +12,11 @@ Named entity recognition (NER) identifies features of interest - such as names o
 
 The best way to grasp NER is to try it out! Visit the [CoreNLP demo](https://corenlp.run/) and paste a short passage of text containing at least some proper names into the "-- Text to annotate --" field (the maximum number of characters in the online demo is 5000).
 
-<img src="assets/img/overview/coreNLP-interface.png" width="100%">
+<img src="assets/img/overview/coreNLP-interface.png" width="100%" style="border: 2px solid black">
 
 Remove the "parts-of-speech" and "dependency parse" options from the "-- Annotations --" field to limit our results to named entities and submit the text for analysis.
 
-<img src="assets/img/overview/coreNLP-ner.png" width="100%">
+<img src="assets/img/overview/coreNLP-ner.png" width="100%" style="border: 2px solid black">
 
 In the screenshot above, CoreNLP has annotated the text from a [Wikipedia article](https://en.wikipedia.org/wiki/Mary_Ann_Shadd) on the American-Canadian anti-slavery activist Mary Ann Shadd, tagging words (tokens) with labels like "Person," "Country," "Organization," and "Date." 
 
@@ -57,7 +57,7 @@ There are two approaches to the task of determining the lemma of a word in NLP:
 {: .important-title }
 > ***Trade offs: Speed Vs. Accuracy***
 >
-> As we get more familiar with the NLP workflow, we will encounter various concessions that developers make in designing their tools to increase the speed or maximize the efficiency of processes. For example, with respect to tokenization: we know that a space does not necessarily indicate the beginning of a new word but creating a comprehensive list of exceptions in various languages would be very time-consuming. Indeed, in the "[Pre-Processing Digitized Texts](https://scds.github.io/text-analysis-1/output.html)" lesson, we discussed setting the bar for accuracy relatively low because it would take too long to correct every error.
+> As we get more familiar with the NLP workflow, we will encounter various concessions that developers make in designing their tools to increase the speed or maximize the efficiency of processes. For example, with respect to tokenization: we know that a space does not necessarily indicate the beginning of a new word but creating a comprehensive list of exceptions in various languages would be very time-consuming. Indeed, in the "[Pre-Processing Digitized Texts](https://scds.github.io/text-analysis-1/lessons/output.html)" lesson, we discussed setting the bar for accuracy relatively low because it would take too long to correct every error.
 >
 > Accuracy is not the only feature traded off for speed or efficiency in the design of computer programs and algorithms. The Python library we will be using for the lesson, SpaCy, limits the choices we have in how to approach the NLP workflow by making decisions for us in order to optimize for speed. Most troubling is the privileging of efficiency over equity - whether it is done consciously or unconsciously - by not involving minoritized groups in the design process, by assuming that the user shares the dominant subject position of the developer, by not taking the time to assemble fully representative training datasets and so on.   
 

@@ -40,5 +40,3 @@ One of the challenges to engaging in a critique of machine learning processes is
 
 -->
 
-<br />
-Next --> [Learn More](learn-more.html) 
