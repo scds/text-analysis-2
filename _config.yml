@@ -1,7 +1,7 @@
 title: Identifying Proper Nouns with Named Entity Recognition # *** Enter workshop title here 
 github_repo_url: "https://scds.github.io/text-analysis-2/" # *** Enter workshop URL (in github pages) here
 gh_edit_repository: "https://github.com/scds/text-analysis-2/" # *** Enter the github URL for your repo
-ga_tracking: "" # *** This needs to be set up in Google Analytics once you know the website URL (ask Jay to do this). Then the tracking code needs to be taken from Google Analytics and pasted here.  
+ga_tracking: "G-NP42FWDZ4X" # *** This needs to be set up in Google Analytics once you know the website URL (ask Jay to do this). Then the tracking code needs to be taken from Google Analytics and pasted here.  
 
 # DMDS Settings
 subtitle: "This workshop is part of the SCDS Do More with Digital Scholarship series."
