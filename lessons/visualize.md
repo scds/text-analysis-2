@@ -136,7 +136,7 @@ The server that displaCy creates will continue to run until we stop the process 
 <img src="../assets/img/visualize/console-stop.png" width="100%">
 
 {: .important }
-Remember to stop the server process in the console when you are done with it by interrupting the kernel. You will not be able to type any other commands in the active console while the console is running the server, though you can open a new console in Spyer (`Ctrl` / `cmd` + `T`) if you want to perform another task concurrently. 
+> Remember to stop the server process in the console when you are done with it by interrupting the kernel. You will not be able to type any other commands in the active console while the console is running the server, though you can open a new console in Spyer (`Ctrl` / `cmd` + `T`) if you want to perform another task concurrently. 
 
 ## Outputting displaCy visualizations to HTML and SVG
 

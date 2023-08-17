@@ -55,7 +55,7 @@ There are two approaches to the task of determining the lemma of a word in NLP:
 * lemmatization, which uses a vocabulary and performs morphological analysis to more accurately identify the lemma.
 
 {: .important-title }
-> ***Trade offs: Speed Vs. Accuracy***
+> Trade offs: Speed Vs. Accuracy
 >
 > As we get more familiar with the NLP workflow, we will encounter various concessions that developers make in designing their tools to increase the speed or maximize the efficiency of processes. For example, with respect to tokenization: we know that a space does not necessarily indicate the beginning of a new word but creating a comprehensive list of exceptions in various languages would be very time-consuming. Indeed, in the "[Pre-Processing Digitized Texts](https://scds.github.io/text-analysis-1/lessons/output.html)" lesson, we discussed setting the bar for accuracy relatively low because it would take too long to correct every error.
 >

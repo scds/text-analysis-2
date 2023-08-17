@@ -85,7 +85,7 @@ Nothing much will seem to have happened in the console but head over to the top-
 Checking the status of our variables lets us know that we have successfully connected to our document, as evidenced by the values of the `filename` and `ner_text` variables, and that we have a *Doc* object, `doc`, to work with.
 
 {: .important}
-Restarting the console kernel will remove all the variables from the Variable Explorer, meaning that you can no longer work with them. If you have restarted the kernel and need to work with any of the variables (e.g. `doc`), run the full script (`F5`) to create them again.
+> Restarting the console kernel will remove all the variables from the Variable Explorer, meaning that you can no longer work with them. If you have restarted the kernel and need to work with any of the variables (e.g. `doc`), run the full script (`F5`) to create them again.
 
 ### 2.5. Perform named entity recognition {#step5}
 
