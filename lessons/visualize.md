@@ -66,7 +66,7 @@ displacy.serve(doc, style='ent')
 
 DisplaCy will start up a simple web server on your local machine to produce a visualization that you can access through your web browser.
 
-{: .important-title }
+{: .warning-title }
 > MacOS Monterey Usersx
 > 
 > In the Monterey version of the MacOS (12+), the 5000 port to which displaCy serves is used by the AirPlay receiver. You can opt to skip to step 3.4 to produce a file with the same contents that served to the web browser.  

@@ -77,7 +77,7 @@ The results returned should be limited to the names of persons; including `ent.l
 
 Using the entity types from "[Interpreting the results](visualize#interpreting-the-results)" on the previous page, you can change the value of `ent.label_` to return a list of events or places, alternatively.
 
-{: .note-title}
+{: .warning-title}
 > Caveat: on the limits of counting in computational text analysis
 > 
 > Although counting terms in a corpus can point us towards avenues for further investigation, there are numerous points within the text analysis workflow that may lead to inaccurate counts: OCR errors, variations in spelling, mis- or missed classification by SpaCy and so on. Not to mention that we do not know the manner in which terms are used without verifying the context of their appearance. All to say: counts can be unreliable, so delve deeper into the corpus before making any claims about the text!
