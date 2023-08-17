@@ -48,7 +48,7 @@ import spacy
 nlp = spacy.load('en_core_web_trf')
 ```
 
-<img src="../assets/img/object/spacy-nlp.png" width="100%">
+<img src="../assets/img/object/spacy-nlp.png" width="100%" alt="the code shown above written in the 'ner.py' file">
 
 ### 2.3. Pass the text through SpaCy's NLP pipeline {#step3}
 
@@ -65,7 +65,7 @@ ner_text = open(filename).read()
 doc = nlp(ner_text)
 ```
 
-<img src="../assets/img/object/spacy-doc.png" width="100%">
+<img src="../assets/img/object/spacy-doc.png" width="100%" alt="the same code shown above written in the 'ner.py' file">
 
 If you would like to work with your own documents, simply change the `filename` variable to the name of your text file (verifying that it is also in the same folder as the ner.py script).
 
@@ -75,7 +75,7 @@ Run the script (`F5`) and note the results in the console. It will likely take a
 
 Nothing much will seem to have happened in the console but head over to the top-right pane in Spyder that we have been ignoring thus far. Select the "Variable Explorer" tab and notice that we have three variable names and associated values: "doc," "filename" and "ner_text" that we created by running the script.
 
-<img src="../assets/img/object/spyder-variables.png" width="100%">
+<img src="../assets/img/object/spyder-variables.png" width="100%" alt="the 'variable explorer' showcasing the doc, filename, and ner_text variables">
 
 {: .warning-title}
 > Known issue
@@ -97,7 +97,7 @@ for ent in doc.ents:
     print(ent.text, ent.start_char, ent.end_char, ent.label_, spacy.explain(ent.label_))
 ```
 
-<img src="../assets/img/object/spacy-ents.png" width="100%">
+<img src="../assets/img/object/spacy-ents.png" width="100%" alt="screenshot of the entire code in 'ner.py'">
 
 Rather than running the full script (`F5`), we will instead simply select the lines of code we just created and run them using the shortcut key `F9` instead. The console should return a long list of named entities much faster than in the previous step, because the *Doc* object has already been created and exists as a variable in the Variable Explorer (`doc`). 
 
@@ -111,7 +111,7 @@ The code helps us to interpret the rest of the line in the console:
 * The entity type code, based on the  (`ent.label_`)
 * An explanation of the entity type code (`spacy.explain(ent.label_)`)
 
-<img src="../assets/img/object/ner-results.png" width="100%">
+<img src="../assets/img/object/ner-results.png" width="100%" alt="the console outputting the data gathered from NER">
 
 You can, of course, omit some of the values from your `print` request to limit the output to details of interest only.
 

@@ -33,11 +33,11 @@ The following video demonstrates each of the steps outlined below in text.
 
 We will begin by installing the SpaCy library so that we can use it in our script. Start by opening Anaconda and then launching Spyder, the integrated development environment - or IDE - that we will use to write our Python script.
 
-<img src="../assets/img/install/anaconda.png" width="100%" style="border: 2px solid black">
+<img src="../assets/img/install/anaconda.png" width="100%" style="border: 2px solid black" alt="arrow pointing to the install button for the Spyder IDE in Anaconda Navigator">
 
 In the default layout for Spyder, the editor is on the left-side pane - we will write our script in the editor. On the bottom right-side pane is the console, which is where we will execute our script, type individual commands and get feedback from Spyder on what is happening with our script.
 
-<img src="../assets/img/install/spyder-interface.png" width="100%">
+<img src="../assets/img/install/spyder-interface.png" width="100%" alt="a screenshot of the Spyder IDE at launch with text highlighting the different sections of the IDE. 'write code here (editor)' on the left hand side, and 'run code here (console)' on the bottom right hand side">
 
 We will learn about other features and shortcut keys in Spyder as we work through the lesson. If you would like a more comprehensive introduction to Spyder, [the developer's documentation](https://docs.spyder-ide.org/current/quickstart.html) is a great place to start.
 
@@ -51,13 +51,13 @@ In the console area of Spyder - i.e. the bottom-right pane in the default Spyder
 pip install -U pip setuptools wheel
 ```
 
-<img src="../assets/img/install/spyder-pack.png" width="100%">
+<img src="../assets/img/install/spyder-pack.png" width="100%" alt="the interactive python console with 'pip install -U pip setuptools wheel' inputted">
 
 Hit `Enter` (Windows) / `Return` (Mac) to run the command. Spyder will let you know in the console the status of your update command. 
 
 You may be prompted to restart the kernel - or refresh the console by erasing previous variables and data - which you can do by going to the "Options" menu at the top-right of the console or using `Ctrl` / `cmd` and `.` as the shortcut keys.
 
-<img src="../assets/img/install/spyder-restart.png" width="100%">
+<img src="../assets/img/install/spyder-restart.png" width="100%" alt="the interactive python console, with an extra menu open showing how to restart the kernel">
 
 ### 1.2. Install SpaCy {#step2}
 

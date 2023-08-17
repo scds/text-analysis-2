@@ -61,7 +61,7 @@ With displaCy imported, we can now make use of it to visualize named entities by
 displacy.serve(doc, style='ent')
 ```
 
-<img src="../assets/img/visualize/spacy-displacy.png" width="100%">
+<img src="../assets/img/visualize/spacy-displacy.png" width="100%" alt="entire code so far written in 'ner.py'">
 
 
 DisplaCy will start up a simple web server on your local machine to produce a visualization that you can access through your web browser.
@@ -73,7 +73,7 @@ DisplaCy will start up a simple web server on your local machine to produce a vi
 > 
 > Alternatively: if you wish to try the displaCy server, before running the script you will need to "free up" the localhost address so that the console can make use of it. You can stop the AirPlay Receiver process by going to System Preferences \> Sharing and uncheck "AirPlay Receiver" for as long as you need the displaCy server. Turn the AirPlay Receiver back on when you are done (if you use AirPlay). 
 >
-> <img src="../assets/img/visualize/5000-error.png" width="75%" style="border-radius: 20px">
+> <img src="../assets/img/visualize/5000-error.png" width="75%" style="border-radius: 20px" alt="the sharing window on MacOS with AirPlay Reciever settings selected">
 
 Instead of running the whole script, we will again just run parts of it by selecting the relevant lines of code and using the shortcut key `F9`. Remember to run the code that imports displaCy (`from spacy import displacy`) before asking it to create a server (`displacy.serve(doc, style='ent')`) or you will get an error message. 
 
@@ -93,7 +93,7 @@ http://localhost:5000/
 
 You should now have a web page with the contents of the "wollstonecraft.txt" document marked up to show named entities.
 
-<img src="../assets/img/visualize/displacy-server.png" width="100%" style="border: 2px solid black">
+<img src="../assets/img/visualize/displacy-server.png" width="100%" style="border: 2px solid black" alt="localhost page opened up in a browser, showing the analyzed text with the named entities highlighted and labeled">
 
 ## Interpreting the results
 
@@ -133,7 +133,7 @@ In reviewing your results, you will likely notice some errors - named entities t
 
 The server that displaCy creates will continue to run until we stop the process in the console. To stop the command, use the small square icon at the top right of the console - which will be red when a command is running - or choose "Interrupt kernel" from the IPython console menu, or from Spyder's menu area: Consoles > Interrupt kernel.
 
-<img src="../assets/img/visualize/console-stop.png" width="100%">
+<img src="../assets/img/visualize/console-stop.png" width="100%" alt="the console with an arrow pointing to the button that stops the localhost server">
 
 {: .important }
 > Remember to stop the server process in the console when you are done with it by interrupting the kernel. You will not be able to type any other commands in the active console while the console is running the server, though you can open a new console in Spyer (`Ctrl` / `cmd` + `T`) if you want to perform another task concurrently. 
@@ -155,7 +155,7 @@ f.close()
 ```
 Comment out or delete the previous `displacy.serve` code as we do not need the server to create the file.
 
-<img src="../assets/img/visualize/displacy-html.png" width="100%">
+<img src="../assets/img/visualize/displacy-html.png" width="100%" alt="a screenshot of the entire code made so far in the 'ner.py' file">
 
 ## Visualizing dependencies
 

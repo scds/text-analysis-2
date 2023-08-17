@@ -9,7 +9,7 @@ nav_order: 5
 
 Although SpaCy does a fairly reliable job of recognizing named entities, it falls short of being perfect. In fact, the first few lines of the "wollstonecraft.txt" document, when visualized with displaCy, contain several obvious named entities - "SWEDEN", "MARY WOLLSTONECRAFT", "CASSEL & COMPANY Limited" and so on - that SpaCy has overlooked. And yet, SpaCy is able to recognize those same entities at other points in the document. 
 
-<img src="../assets/img/tuning/ner-misses.png" width="80%" style="border: 2px solid black">
+<img src="../assets/img/tuning/ner-misses.png" width="80%" style="border: 2px solid black" alt="annotated text with missing terms - sweden not being highlighted as a location">
 
 Although we can expect - and tolerate - a small margin of error as implied by an accuracy score of 0.90 for the *en_core_web_trf* language model, there are steps we can take in our script to fine-tune our results. 
 
@@ -58,7 +58,7 @@ print(stopwords)
 
 When you print the list of stop words, you should now observe that the terms in the curly brackets no longer appear - for example, "again" in the example pictured below.
 
-<img src="../assets/img/tuning/console-stopwords.png" width="100%">
+<img src="../assets/img/tuning/console-stopwords.png" width="75%" alt="console log of all the stopwords being printed out -- words like 'while', 'should', and 'get'">
 
 ## Adding entity names
 
@@ -94,7 +94,7 @@ ruler = nlp.add_pipe("entity_ruler")
 
 Next, we will create a rule to ask SpaCy to annotate a certain pattern of characters with an entity type label. In the visualization of the "wollstonecraft.txt" document, you likely noticed some missed entities. For example, "the Earl of Kingston" is not labelled as a person, or even as a place.
 
-<img src="../assets/img/tuning/ruler-before.png" width="80%" style="border: 2px solid black">
+<img src="../assets/img/tuning/ruler-before.png" width="80%" style="border: 2px solid black" alt="another annotated text where the 'earl of kingston' is not labelled as a person nor a place">
 
 For further practice, we will also annotate "Continent" with the location entity type. SpaCy's *EntityRuler* component accepts strings ("Kingston") and tokens ("LOWER": "continent") as patterns.
 
@@ -144,17 +144,17 @@ for ent in doc.ents:
     print(ent.text, ent.start_char, ent.end_char, ent.label_, spacy.explain(ent.label_))
 ```
 
-<img src="../assets/img/tuning/entity-ruler.png" width="100%">
+<img src="../assets/img/tuning/entity-ruler.png" width="100%" alt="screenshot of the entire code written in 'entity-ruler.py'">
 
 Save the file and run the code (`F5`) to test out the script. The named entities should appear fairly quickly in the console, and remember to visit <http://localhost:5000/> in your web browser to access the visualization.
 
-<img src="../assets/img/tuning/ruler-console.png" width="100%">
+<img src="../assets/img/tuning/ruler-console.png" width="100%" alt="screenshot of the console with the output of all named entities and some additional data">
 
-<img src="../assets/img/tuning/ruler-viz.png" width="80%" style="border: 2px solid black">
+<img src="../assets/img/tuning/ruler-viz.png" width="80%" style="border: 2px solid black" alt="the annotated text shown in an html file in the localhost server">
 
 If the script worked, we should see the results in both the console output and the displaCy visualization in our web brower. Having had success with a small sample of the text that we could run very rapidly, we can now write it into our longer ner.py script.
 
-<img src="../assets/img/tuning/ruler-full.png" width="100%">
+<img src="../assets/img/tuning/ruler-full.png" width="100%" alt="copying the fine-tuning code to the main 'ner.py' code file">
 
 If you have a large number of named entities to manually label, you can create the patterns in a JSON file and upload to the NLP pipeline [as described in SpaCy's documentation](https://spacy.io/usage/rule-based-matching#entityruler-files). You may find, though, that you reach a point of diminishing returns wherein it might be less time-consuming to train your own NER pipeline component (see below).
 

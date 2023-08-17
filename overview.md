@@ -12,11 +12,11 @@ Named entity recognition (NER) identifies features of interest - such as names o
 
 The best way to grasp NER is to try it out! Visit the [CoreNLP demo](https://corenlp.run/) and paste a short passage of text containing at least some proper names into the "-- Text to annotate --" field (the maximum number of characters in the online demo is 5000).
 
-<img src="assets/img/overview/coreNLP-interface.png" width="100%" style="border: 2px solid black">
+<img src="assets/img/overview/coreNLP-interface.png" width="100%" style="border: 2px solid black" alt="homepage of the CoreNLP demo website">
 
 Remove the "parts-of-speech" and "dependency parse" options from the "-- Annotations --" field to limit our results to named entities and submit the text for analysis.
 
-<img src="assets/img/overview/coreNLP-ner.png" width="100%" style="border: 2px solid black">
+<img src="assets/img/overview/coreNLP-ner.png" width="100%" style="border: 2px solid black" alt="CoreNLP's annotation of a Wikipedia article on the American-Canadian anti-slavery activist Mary Ann Shadd">
 
 In the screenshot above, CoreNLP has annotated the text from a [Wikipedia article](https://en.wikipedia.org/wiki/Mary_Ann_Shadd) on the American-Canadian anti-slavery activist Mary Ann Shadd, tagging words (tokens) with labels like "Person," "Country," "Organization," and "Date." 
 
@@ -65,7 +65,7 @@ There are two approaches to the task of determining the lemma of a word in NLP:
 
 Examining individual tokens in isolation can obscure the contextual information from surrounding words that would be critical to their meaning. Dependency parsing infers syntactic relationships between tokens, which can then help other components of the NLP workflow; for example, tokenization would undermine the semantic connection between “New” and “York.” In addition to merging tokens that have been over-segmented, dependency parsing annotates the language data with lexical information in a tree-like structure.
 
-<img src="assets/img/overview/spacy-dependency.png" width="100%">
+<img src="assets/img/overview/spacy-dependency.png" width="100%" alt="a SpaCy dependency parsing visualization of the first sentence of the intro in the wollstonecraft.txt document">
 
 The above screenshot shows the first sentence of the introduction in the "wollstonecraft.txt" document visualized with SpaCy's dependency parsing visualizer. The curved line that connects the tokens "Mary" and "Wollstonecraft" and annotated with the "compound" label indicates that SpaCy has re-associated the two tokens which comprise a proper name. The dependency parsing visualizer has also identified relationships like prepositional modifiers ("prep") and the objects of preposition ("pobj"), sometimes nesting the labelled connecting lines to express more complex dependencies. A discussion of the grammatical rules that the dependency parser uses is outside of the scope of the workshop but you can refer to the [full list of the labels](https://github.com/clir/clearnlp-guidelines/blob/master/md/specifications/dependency_labels.md) for more information.
 

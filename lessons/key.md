@@ -37,7 +37,7 @@ The `collections` module is built in to Python, so we do not need to install it 
 from collections import Counter
 ```
 
-<img src="../assets/img/key/import-counter.png" width="100%">
+<img src="../assets/img/key/import-counter.png" width="100%" alt="screenshot of where to put the 'from collections import Counter' line of code, above the 'import spacy' line">
 
 ### **4.2.** Print most commonly occurring named entities {#step2}
 
@@ -51,11 +51,11 @@ print(Counter(entities).most_common(15))
 
 Again, we can comment out the code from the previous step where we created an HTML file visualizing named entities for the time being. In Spyder, you may receive a code analysis warning next to `from spacy import displacy` because you are no longer using displaCy at all in the script. You can ignore it!
 
-<img src="../assets/img/key/spacy-key.png" width="100%">
+<img src="../assets/img/key/spacy-key.png" width="100%" alt="screenshot of the new code in 'ner.py' added at the end">
 
 Run just the lines of code we wrote in steps 4.1 & 4.2 with `F9`, which will return the 15 most frequently occurring entities as well as the entity type label. You can adjust the number of entities by changing the argument (value) of `.most_common()`.
 
-<img src="../assets/img/key/key-results.png" width="100%">
+<img src="../assets/img/key/key-results.png" width="100%" alt="console output of the most frequest words, alongside how many times they've been included. [('Norway', 56), ('Sweden', 35), ('first', 33), ('one', 26), ('England', 25), ('English', 24), ('Copenhagen', 23), ('French', 22), ('two', 21), ('Tonsberg', 19), ('Mary Wollstonecraft', 18), ('France', 17), ('Norwegians', 16), ('Denmark', 16), ('Christiania', 16)]">
 
 ### 4.3. Return results for a single entity type {#step3}
 
@@ -69,7 +69,7 @@ persons = [(ent.text, ent.label_) for ent in doc.ents if ent.label_ == 'PERSON']
 print(Counter(persons).most_common(15))
 ```
 
-<img src="../assets/img/key/key-persons.png" width="100%">
+<img src="../assets/img/key/key-persons.png" width="100%" alt="a modified version of the code in the previous image, limiting output to only PERSONs">
 
 The results returned should be limited to the names of persons; including `ent.label_` in our statement allows us to verify our results (as well as getting a peek at the aformentioned "CUDA device" error):
 
@@ -97,7 +97,7 @@ As with `collections` module, we will import Matplotlib with our other import st
 import matplotlib.pyplot as plt
 ```
 
-<img src="../assets/img/key/import-full.png" width="100%">
+<img src="../assets/img/key/import-full.png" width="100%" alt="image of code imports, adding the matplotlib library at the end after the spacy import">
 
 ### 4.5. Assign entity values to variables for plotting {#step5}
 
@@ -122,7 +122,7 @@ plt.xticks(fontsize=7.5, rotation=45)
 plt.show()
 ```
 
-<img src="../assets/img/key/matplotlib-plot.png" width="100%">
+<img src="../assets/img/key/matplotlib-plot.png" width="100%" alt="screenshot of the new code above added at the end of the script">
 
 Select and run the new lines of code with `F9` - again, first running the matplotlib `import` statement. When the console has processed your script, the plot will appear in the "Plots" tab within the same pane as the Variable Explorer. The labels are quite tiny for the purpose, ironically, of being able to read them more easily by avoiding overlap. We can refer back to "entities" in the Variable Explorer if any of them are unclear.
 
@@ -130,11 +130,11 @@ Select and run the new lines of code with `F9` - again, first running the matplo
 
 Although we do not have the counts to refer to in the "labels" variable, the label names will be arranged from largest to smallest count size.
 
-<img src="../assets/img/key/tuple-view.png" width="100%">
+<img src="../assets/img/key/tuple-view.png" width="100%" alt="full screen window showcasing the values of the label variable sorted by the word most frequently used in the text">
 
 You can save the plot as a PNG file directly from the "Plots" tab in Spyder. Right click on the plot and select "Save plot as..." (`Ctrl` / `cmd` + `S`).
 
-<img src="../assets/img/key/spyder-plots.png" width="100%">
+<img src="../assets/img/key/spyder-plots.png" width="100%" alt="bar graph with the most frequent terms in the text">
 
 The plot output is unlikely to win any visualization beauty contests but useful enough for the purposes of exploratory data analysis. Styling the bar graph is out of the scope of the current lesson, but you can find out more by visiting the [Matplotlib tutorials](https://matplotlib.org/stable/tutorials/index.html).
 
