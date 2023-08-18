@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Other NER Tools
-nav_order: 4
+nav_order: 5
 ---
 
 # Other Tools for Named Entity Recognition
@@ -12,7 +12,15 @@ If you will be working with a large number of documents, you may wish to investi
 
 The list below is not comprehensive - in fact, it is barely a list! - but they are relatively quick to set up and robustly supported.
 
-## CoreNLP
+<div markdown="1" style="border: 1px solid #7a003c; border-radius: 6px; margin-bottom: 1em; padding: 0.5em 1em 0; margin-top: 1em;" class="toc">
+<summary style="cursor:default; display: block; border-bottom: 1px solid #302d36; margin-bottom: 0.5em">
+  Tools
+</summary>
+- [CoreNLP](#corenlp)
+- [Natural Language Toolkit (NLTK) - Python](#nltk)
+</div>
+
+## CoreNLP {#corenlp}
 
 ### Grapical interface (GUI) option
 
@@ -25,11 +33,11 @@ After [downloading CoreNLP](https://stanfordnlp.github.io/CoreNLP/download.html)
 
 To open a folder in the terminal on a Mac, right click on the "stanford-corenlp-4.4.0" folder and select "Open in Terminal" from the menu. With a Windows OS, navigate one step further into the application itself and type "cmd" into the address bar:
 
-![Screenshot of stanford-corenlp-4.4.0 folder in Windows with "cmd" typed into the folder address bar](assets/img/terminal-windows.png)
+<img src="assets/img/tools/terminal-windows.png" width="100%" alt="Screenshot of stanford-corenlp-4.4.0 folder in Windows with 'cmd' typed into the folder address bar">
 
 Copy and paste the following command to the terminal:
 
-```
+```bash
 java -mx4g -cp "*" edu.stanford.nlp.pipeline.StanfordCoreNLPServer -port 9000 -timeout 15000
 ```
 
@@ -45,12 +53,8 @@ Running CoreNLP From the command line allows you to work with larger documents o
 
 As with our SpaCy script, if you would prefer to avoid specifying a file path, move a copy of the document you will be processing to the "stanford-corenlp-4.4.0" folder. You may need to allocate more memory to CoreNLP to run a document or corpus the size of "wollstonecraft.txt" (~90 pages) by adding `-Xmx4g` or `-Xmx6g` before `-cp` in the command to run CoreNLP - if you happen to have 4GB or 6GB of processing resources to draw from. 
 
-There are numerous [output options](https://stanfordnlp.github.io/CoreNLP/cmdline.html#output) available with CoreNLP; as an example, a text document using the [sample data from the workshop's lesson](assets/wollstonecraft-processed.txt). You may wish to experiment with [BRAT](https://github.com/nlplab/brat), the visualizer that the CoreNLP hosted demo uses.
+There are numerous [output options](https://stanfordnlp.github.io/CoreNLP/cmdline.html#output) available with CoreNLP; as an example, a text document using the <a href="data/wollstonecraft-processed.txt" download>sample data from the workshop's lesson</a>. You may wish to experiment with [BRAT](https://github.com/nlplab/brat), the visualizer that the CoreNLP hosted demo uses.
 
-## Natural Language Toolkit (NLTK) - Python
+## Natural Language Toolkit (NLTK) - Python {#nltk}
 
 NLTK has a classifier component trained to recognize named entities. You can [read more about it](https://www.nltk.org/book/ch07.html#tab-ne-types) in the NLTK documentation. The function, `nltk.ne_chunk()`, outputs text with annotations.
-
-
-<br />
-Next --> [Behind the Interface: Training Data Bias](behind.html)

@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Behind the Interface
-nav_order: 5
+nav_order: 6
 ---
 
 # Behind the Interface: Layers of Bias Hidden in Machine Learning
@@ -40,5 +40,3 @@ One of the challenges to engaging in a critique of machine learning processes is
 
 -->
 
-<br />
-Next --> [Learn More](learn-more.html) 
