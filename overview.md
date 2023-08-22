@@ -32,7 +32,7 @@ If you have ever gone through the intellectual exercise of considering how to te
 
 Most computational text analysis methods, including NER, first involve tokenizing the data - or segmenting the text into tokens - so that each word can be examined individually. If you completed the “[Pre-processing Digitized Texts](https://scds.github.io/text-analysis-1)” workshop, you tokenized a text document in OpenRefine to make it possible to correct multiple errors with one operation. When performing computational text analysis, tokenization is done by the natural language processing system.
 
-Once we can approach texts at the level of the word, other processing tasks in the text analysis workflow can then be performed such as:
+Once we are able to approach texts at the level of the word, we can then perform other pre-processing tasks in the text analysis workflow such as those described below.
 
 ### Stop word removal
 
@@ -44,8 +44,6 @@ PoS tagging is a form of annotation that evaluates each word to determine its co
 
 NLP tools use trained language models to make their predictions, which are "taught" through many examples of the various categories being modelled. Often - and in the current lesson - you will be working with a model trained by someone else, like the developers of the tool. It is usually possible - if time-consuming - to train your own model if the tool's supplied model is inadequate for your purposes. 
 
-As we might expect, how the tool arrives at its predictions can be utterly opaque to the user; we will discuss training data bias further in "[Behind the Interface](behind.html)." 
-
 ### Stemming or lemmatization
 
 A word can be expressed in different forms; for example, pluralized nouns (“pickle”, “pickles”) or conjugated verbs (“pickling”, “pickle”, “pickled”). Although we humans recognize that they are semantically related, a computer must be instructed to regard them as such. For the purposes of being able to compare like with like, many NLP workflows involve reducing words to their root form, or *lemma*.
@@ -55,7 +53,7 @@ There are two approaches to the task of determining the lemma of a word in NLP:
 * lemmatization, which uses a vocabulary and performs morphological analysis to more accurately identify the lemma.
 
 {: .important-title }
-> Trade offs: Speed Vs. Accuracy
+> Trade-offs: Speed Vs. Accuracy
 >
 > As we get more familiar with the NLP workflow, we will encounter various concessions that developers make in designing their tools to increase the speed or maximize the efficiency of processes. For example, with respect to tokenization: we know that a space does not necessarily indicate the beginning of a new word but creating a comprehensive list of exceptions in various languages would be very time-consuming. Indeed, in the "[Pre-Processing Digitized Texts](https://scds.github.io/text-analysis-1/lessons/output.html)" lesson, we discussed setting the bar for accuracy relatively low because it would take too long to correct every error.
 >
