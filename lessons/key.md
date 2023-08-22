@@ -53,7 +53,7 @@ Again, we can comment out the code from the previous step where we created an HT
 
 <img src="../assets/img/key/spacy-key.png" width="100%" alt="screenshot of the new code in 'ner.py' added at the end">
 
-Run just the lines of code we wrote in steps 4.1 & 4.2 with `F9`, which will return the 15 most frequently occurring entities as well as the entity type label. You can adjust the number of entities by changing the argument (value) of `.most_common()`.
+Run just the lines of code we wrote in steps 4.1 & 4.2 with `F9`, which will return the 15 most frequently occurring entities as well as the entity type label (in the image below, only `ent.text` has been printed -- your results will have the additional entity type label). You can adjust the number of entities by changing the argument (value) of `.most_common()`.
 
 <img src="../assets/img/key/key-results.png" width="100%" alt="console output of the most frequest words, alongside how many times they've been included. [('Norway', 56), ('Sweden', 35), ('first', 33), ('one', 26), ('England', 25), ('English', 24), ('Copenhagen', 23), ('French', 22), ('two', 21), ('Tonsberg', 19), ('Mary Wollstonecraft', 18), ('France', 17), ('Norwegians', 16), ('Denmark', 16), ('Christiania', 16)]">
 
@@ -98,6 +98,11 @@ import matplotlib.pyplot as plt
 ```
 
 <img src="../assets/img/key/import-full.png" width="100%" alt="image of code imports, adding the matplotlib library at the end after the spacy import">
+
+{: .warning-title }
+> Not using Anaconda?
+>
+> If you are not using the Spyder IDE through the Anaconda environment, you may need to install Matplotlib before importing the package (`pip install matplotlib`).
 
 ### 4.5. Assign entity values to variables for plotting {#step5}
 
