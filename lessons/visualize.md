@@ -67,9 +67,9 @@ displacy.serve(doc, style='ent')
 DisplaCy will start up a simple web server on your local machine to produce a visualization that you can access through your web browser.
 
 {: .warning-title }
-> MacOS Monterey Usersx
+> Mac OS Monterey Users
 > 
-> In the Monterey version of the MacOS (12+), the 5000 port to which displaCy serves is used by the AirPlay receiver. You can opt to skip to step 3.4 to produce a file with the same contents that served to the web browser.  
+> In the Monterey version of the MacOS (12+ -- and possibly future Mac OS versions), the 5000 port to which displaCy serves is used by the AirPlay receiver. You can opt to skip to step 3.4 to produce a file with the same contents that served to the web browser.  
 > 
 > Alternatively: if you wish to try the displaCy server, before running the script you will need to "free up" the localhost address so that the console can make use of it. You can stop the AirPlay Receiver process by going to System Preferences \> Sharing and uncheck "AirPlay Receiver" for as long as you need the displaCy server. Turn the AirPlay Receiver back on when you are done (if you use AirPlay). 
 >
@@ -84,6 +84,11 @@ Using the 'ent' visualizer
 
 Serving on http://0.0.0.0:5000 ...
 ```
+
+{: .warning-title }
+> Windows Users
+>
+> When trying start up the localhost server, you may be prompted with a Windows Defender Firewall permission request. Workshop editor Richie Motorgeanu reports that, regardless of whether you give permission or not, the localhost server should still work -- thanks for testing, Richie!
 
 When the server is ready, open a web browser and go to the following URL:
 
