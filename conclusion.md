@@ -37,6 +37,7 @@ SpaCy's developers, Explosion AI, also have [a YouTube channel](https://www.yout
 NLTK, briefly referenced in "[Other NER Tools](tools.html)," is another natural language processing library for Python that is widely used within the academic Digital Scholarship community. If you are using Spyder through the Anaconda environment, NLTK will already be installed for you.
 
 * [Read more about NLTK](https://www.nltk.org/), including installation instructions and numerous [examples of use](https://www.nltk.org/howto.html) for different NLP tasks
+* Get [an overview of working with NLTK for text preparation and analysis](https://jasonbrodeur.github.io/dsi-text-prep/python.html) from the Sherman Centre's very own Jay Brodeur (with Alexandra Provo of NYU Libraries) 
 * Tutorials from the [Programming Historian](https://programminghistorian.org/) on performing [sentiment analysis](https://programminghistorian.org/en/lessons/sentiment-analysis) (Z. Saldaña) and [stylometric analysis](https://programminghistorian.org/en/lessons/introduction-to-stylometry-with-python) (F. Laramée) with NLTK
 * [Natural Language Processing with Python – Analyzing Text with the Natural Language Toolkit](https://www.nltk.org/book/), a free online textbook on NLTK that is actively maintained
 
