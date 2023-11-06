@@ -16,7 +16,7 @@ nav_order: 6
 
 ## Dominant Datasets
 
-[Safiya Noble](https://safiyaunoble.com/), [Joy Buolamwini](https://www.media.mit.edu/people/joyab/overview/), [Cathy O’Neil](https://mathbabe.org/) and others have drawn attention to the latent biases and assumptions encoded into algorithmically driven processes such as search engine term autocompletions and facial recognition. As we have already encountered in the lesson, natural language processing is no less immune to being shaped by the social-technical  can be . is the training dataset used in machine learning to recognize patterns that will be applied to . For example, choices in how to label data, what data is included 
+[Safiya Noble](https://safiyaunoble.com/), [Joy Buolamwini](https://www.media.mit.edu/people/joyab/overview/), [Cathy O’Neil](https://mathbabe.org/) and others have drawn attention to the latent biases and assumptions encoded into algorithmically driven processes such as search engine term autocompletions and facial recognition. As we have already encountered in the lesson, natural language processing tools are no less immune to being shaped by the  .  can be . is the training dataset used in machine learning to recognize patterns that will be applied to . For example, choices in how to label data, what data is included 
 
 For example, 
 
@@ -31,12 +31,7 @@ Benjamin does not , and stresses that there are sites of resistance to the new J
 
 
 The importance of working together with communities who are impacted  and their data sovereignty. 
-
-
-
-## Algorithmic Opacity
-
-One of the challenges to engaging in a critique of machine learning processes is the As Ananny and Crawford highlight, 
+ 
 
 -->
 
